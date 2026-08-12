@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>القيادة الاستراتيجية</title>
+    <title>دورة القيادة الاستراتيجية</title>
 
     <style>
         * {
@@ -16,163 +16,363 @@
             margin: 0;
             font-family: Tahoma, Arial, sans-serif;
             background: #07182d;
-            color: white;
+            color: #ffffff;
+            line-height: 1.8;
         }
 
-        .page {
+        .container {
+            width: 92%;
             max-width: 900px;
             margin: auto;
-            padding: 35px 20px 60px;
+        }
+
+        /* Header */
+
+        .hero {
+            text-align: center;
+            padding: 45px 0 30px;
         }
 
         .badge {
-            text-align: center;
-            color: #f2b84b;
-            font-size: 18px;
+            display: inline-block;
+            background: #eab65b;
+            color: #07182d;
+            padding: 8px 20px;
+            border-radius: 30px;
             font-weight: bold;
             margin-bottom: 20px;
         }
 
         h1 {
-            text-align: center;
-            font-size: 38px;
-            line-height: 1.5;
-            margin: 10px 0 20px;
+            font-size: clamp(32px, 6vw, 55px);
+            margin: 0 0 20px;
+            line-height: 1.4;
+        }
+
+        h1 span {
+            color: #eab65b;
         }
 
         .subtitle {
-            text-align: center;
-            color: #d7dce4;
+            max-width: 750px;
+            margin: auto;
+            color: #d6dfeb;
             font-size: 21px;
-            line-height: 1.8;
-            margin-bottom: 35px;
+            line-height: 1.9;
+        }
+
+        /* Video */
+
+        .video-section {
+            margin: 30px 0;
         }
 
         .video-box {
-            background: #000;
-            border: 2px solid #555;
-            border-radius: 14px;
+            background: #000000;
+            border: 2px solid #46576b;
+            border-radius: 15px;
             overflow: hidden;
-            margin: 0 auto 35px;
-            max-width: 850px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
         }
 
-        video {
+        .video-box video {
             width: 100%;
             display: block;
-            background: black;
+            background: #000000;
         }
 
-        .course-title {
-            text-align: center;
-            color: #f2b84b;
-            font-size: 28px;
-            font-weight: bold;
-            margin: 30px 0 15px;
-        }
-
-        .description {
-            text-align: center;
-            color: #e1e5eb;
-            font-size: 18px;
-            line-height: 2;
-            margin-bottom: 35px;
-        }
+        /* Button */
 
         .button {
             display: block;
             width: fit-content;
-            margin: auto;
-            padding: 16px 35px;
-            background: #f2b84b;
+            margin: 25px auto 45px;
+            background: #eab65b;
             color: #07182d;
             text-decoration: none;
+            padding: 15px 35px;
             border-radius: 12px;
-            font-size: 19px;
             font-weight: bold;
+            font-size: 19px;
         }
 
-        .footer {
+        /* Sections */
+
+        .section {
+            background: #0c2543;
+            border-radius: 20px;
+            padding: 30px 25px;
+            margin: 25px 0;
             text-align: center;
-            color: #9da7b5;
-            margin-top: 50px;
-            font-size: 14px;
         }
 
-        @media (max-width: 600px) {
+        .section h2 {
+            color: #eab65b;
+            font-size: 30px;
+            margin-top: 0;
+        }
 
-            .page {
-                padding: 25px 15px 40px;
+        .section p {
+            color: #d8e0ea;
+            font-size: 18px;
+            line-height: 2;
+        }
+
+        /* Features */
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .feature {
+            background: #102e50;
+            padding: 20px;
+            border-radius: 14px;
+        }
+
+        .feature strong {
+            display: block;
+            color: #eab65b;
+            font-size: 19px;
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            font-size: 15px;
+            margin: 0;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            color: #8999ad;
+            font-size: 14px;
+            padding: 30px 0;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 650px) {
+
+            .hero {
+                padding-top: 30px;
             }
 
             h1 {
-                font-size: 27px;
+                font-size: 30px;
             }
 
             .subtitle {
                 font-size: 17px;
             }
 
-            .course-title {
-                font-size: 23px;
+            .features {
+                grid-template-columns: 1fr;
             }
 
-            .description {
-                font-size: 16px;
+            .button {
+                width: 90%;
+                text-align: center;
+            }
+
+            .section {
+                padding: 25px 18px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <div class="page">
+<div class="container">
+
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <section class="hero">
 
         <div class="badge">
-            دورة تدريبية
+            دورة تدريبية احترافية
         </div>
 
         <h1>
-            القيادة الاستراتيجية
+            دورة
+            <span>القيادة الاستراتيجية</span>
         </h1>
 
-        <div class="subtitle">
-            طوّر مهاراتك في القيادة والتفكير الاستراتيجي
-            <br>
-            وتعلم كيفية اتخاذ القرارات بفعالية
-        </div>
+        <p class="subtitle">
+
+            طوّر مهاراتك القيادية،
+            وتعلم التفكير الاستراتيجي،
+            واتخاذ القرارات الفعالة
+            في بيئة العمل الحديثة.
+
+        </p>
+
+    </section>
+
+
+    <!-- ==============================
+         VIDEO
+    =============================== -->
+
+    <section class="video-section">
 
         <div class="video-box">
 
-            <video controls preload="metadata">
+            <video
+                controls
+                playsinline
+                preload="metadata">
 
-                <source src="video.mp4" type="video/mp4">
+                <source
+                    src="./video.mp4"
+                    type="video/mp4">
 
-                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+                عذراً، متصفحك لا يدعم تشغيل الفيديو.
 
             </video>
 
         </div>
 
-        <div class="course-title">
-            المحاضرة الأولى
+    </section>
+
+
+    <a href="#about" class="button">
+        تعرف على الدورة
+    </a>
+
+
+    <!-- ==============================
+         ABOUT
+    =============================== -->
+
+    <section
+        class="section"
+        id="about">
+
+        <h2>
+            عن دورة القيادة الاستراتيجية
+        </h2>
+
+        <p>
+
+            دورة متخصصة تهدف إلى تطوير مهارات القادة
+            والمديرين في التفكير والتحليل الاستراتيجي،
+            والتخطيط، واتخاذ القرارات، وقيادة فرق العمل
+            وتحقيق النتائج المؤسسية.
+
+        </p>
+
+    </section>
+
+
+    <!-- ==============================
+         WHAT YOU WILL LEARN
+    =============================== -->
+
+    <section class="section">
+
+        <h2>
+            ماذا ستتعلم؟
+        </h2>
+
+
+        <div class="features">
+
+
+            <div class="feature">
+
+                <strong>
+                    التفكير الاستراتيجي
+                </strong>
+
+                <p>
+                    تحليل التحديات ورؤية المستقبل
+                    بطريقة استراتيجية.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>
+                    التخطيط الاستراتيجي
+                </strong>
+
+                <p>
+                    تحويل الأهداف والرؤية إلى
+                    خطط قابلة للتنفيذ.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <strong>
+                    اتخاذ القرار
+                </strong>
+
+                <p>
+                    تحليل البدائل واتخاذ قرارات
+                    أكثر فاعلية.
+                </p>
+
+            </div>
+
+
         </div>
 
-        <div class="description">
-            شاهد الفيديو التعريفي وابدأ رحلتك في
-            <strong>القيادة الاستراتيجية</strong>.
-        </div>
+    </section>
 
-        <a href="#video" class="button">
-            ابدأ مشاهدة الدورة
+
+    <!-- ==============================
+         FINAL SECTION
+    =============================== -->
+
+    <section class="section">
+
+        <h2>
+            ابدأ رحلتك في القيادة الاستراتيجية
+        </h2>
+
+        <p>
+            شاهد الفيديو وابدأ في تطوير مهاراتك القيادية.
+        </p>
+
+        <a
+            href="#top"
+            class="button">
+
+            مشاهدة الفيديو
+
         </a>
 
-        <div class="footer">
-            © 2026 - القيادة الاستراتيجية
-        </div>
+    </section>
 
-    </div>
+
+    <footer>
+
+        STRATEGENCE
+
+        <br>
+
+        دورة القيادة الاستراتيجية © 2026
+
+    </footer>
+
+
+</div>
 
 </body>
-
 </html>
