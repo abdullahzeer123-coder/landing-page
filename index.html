@@ -61,24 +61,30 @@
             line-height: 1.9;
         }
 
-        /* Video */
+        /* Website Section */
 
-        .video-section {
+        .website-section {
             margin: 30px 0;
         }
 
-        .video-box {
-            background: #000000;
+        .website-box {
+            background: #0c2543;
             border: 2px solid #46576b;
             border-radius: 15px;
-            overflow: hidden;
+            padding: 55px 25px;
+            text-align: center;
             box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
         }
 
-        .video-box video {
-            width: 100%;
-            display: block;
-            background: #000000;
+        .website-box h2 {
+            color: #eab65b;
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        .website-box p {
+            color: #d8e0ea;
+            font-size: 18px;
         }
 
         /* Button */
@@ -94,6 +100,12 @@
             border-radius: 12px;
             font-weight: bold;
             font-size: 19px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
         }
 
         /* Sections */
@@ -182,6 +194,10 @@
             .section {
                 padding: 25px 18px;
             }
+
+            .website-box {
+                padding: 40px 18px;
+            }
         }
 
     </style>
@@ -221,34 +237,34 @@
 
 
     <!-- ==============================
-         VIDEO
+         WEBSITE LINK
     =============================== -->
 
-    <section class="video-section">
+    <section class="website-section">
 
-        <div class="video-box">
+        <div class="website-box">
 
-            <video
-                controls
-                playsinline
-                preload="metadata">
+            <h2>
+                ابدأ رحلتك في القيادة الاستراتيجية
+            </h2>
 
-                <source
-                    src="./video.mp4"
-                    type="video/mp4">
+            <p>
+                انتقل إلى الموقع وابدأ في تطوير مهاراتك القيادية.
+            </p>
 
-                عذراً، متصفحك لا يدعم تشغيل الفيديو.
+            <a
+                href="https://elearning.omaraljaber.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button">
 
-            </video>
+                اذهب إلى الموقع
+
+            </a>
 
         </div>
 
     </section>
-
-
-    <a href="#about" class="button">
-        تعرف على الدورة
-    </a>
 
 
     <!-- ==============================
@@ -347,14 +363,16 @@
         </h2>
 
         <p>
-            شاهد الفيديو وابدأ في تطوير مهاراتك القيادية.
+            انتقل إلى الموقع وابدأ في تطوير مهاراتك القيادية.
         </p>
 
         <a
-            href="#top"
+            href="https://elearning.omaraljaber.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             class="button">
 
-            مشاهدة الفيديو
+            اذهب إلى الموقع
 
         </a>
 
