@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <source src="video.mp4" type="video/mp4">
 
     <title>القيادة الاستراتيجية</title>
 
@@ -16,188 +16,109 @@
             margin: 0;
             font-family: Tahoma, Arial, sans-serif;
             background: #07182d;
-            color: #ffffff;
+            color: white;
         }
 
         .page {
-            width: min(900px, 100%);
+            max-width: 900px;
             margin: auto;
-            padding: 25px 18px 60px;
-        }
-
-        .top {
-            text-align: center;
-            margin-bottom: 25px;
+            padding: 35px 20px 60px;
         }
 
         .badge {
-            display: inline-block;
-            background: #eab65b;
-            color: #07182d;
-            padding: 8px 18px;
-            border-radius: 30px;
-            font-size: 15px;
+            text-align: center;
+            color: #f2b84b;
+            font-size: 18px;
             font-weight: bold;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: clamp(28px, 5vw, 48px);
-            line-height: 1.35;
-            margin: 10px 0 18px;
-            font-weight: 800;
-        }
-
-        h1 span {
-            color: #eab65b;
+            text-align: center;
+            font-size: 38px;
+            line-height: 1.5;
+            margin: 10px 0 20px;
         }
 
         .subtitle {
-            color: #d9e1eb;
-            font-size: clamp(17px, 2.5vw, 22px);
+            text-align: center;
+            color: #d7dce4;
+            font-size: 21px;
             line-height: 1.8;
-            margin: 0 auto;
-            max-width: 760px;
+            margin-bottom: 35px;
         }
 
         .video-box {
-            margin: 35px auto 25px;
-            background: #0d223b;
-            border: 1px solid rgba(234, 182, 91, 0.6);
-            border-radius: 15px;
-            padding: 8px;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+            background: #000;
+            border: 2px solid #555;
+            border-radius: 14px;
+            overflow: hidden;
+            margin: 0 auto 35px;
+            max-width: 850px;
         }
 
         video {
-            display: block;
             width: 100%;
-            max-height: 560px;
-            border-radius: 10px;
-            background: #000000;
+            display: block;
+            background: black;
+        }
+
+        .course-title {
+            text-align: center;
+            color: #f2b84b;
+            font-size: 28px;
+            font-weight: bold;
+            margin: 30px 0 15px;
+        }
+
+        .description {
+            text-align: center;
+            color: #e1e5eb;
+            font-size: 18px;
+            line-height: 2;
+            margin-bottom: 35px;
         }
 
         .button {
             display: block;
             width: fit-content;
-            margin: 25px auto 45px;
-            padding: 17px 35px;
-            background: #eab65b;
+            margin: auto;
+            padding: 16px 35px;
+            background: #f2b84b;
             color: #07182d;
             text-decoration: none;
             border-radius: 12px;
-            font-size: 18px;
+            font-size: 19px;
             font-weight: bold;
-            text-align: center;
-        }
-
-        .button:hover {
-            opacity: 0.9;
-        }
-
-        .section {
-            margin-top: 35px;
-            text-align: center;
-        }
-
-        .section-image {
-            width: 100%;
-            max-width: 650px;
-            height: 250px;
-            margin: 0 auto 30px;
-            border-radius: 15px;
-            background:
-                linear-gradient(
-                    rgba(7, 24, 45, 0.25),
-                    rgba(7, 24, 45, 0.25)
-                ),
-                url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80")
-                center/cover;
-        }
-
-        .section h2 {
-            color: #eab65b;
-            font-size: clamp(25px, 4vw, 36px);
-            margin-bottom: 18px;
-        }
-
-        .section p {
-            color: #dce4ed;
-            font-size: 18px;
-            line-height: 2;
-            max-width: 750px;
-            margin: auto;
-        }
-
-        .learn-box {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .learn-item {
-            background: #0d223b;
-            border: 1px solid rgba(234, 182, 91, 0.25);
-            border-radius: 12px;
-            padding: 22px 15px;
-        }
-
-        .learn-item strong {
-            display: block;
-            color: #eab65b;
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .learn-item p {
-            font-size: 15px;
-            line-height: 1.7;
         }
 
         .footer {
             text-align: center;
-            color: #8fa0b4;
-            font-size: 14px;
+            color: #9da7b5;
             margin-top: 50px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
         }
 
-        @media (max-width: 650px) {
+        @media (max-width: 600px) {
 
             .page {
-                padding: 20px 13px 45px;
+                padding: 25px 15px 40px;
             }
 
             h1 {
-                font-size: 28px;
+                font-size: 27px;
             }
 
             .subtitle {
+                font-size: 17px;
+            }
+
+            .course-title {
+                font-size: 23px;
+            }
+
+            .description {
                 font-size: 16px;
-            }
-
-            .video-box {
-                margin-top: 25px;
-            }
-
-            .button {
-                width: 90%;
-                font-size: 16px;
-                padding: 15px 20px;
-            }
-
-            .section-image {
-                height: 190px;
-            }
-
-            .learn-box {
-                grid-template-columns: 1fr;
-            }
-
-            .learn-item p {
-                font-size: 14px;
             }
         }
     </style>
@@ -205,117 +126,53 @@
 
 <body>
 
-<div class="page">
-
-    <!-- Header -->
-    <header class="top">
+    <div class="page">
 
         <div class="badge">
-            دورة القيادة الاستراتيجية
+            دورة تدريبية
         </div>
 
         <h1>
-            كيف تقود الاجتماعات الدولية
-            <span>بثقة واحترافية</span>
+            القيادة الاستراتيجية
         </h1>
 
-        <p class="subtitle">
-            تعلم مهارات القيادة والتواصل الفعال،
-            واتخاذ القرارات بثقة في بيئة العمل الدولية.
-        </p>
+        <div class="subtitle">
+            طوّر مهاراتك في القيادة والتفكير الاستراتيجي
+            <br>
+            وتعلم كيفية اتخاذ القرارات بفعالية
+        </div>
 
-    </header>
+        <div class="video-box">
 
+            <video controls preload="metadata">
 
-    <!-- Video -->
-    <section class="video-box">
+                <source src="video.mp4" type="video/mp4">
 
-        <video controls playsinline preload="metadata">
+                المتصفح الخاص بك لا يدعم تشغيل الفيديو.
 
-            <source src="video.mp4" type="video/mp4">
-
-            متصفحك لا يدعم تشغيل الفيديو.
-
-        </video>
-
-    </section>
-
-
-    <!-- Button -->
-    <a href="#learn" class="button">
-        ابدأ رحلة القيادة الاستراتيجية
-    </a>
-
-
-    <!-- Learning Section -->
-    <section class="section" id="learn">
-
-        <div class="section-image"></div>
-
-        <h2>
-            ماذا ستتعلم؟
-        </h2>
-
-        <p>
-            في هذا المحتوى ستتعرف على أهم المهارات التي تساعد
-            القائد على إدارة الاجتماعات والتواصل مع الآخرين
-            واتخاذ القرارات بطريقة احترافية وفعالة.
-        </p>
-
-
-        <div class="learn-box">
-
-            <div class="learn-item">
-
-                <strong>
-                    القيادة
-                </strong>
-
-                <p>
-                    تطوير مهارات القيادة والتأثير في فريق العمل.
-                </p>
-
-            </div>
-
-
-            <div class="learn-item">
-
-                <strong>
-                    التواصل
-                </strong>
-
-                <p>
-                    التواصل بثقة ووضوح في بيئات العمل المختلفة.
-                </p>
-
-            </div>
-
-
-            <div class="learn-item">
-
-                <strong>
-                    اتخاذ القرار
-                </strong>
-
-                <p>
-                    تطوير القدرة على تحليل المواقف واتخاذ القرارات المناسبة.
-                </p>
-
-            </div>
+            </video>
 
         </div>
 
-    </section>
+        <div class="course-title">
+            المحاضرة الأولى
+        </div>
 
+        <div class="description">
+            شاهد الفيديو التعريفي وابدأ رحلتك في
+            <strong>القيادة الاستراتيجية</strong>.
+        </div>
 
-    <!-- Footer -->
-    <footer class="footer">
+        <a href="#video" class="button">
+            ابدأ مشاهدة الدورة
+        </a>
 
-        © 2026 - دورة القيادة الاستراتيجية
+        <div class="footer">
+            © 2026 - القيادة الاستراتيجية
+        </div>
 
-    </footer>
-
-</div>
+    </div>
 
 </body>
+
 </html>
