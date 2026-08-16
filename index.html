@@ -13,11 +13,13 @@
         دورة القيادة الاستراتيجية
     </title>
 
+
     <style>
 
         * {
             box-sizing: border-box;
         }
+
 
         body {
 
@@ -34,6 +36,7 @@
 
             line-height: 1.8;
         }
+
 
         .container {
 
@@ -56,11 +59,12 @@
             padding: 45px 0 30px;
         }
 
+
         .badge {
 
             display: inline-block;
 
-            background: #38bdf8;
+            background: #eab65b;
 
             color: #07182d;
 
@@ -72,6 +76,7 @@
 
             margin-bottom: 20px;
         }
+
 
         h1 {
 
@@ -87,10 +92,12 @@
             line-height: 1.4;
         }
 
+
         h1 span {
 
-            color: #38bdf8;
+            color: #eab65b;
         }
+
 
         .subtitle {
 
@@ -118,7 +125,7 @@
 
             padding: 16px 40px;
 
-            background: #38bdf8;
+            background: #eab65b;
 
             color: #07182d;
 
@@ -133,15 +140,16 @@
             box-shadow:
                 0 8px 25px
                 rgba(
-                    56,
-                    189,
-                    248,
+                    234,
+                    182,
+                    91,
                     0.25
                 );
 
             transition:
                 all 0.3s ease;
         }
+
 
         .cta-button:hover {
 
@@ -151,9 +159,9 @@
             box-shadow:
                 0 12px 30px
                 rgba(
-                    56,
-                    189,
-                    248,
+                    234,
+                    182,
+                    91,
                     0.4
                 );
         }
@@ -169,6 +177,7 @@
 
             margin: 30px auto;
         }
+
 
         .video-container video {
 
@@ -199,9 +208,10 @@
             text-align: center;
         }
 
+
         .section h2 {
 
-            color: #38bdf8;
+            color: #eab65b;
 
             font-size: 30px;
 
@@ -209,6 +219,7 @@
 
             margin-bottom: 20px;
         }
+
 
         .section p {
 
@@ -237,9 +248,10 @@
             text-align: center;
         }
 
+
         .doctor-section h2 {
 
-            color: #38bdf8;
+            color: #eab65b;
 
             font-size: 32px;
 
@@ -247,6 +259,7 @@
 
             margin-bottom: 20px;
         }
+
 
         .doctor-intro {
 
@@ -301,6 +314,7 @@
                 );
         }
 
+
         .professional-title {
 
             color: #38bdf8;
@@ -310,6 +324,7 @@
             margin:
                 0 0 25px;
         }
+
 
         .experience-layout {
 
@@ -337,6 +352,7 @@
             align-items: center;
         }
 
+
         .experience-circle {
 
             width: 220px;
@@ -347,10 +363,10 @@
 
             background:
                 conic-gradient(
-                    #7dd3fc 0deg,
-                    #7dd3fc 0deg,
-                    #234667 0deg,
-                    #234667 360deg
+                    #38bdf8 0deg,
+                    #38bdf8 0deg,
+                    #075985 0deg,
+                    #075985 360deg
                 );
 
             position: relative;
@@ -426,6 +442,7 @@
             direction: rtl;
         }
 
+
         .experience-number strong {
 
             display: block;
@@ -440,6 +457,7 @@
 
             transform: none;
         }
+
 
         .experience-number span {
 
@@ -464,6 +482,7 @@
             text-align: right;
         }
 
+
         .experience-info h4 {
 
             color: #ffffff;
@@ -473,6 +492,7 @@
             margin:
                 0 0 8px;
         }
+
 
         .experience-info > p {
 
@@ -498,10 +518,12 @@
             gap: 15px;
         }
 
+
         .experience-bar-row {
 
             width: 100%;
         }
+
 
         .experience-bar-header {
 
@@ -519,12 +541,26 @@
             color: #ffffff;
         }
 
+
         .experience-bar-header span:last-child {
 
             color: #38bdf8;
 
             font-weight: bold;
         }
+
+
+        .percentage-number {
+
+            color: #38bdf8;
+
+            font-weight: bold;
+
+            min-width: 45px;
+
+            text-align: left;
+        }
+
 
         .experience-bar {
 
@@ -539,9 +575,12 @@
             overflow: hidden;
         }
 
+
         .experience-fill {
 
             height: 100%;
+
+            width: 0%;
 
             border-radius: 20px;
 
@@ -553,37 +592,13 @@
                     #38bdf8
                 );
 
-            animation:
-                experienceAnimation
-                1.2s ease;
-        }
-
-        .experience-fill.one {
-
-            width: 90%;
-        }
-
-        .experience-fill.two {
-
-            width: 85%;
-        }
-
-        .experience-fill.three {
-
-            width: 80%;
-        }
-
-        @keyframes experienceAnimation {
-
-            from {
-                width: 0;
-            }
-
+            transition:
+                width 0.05s linear;
         }
 
 
         /* =================================
-           EXPERIENCE BOXES
+           OLD EXPERIENCE BOXES
         ================================= */
 
         .experience-box {
@@ -597,14 +612,16 @@
             margin-top: 25px;
         }
 
+
         .experience-box h3 {
 
-            color: #38bdf8;
+            color: #eab65b;
 
             margin-top: 0;
 
             font-size: 22px;
         }
+
 
         .countries {
 
@@ -619,6 +636,7 @@
             margin-top: 15px;
         }
 
+
         .country {
 
             background: #0c2543;
@@ -628,9 +646,9 @@
             border:
                 1px solid
                 rgba(
-                    56,
-                    189,
-                    248,
+                    234,
+                    182,
+                    91,
                     0.3
                 );
 
@@ -666,22 +684,24 @@
             border:
                 1px solid
                 rgba(
-                    56,
-                    189,
-                    248,
+                    234,
+                    182,
+                    91,
                     0.20
                 );
         }
 
+
         .accreditation-title {
 
-            color: #38bdf8;
+            color: #eab65b;
 
             font-size: 28px;
 
             margin:
                 0 0 8px;
         }
+
 
         .accreditation-description {
 
@@ -695,6 +715,7 @@
             max-width: 700px;
         }
 
+
         .accreditation-grid {
 
             display: grid;
@@ -706,6 +727,7 @@
 
             align-items: stretch;
         }
+
 
         .accreditation-card {
 
@@ -735,13 +757,14 @@
                 border-color 0.3s ease;
         }
 
+
         .accreditation-card:hover {
 
             transform:
                 translateY(-6px);
 
             border-color:
-                #38bdf8;
+                #eab65b;
 
             box-shadow:
                 0 12px 30px
@@ -752,6 +775,7 @@
                     0.30
                 );
         }
+
 
         .accreditation-card img {
 
@@ -765,6 +789,7 @@
 
             margin-bottom: 8px;
         }
+
 
         .accreditation-card span {
 
@@ -789,14 +814,16 @@
             text-align: center;
         }
 
+
         .academies h3 {
 
-            color: #38bdf8;
+            color: #eab65b;
 
             font-size: 27px;
 
             margin-bottom: 8px;
         }
+
 
         .branches-title {
 
@@ -808,6 +835,7 @@
 
             margin-bottom: 15px;
         }
+
 
         .academies > p {
 
@@ -844,6 +872,7 @@
             align-items: start;
         }
 
+
         .academy-card {
 
             background: #102e50;
@@ -851,9 +880,9 @@
             border:
                 1px solid
                 rgba(
-                    56,
-                    189,
-                    248,
+                    234,
+                    182,
+                    91,
                     0.25
                 );
 
@@ -877,6 +906,7 @@
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
         }
+
 
         .academy-card:hover {
 
@@ -924,9 +954,9 @@
             border:
                 3px solid
                 rgba(
-                    56,
-                    189,
-                    248,
+                    234,
+                    182,
+                    91,
                     0.35
                 );
 
@@ -934,6 +964,7 @@
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
         }
+
 
         .academy-image:hover {
 
@@ -944,9 +975,9 @@
 
                 0 0 0 4px
                 rgba(
-                    56,
-                    189,
-                    248,
+                    234,
+                    182,
+                    91,
                     0.20
                 ),
 
@@ -958,6 +989,7 @@
                     0.35
                 );
         }
+
 
         .strategence-image {
 
@@ -985,9 +1017,10 @@
             line-height: 1.4;
         }
 
+
         .academy-subtitle {
 
-            color: #38bdf8;
+            color: #eab65b;
 
             font-size: 15px;
 
@@ -1017,6 +1050,7 @@
             overflow: visible;
         }
 
+
         .feature {
 
             background: #102e50;
@@ -1033,6 +1067,7 @@
             z-index: 1;
         }
 
+
         .feature:hover {
 
             transform:
@@ -1041,16 +1076,18 @@
             z-index: 10;
         }
 
+
         .feature strong {
 
             display: block;
 
-            color: #38bdf8;
+            color: #eab65b;
 
             font-size: 19px;
 
             margin-bottom: 8px;
         }
+
 
         .feature p {
 
@@ -1073,7 +1110,7 @@
             margin:
                 25px auto 45px;
 
-            background: #38bdf8;
+            background: #eab65b;
 
             color: #07182d;
 
@@ -1119,6 +1156,7 @@
             padding: 20px;
         }
 
+
         .popup-overlay.show {
 
             display: flex;
@@ -1142,9 +1180,9 @@
             border:
                 1px solid
                 rgba(
-                    56,
-                    189,
-                    248,
+                    234,
+                    182,
+                    91,
                     0.40
                 );
 
@@ -1169,6 +1207,7 @@
                 0.25s ease;
         }
 
+
         @keyframes popupAnimation {
 
             from {
@@ -1178,6 +1217,7 @@
                 transform:
                     scale(0.85);
             }
+
 
             to {
 
@@ -1210,7 +1250,7 @@
 
             border-radius: 50%;
 
-            background: #38bdf8;
+            background: #eab65b;
 
             color: #07182d;
 
@@ -1233,10 +1273,11 @@
             margin:
                 5px 0 3px;
 
-            color: #38bdf8;
+            color: #eab65b;
 
             font-size: 26px;
         }
+
 
         .popup-box p {
 
@@ -1261,6 +1302,7 @@
 
             gap: 10px;
         }
+
 
         .popup-link {
 
@@ -1288,6 +1330,7 @@
 
             transition: 0.25s;
         }
+
 
         .popup-link:hover {
 
@@ -1337,6 +1380,7 @@
             background: #1877f2;
         }
 
+
         .popup-link.instagram {
 
             background:
@@ -1349,6 +1393,7 @@
                 );
         }
 
+
         .popup-link.tiktok {
 
             background: #050505;
@@ -1357,14 +1402,16 @@
                 1px solid #333;
         }
 
+
         .popup-link.linkedin {
 
             background: #0a66c2;
         }
 
+
         .popup-link.website {
 
-            background: #38bdf8;
+            background: #eab65b;
 
             color: #07182d;
         }
@@ -1398,6 +1445,7 @@
                     repeat(2, 1fr);
             }
 
+
             .accreditation-grid {
 
                 grid-template-columns:
@@ -1418,20 +1466,24 @@
                 padding-top: 30px;
             }
 
+
             h1 {
 
                 font-size: 30px;
             }
+
 
             .subtitle {
 
                 font-size: 17px;
             }
 
+
             .features {
 
                 grid-template-columns: 1fr;
             }
+
 
             .button {
 
@@ -1439,6 +1491,7 @@
 
                 text-align: center;
             }
+
 
             .cta-button {
 
@@ -1452,6 +1505,7 @@
                     15px 20px;
             }
 
+
             .section,
             .doctor-section {
 
@@ -1459,10 +1513,12 @@
                     25px 18px;
             }
 
+
             .doctor-section h2 {
 
                 font-size: 27px;
             }
+
 
             .doctor-intro {
 
@@ -1479,10 +1535,12 @@
                 gap: 25px;
             }
 
+
             .experience-info {
 
                 text-align: center;
             }
+
 
             .experience-circle {
 
@@ -1491,12 +1549,14 @@
                 height: 195px;
             }
 
+
             .experience-circle::before {
 
                 width: 150px;
 
                 height: 150px;
             }
+
 
             .experience-number strong {
 
@@ -1514,10 +1574,12 @@
                 gap: 12px;
             }
 
+
             .accreditation-card {
 
                 min-height: 135px;
             }
+
 
             .accreditation-card img {
 
@@ -1536,6 +1598,7 @@
                 gap: 25px;
             }
 
+
             .academy-card {
 
                 max-width: 350px;
@@ -1545,12 +1608,14 @@
                 margin: auto;
             }
 
+
             .academy-image {
 
                 width: 250px;
 
                 height: 250px;
             }
+
 
             .popup-box {
 
@@ -1715,10 +1780,9 @@
 
                 <div class="experience-info">
 
+
                     <h4>
-
                         الخبرة المهنية
-
                     </h4>
 
 
@@ -1734,7 +1798,9 @@
                     <div class="experience-bars">
 
 
-                        <!-- الاستشارات المؤسسية -->
+                        <!-- =================================
+                             CONSULTING
+                        ================================= -->
 
                         <div class="experience-bar-row">
 
@@ -1744,8 +1810,12 @@
                                     الاستشارات المؤسسية
                                 </span>
 
-                                <span>
-                                    90%
+                                <span
+                                    class="percentage-number"
+                                    data-target="90">
+
+                                    0%
+
                                 </span>
 
                             </div>
@@ -1754,7 +1824,8 @@
                             <div class="experience-bar">
 
                                 <div
-                                    class="experience-fill one">
+                                    class="experience-fill"
+                                    data-target="90">
                                 </div>
 
                             </div>
@@ -1763,7 +1834,9 @@
 
 
 
-                        <!-- التدريب والتطوير -->
+                        <!-- =================================
+                             TRAINING
+                        ================================= -->
 
                         <div class="experience-bar-row">
 
@@ -1773,8 +1846,12 @@
                                     التدريب والتطوير
                                 </span>
 
-                                <span>
-                                    85%
+                                <span
+                                    class="percentage-number"
+                                    data-target="85">
+
+                                    0%
+
                                 </span>
 
                             </div>
@@ -1783,7 +1860,8 @@
                             <div class="experience-bar">
 
                                 <div
-                                    class="experience-fill two">
+                                    class="experience-fill"
+                                    data-target="85">
                                 </div>
 
                             </div>
@@ -1792,7 +1870,9 @@
 
 
 
-                        <!-- تطوير الأعمال والقيادات -->
+                        <!-- =================================
+                             BUSINESS & LEADERSHIP
+                        ================================= -->
 
                         <div class="experience-bar-row">
 
@@ -1802,8 +1882,12 @@
                                     تطوير الأعمال والقيادات
                                 </span>
 
-                                <span>
-                                    80%
+                                <span
+                                    class="percentage-number"
+                                    data-target="80">
+
+                                    0%
+
                                 </span>
 
                             </div>
@@ -1812,12 +1896,14 @@
                             <div class="experience-bar">
 
                                 <div
-                                    class="experience-fill three">
+                                    class="experience-fill"
+                                    data-target="80">
                                 </div>
 
                             </div>
 
                         </div>
+
 
                     </div>
 
@@ -2404,7 +2490,7 @@
 
             <a
                 href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
-                style="color:#38bdf8;">
+                style="color:#eab65b;">
 
                 ابدأ رحلتك في القيادة الاستراتيجية
 
@@ -2772,32 +2858,50 @@
 
 
 /* =================================
-   EXPERIENCE COUNTER
-
-   0 → 20
-
-   الدائرة تتحرك
-   الرقم لا يلف
+   EXPERIENCE ELEMENTS
 ================================= */
 
+const professionalExperience =
+    document.querySelector(
+        ".professional-experience"
+    );
+
+
 const experienceCircle =
-    document.getElementById("experienceCircle");
+    document.getElementById(
+        "experienceCircle"
+    );
+
 
 const experienceNumber =
-    document.getElementById("experienceNumber");
+    document.getElementById(
+        "experienceNumber"
+    );
+
+
+const percentageNumbers =
+    document.querySelectorAll(
+        ".percentage-number"
+    );
+
+
+const experienceFills =
+    document.querySelectorAll(
+        ".experience-fill"
+    );
+
 
 let experienceAnimation = null;
 
 
+
 /* =================================
-   START EXPERIENCE ANIMATION
+   RESET EXPERIENCE
 ================================= */
 
-function startExperienceAnimation() {
+function resetExperience() {
 
-    /*
-        إلغاء أي حركة سابقة
-    */
+    /* إيقاف أي حركة سابقة */
 
     if (experienceAnimation) {
 
@@ -2805,29 +2909,66 @@ function startExperienceAnimation() {
             experienceAnimation
         );
 
+        experienceAnimation = null;
+
     }
 
 
-    /*
-        إعادة الرقم إلى صفر
-    */
+    /* الرقم الرئيسي */
 
-    experienceNumber.textContent = "0";
+    experienceNumber.textContent =
+        "0";
 
 
-    /*
-        إعادة الدائرة إلى البداية
-    */
+    /* إعادة الدائرة إلى الصفر */
 
     experienceCircle.style.background =
         `
         conic-gradient(
-            #7dd3fc 0deg,
-            #7dd3fc 0deg,
-            #234667 0deg,
-            #234667 360deg
+            #38bdf8 0deg,
+            #38bdf8 0deg,
+            #075985 0deg,
+            #075985 360deg
         )
         `;
+
+
+    /* إعادة النسب إلى الصفر */
+
+    percentageNumbers.forEach(
+        function(number) {
+
+            number.textContent =
+                "0%";
+
+        }
+    );
+
+
+    /* إعادة الأشرطة إلى الصفر */
+
+    experienceFills.forEach(
+        function(fill) {
+
+            fill.style.width =
+                "0%";
+
+        }
+    );
+
+}
+
+
+
+/* =================================
+   START EXPERIENCE
+================================= */
+
+function startExperienceAnimation() {
+
+    /* نبدأ من الصفر دائماً */
+
+    resetExperience();
 
 
     let startTime = null;
@@ -2840,9 +2981,6 @@ function startExperienceAnimation() {
     const duration = 2200;
 
 
-    /* =================================
-       ANIMATION FUNCTION
-    ================================= */
 
     function animateExperience(timestamp) {
 
@@ -2880,93 +3018,102 @@ function startExperienceAnimation() {
             );
 
 
-        /*
-            الرقم:
 
-            0
-            5
-            10
-            15
-            20
+        /* =================================
+           YEARS 0 → 20
+        ================================= */
 
-            والرقم لا يدور
-        */
-
-        const value =
+        const years =
             Math.floor(
                 smoothProgress * 20
             );
 
 
         experienceNumber.textContent =
-            value;
+            years;
 
 
-        /*
-            الدائرة:
 
-            0° → 360°
-        */
+        /* =================================
+           CIRCLE
+        ================================= */
 
         const degrees =
             smoothProgress * 360;
 
 
-        /*
-            ألوان التدرج
-        */
-
-        const color1 =
-            "#7dd3fc";
-
-        const color2 =
-            "#38bdf8";
-
-        const color3 =
-            "#0ea5e9";
-
-        const color4 =
-            "#0369a1";
-
-        const color5 =
-            "#075985";
-
-
-        /*
-            نقاط التدرج
-        */
-
-        const point1 =
-            degrees * 0.25;
-
-        const point2 =
-            degrees * 0.50;
-
-        const point3 =
-            degrees * 0.75;
-
-
-        /*
-            رسم الدائرة
-        */
-
         experienceCircle.style.background =
             `
             conic-gradient(
-                ${color1} 0deg,
-                ${color2} ${point1}deg,
-                ${color3} ${point2}deg,
-                ${color4} ${point3}deg,
-                ${color5} ${degrees}deg,
+                #7dd3fc 0deg,
+                #38bdf8 ${degrees * 0.25}deg,
+                #0ea5e9 ${degrees * 0.50}deg,
+                #0369a1 ${degrees * 0.75}deg,
+                #075985 ${degrees}deg,
                 #234667 ${degrees}deg,
                 #234667 360deg
             )
             `;
 
 
-        /*
-            الاستمرار في الحركة
-        */
+
+        /* =================================
+           PERCENTAGES
+        ================================= */
+
+        percentageNumbers.forEach(
+            function(number) {
+
+                const target =
+                    Number(
+                        number.dataset.target
+                    );
+
+
+                const currentValue =
+                    Math.floor(
+                        smoothProgress *
+                        target
+                    );
+
+
+                number.textContent =
+                    currentValue + "%";
+
+            }
+        );
+
+
+
+        /* =================================
+           BAR WIDTH
+        ================================= */
+
+        experienceFills.forEach(
+            function(fill) {
+
+                const target =
+                    Number(
+                        fill.dataset.target
+                    );
+
+
+                const currentWidth =
+                    smoothProgress *
+                    target;
+
+
+                fill.style.width =
+                    currentWidth + "%";
+
+            }
+        );
+
+
+
+        /* =================================
+           CONTINUE ANIMATION
+        ================================= */
 
         if (progress < 1) {
 
@@ -2980,7 +3127,7 @@ function startExperienceAnimation() {
         else {
 
             /*
-                تثبيت الرقم على 20
+                الرقم النهائي
             */
 
             experienceNumber.textContent =
@@ -2988,7 +3135,7 @@ function startExperienceAnimation() {
 
 
             /*
-                تثبيت الدائرة كاملة
+                الدائرة كاملة
             */
 
             experienceCircle.style.background =
@@ -3002,14 +3149,44 @@ function startExperienceAnimation() {
                 )
                 `;
 
+
+            /*
+                النسب النهائية
+            */
+
+            percentageNumbers.forEach(
+                function(number) {
+
+                    number.textContent =
+                        number.dataset.target +
+                        "%";
+
+                }
+            );
+
+
+            /*
+                الأشرطة النهائية
+            */
+
+            experienceFills.forEach(
+                function(fill) {
+
+                    fill.style.width =
+                        fill.dataset.target +
+                        "%";
+
+                }
+            );
+
+
+            experienceAnimation =
+                null;
+
         }
 
     }
 
-
-    /*
-        بدء الحركة
-    */
 
     experienceAnimation =
         requestAnimationFrame(
@@ -3022,12 +3199,6 @@ function startExperienceAnimation() {
 
 /* =================================
    INTERSECTION OBSERVER
-
-   كلما تدخل الدائرة الشاشة
-   تبدأ من 0 إلى 20
-
-   إذا خرجت ثم رجعت
-   تبدأ من جديد
 ================================= */
 
 const experienceObserver =
@@ -3038,9 +3209,26 @@ const experienceObserver =
             entries.forEach(
                 function(entry) {
 
-                    if (entry.isIntersecting) {
+                    /*
+                        القسم ظهر
+                    */
+
+                    if (
+                        entry.isIntersecting
+                    ) {
 
                         startExperienceAnimation();
+
+                    }
+
+
+                    /*
+                        القسم اختفى
+                    */
+
+                    else {
+
+                        resetExperience();
 
                     }
 
@@ -3050,10 +3238,9 @@ const experienceObserver =
         },
 
         {
-
             /*
-                يبدأ عندما يظهر
-                35% من الدائرة
+                تبدأ الحركة عندما يظهر
+                35% من القسم
             */
 
             threshold: 0.35
@@ -3063,12 +3250,13 @@ const experienceObserver =
     );
 
 
-/*
-    مراقبة دائرة الخبرة
-*/
+
+/* =================================
+   OBSERVE EXPERIENCE SECTION
+================================= */
 
 experienceObserver.observe(
-    experienceCircle
+    professionalExperience
 );
 
 
