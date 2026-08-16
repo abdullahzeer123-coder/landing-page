@@ -294,10 +294,10 @@
             border:
                 1px solid
                 rgba(
-                    234,
-                    182,
-                    91,
-                    0.20
+                    56,
+                    189,
+                    248,
+                    0.25
                 );
 
             border-radius: 22px;
@@ -317,7 +317,7 @@
 
         .professional-title {
 
-            color: #eab65b;
+            color: #38bdf8;
 
             font-size: 27px;
 
@@ -361,6 +361,19 @@
 
             border-radius: 50%;
 
+            /*
+                يبدأ من صفر
+                وسيتم تحريكه بواسطة JavaScript
+            */
+
+            background:
+                conic-gradient(
+                    #38bdf8 0deg,
+                    #38bdf8 0deg,
+                    #075985 0deg,
+                    #075985 360deg
+                );
+
             position: relative;
 
             display: flex;
@@ -369,21 +382,16 @@
 
             justify-content: center;
 
-            /*
-                يبدأ من صفر
-            */
-
-            background:
-                conic-gradient(
-                    #7ddfff 0deg,
-                    #36b9e8 0deg,
-                    #1677b8 0deg,
-                    #075985 0deg,
-                    #234667 0deg,
-                    #234667 360deg
-                );
-
             box-shadow:
+
+                0 0 25px
+                rgba(
+                    56,
+                    189,
+                    248,
+                    0.20
+                ),
+
                 0 12px 35px
                 rgba(
                     0,
@@ -392,18 +400,12 @@
                     0.35
                 );
 
-            /*
-                دوران الدائرة أثناء التعبئة
-            */
-
-            transform:
-                rotate(0deg);
+            transition:
+                background 0.08s linear;
         }
 
 
-        /*
-            الدائرة الداخلية
-        */
+        /* الدائرة الداخلية */
 
         .experience-circle::before {
 
@@ -420,19 +422,20 @@
             background: #0c2543;
 
             box-shadow:
+
                 inset 0 0 20px
                 rgba(
                     0,
                     0,
                     0,
-                    0.25
+                    0.30
                 );
         }
 
 
-        /*
-            الرقم
-        */
+        /* =================================
+           EXPERIENCE NUMBER
+        ================================= */
 
         .experience-number {
 
@@ -441,6 +444,8 @@
             z-index: 2;
 
             text-align: center;
+
+            direction: rtl;
         }
 
 
@@ -448,14 +453,19 @@
 
             display: block;
 
-            color: #7ddfff;
+            color: #38bdf8;
 
             font-size: 50px;
 
             line-height: 1.1;
 
-            transition:
-                color 0.2s ease;
+            font-weight: bold;
+
+            /*
+                الرقم ثابت ولا يدور
+            */
+
+            transform: none;
         }
 
 
@@ -468,6 +478,8 @@
             font-size: 17px;
 
             margin-top: 5px;
+
+            transform: none;
         }
 
 
@@ -542,7 +554,7 @@
 
         .experience-bar-header span:last-child {
 
-            color: #eab65b;
+            color: #38bdf8;
 
             font-weight: bold;
         }
@@ -571,8 +583,9 @@
             background:
                 linear-gradient(
                     90deg,
-                    #d99d38,
-                    #eab65b
+                    #075985,
+                    #0ea5e9,
+                    #38bdf8
                 );
 
             animation:
@@ -1766,7 +1779,9 @@
 
                 <div class="experience-circle-wrap">
 
-                    <div class="experience-circle">
+                    <div
+                        class="experience-circle"
+                        id="experienceCircle">
 
                         <div class="experience-number">
 
@@ -2105,10 +2120,6 @@
             </p>
 
 
-
-            <!-- =================================
-                 THREE ACADEMIES
-            ================================= -->
 
             <div class="academy-cards">
 
@@ -2845,53 +2856,81 @@
 
 
 /* =================================
-   EXPERIENCE 0 → 20 ANIMATION
+   EXPERIENCE COUNTER
+   0 → 20
 ================================= */
 
-let experienceStarted = false;
+const experienceCircle =
+    document.getElementById("experienceCircle");
 
+const experienceNumber =
+    document.getElementById("experienceNumber");
+
+let experienceAnimation = null;
+
+
+/*
+    تشغيل الحركة
+    تبدأ من 0 وتنتهي عند 20
+*/
 
 function startExperienceAnimation() {
 
-    if (experienceStarted) {
+    /* إلغاء أي حركة قديمة */
 
-        return;
+    if (experienceAnimation) {
+
+        cancelAnimationFrame(
+            experienceAnimation
+        );
 
     }
 
 
-    experienceStarted = true;
+    /*
+        نرجع الرقم إلى صفر
+    */
+
+    experienceNumber.textContent = "0";
 
 
-    const circle =
-        document.querySelector(
-            ".experience-circle"
-        );
+    /*
+        نرجع الدائرة إلى صفر
+    */
+
+    experienceCircle.style.background =
+        `
+        conic-gradient(
+            #38bdf8 0deg,
+            #38bdf8 0deg,
+            #075985 0deg,
+            #075985 360deg
+        )
+        `;
 
 
-    const number =
-        document.getElementById(
-            "experienceNumber"
-        );
+    let startTime = null;
 
 
-    if (!circle || !number) {
+    /*
+        مدة الحركة
+        2.2 ثانية
+    */
 
-        return;
-
-    }
-
-
-    const duration = 3000;
-
-    const startTime =
-        performance.now();
+    const duration = 2200;
 
 
-    function animateExperience(currentTime) {
+    function animateExperience(timestamp) {
+
+        if (!startTime) {
+
+            startTime = timestamp;
+
+        }
+
 
         const elapsed =
-            currentTime - startTime;
+            timestamp - startTime;
 
 
         let progress =
@@ -2906,7 +2945,7 @@ function startExperienceAnimation() {
 
 
         /*
-           حركة ناعمة
+            حركة ناعمة
         */
 
         const smoothProgress =
@@ -2918,177 +2957,182 @@ function startExperienceAnimation() {
 
 
         /*
-           الدائرة من 0 إلى 360
-        */
-
-        const degrees =
-            360 *
-            smoothProgress;
-
-
-        /*
-           الرقم من 0 إلى 20
+            الرقم من 0 إلى 20
         */
 
         const value =
-            Math.round(
-                20 *
-                smoothProgress
+            Math.floor(
+                smoothProgress * 20
             );
 
 
-        number.textContent =
+        experienceNumber.textContent =
             value;
 
 
         /*
-           التدرج من السماوي الفاتح
-           إلى الأزرق الغامق
+            زاوية الدائرة
+            0 → 360
         */
 
-        circle.style.background =
+        const degrees =
+            smoothProgress * 360;
 
+
+        /*
+            تدرج:
+
+            سماوي فاتح
+            ↓
+            سماوي
+            ↓
+            أزرق
+            ↓
+            أزرق غامق
+        */
+
+        const color1 =
+            "#7dd3fc";
+
+        const color2 =
+            "#38bdf8";
+
+        const color3 =
+            "#0ea5e9";
+
+        const color4 =
+            "#0369a1";
+
+        const color5 =
+            "#075985";
+
+
+        /*
+            نحدد نقاط التدرج
+        */
+
+        const point1 =
+            degrees * 0.25;
+
+        const point2 =
+            degrees * 0.50;
+
+        const point3 =
+            degrees * 0.75;
+
+
+        experienceCircle.style.background =
             `
             conic-gradient(
-
-                #9be8ff 0deg,
-
-                #5dd8f5 ${degrees * 0.35}deg,
-
-                #20a9df ${degrees * 0.60}deg,
-
-                #1677b8 ${degrees * 0.80}deg,
-
-                #075985 ${degrees}deg,
-
+                ${color1} 0deg,
+                ${color2} ${point1}deg,
+                ${color3} ${point2}deg,
+                ${color4} ${point3}deg,
+                ${color5} ${degrees}deg,
                 #234667 ${degrees}deg,
-
                 #234667 360deg
-
             )
             `;
 
 
         /*
-           دوران الدائرة
+            إذا لم تصل إلى النهاية
+            استمر بالحركة
         */
-
-        circle.style.transform =
-            `rotate(${degrees}deg)`;
-
 
         if (progress < 1) {
 
-            requestAnimationFrame(
-                animateExperience
-            );
+            experienceAnimation =
+                requestAnimationFrame(
+                    animateExperience
+                );
 
-        }
-
-        else {
+        } else {
 
             /*
-               الرقم النهائي
+                الرقم النهائي
             */
 
-            number.textContent =
+            experienceNumber.textContent =
                 "20";
 
 
             /*
-               الدائرة مكتملة
+                الدائرة كاملة
             */
 
-            circle.style.background =
-
+            experienceCircle.style.background =
                 `
                 conic-gradient(
-
-                    #9be8ff 0deg,
-
-                    #5dd8f5 126deg,
-
-                    #20a9df 216deg,
-
-                    #1677b8 288deg,
-
+                    #7dd3fc 0deg,
+                    #38bdf8 90deg,
+                    #0ea5e9 180deg,
+                    #0369a1 270deg,
                     #075985 360deg
-
                 )
                 `;
-
-
-            /*
-               إيقاف الدوران
-            */
-
-            circle.style.transform =
-                "rotate(0deg)";
 
         }
 
     }
 
 
-    requestAnimationFrame(
-        animateExperience
-    );
+    experienceAnimation =
+        requestAnimationFrame(
+            animateExperience
+        );
 
 }
 
 
 
 /* =================================
-   START WHEN CIRCLE APPEARS
+   INTERSECTION OBSERVER
 ================================= */
 
 const experienceObserver =
-
     new IntersectionObserver(
 
         function(entries) {
 
             entries.forEach(
-
                 function(entry) {
 
-                    if (
-                        entry.isIntersecting
-                    ) {
+                    /*
+                        عندما تظهر الدائرة
+                    */
+
+                    if (entry.isIntersecting) {
 
                         startExperienceAnimation();
 
                     }
 
                 }
-
             );
 
         },
 
         {
+            /*
+                يبدأ عندما يظهر
+                35% من القسم
+            */
 
-            threshold: 0.45
+            threshold: 0.35
 
         }
 
     );
 
 
-const experienceCircle =
+/*
+    مراقبة الدائرة
+*/
 
-    document.querySelector(
-        ".experience-circle"
-    );
-
-
-if (experienceCircle) {
-
-    experienceObserver.observe(
-        experienceCircle
-    );
-
-}
+experienceObserver.observe(
+    experienceCircle
+);
 
 
 
@@ -3112,7 +3156,7 @@ function closeBosphorleadPopup(event) {
     if (
         !event ||
         event.target.id ===
-            "bosphorleadPopup"
+        "bosphorleadPopup"
     ) {
 
         document
@@ -3147,7 +3191,7 @@ function closeStrategencePopup(event) {
     if (
         !event ||
         event.target.id ===
-            "strategencePopup"
+        "strategencePopup"
     ) {
 
         document
@@ -3182,7 +3226,7 @@ function closeFuturologyPopup(event) {
     if (
         !event ||
         event.target.id ===
-            "futurologyPopup"
+        "futurologyPopup"
     ) {
 
         document
@@ -3205,10 +3249,7 @@ document.addEventListener(
     "keydown",
     function(event) {
 
-        if (
-            event.key ===
-            "Escape"
-        ) {
+        if (event.key === "Escape") {
 
             document
                 .getElementById(
