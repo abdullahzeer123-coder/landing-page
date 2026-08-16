@@ -277,7 +277,7 @@
 
 
         /* =================================
-           NEW PROFESSIONAL EXPERIENCE
+           PROFESSIONAL EXPERIENCE
         ================================= */
 
         .professional-experience {
@@ -294,10 +294,10 @@
             border:
                 1px solid
                 rgba(
-                    234,
-                    182,
-                    91,
-                    0.20
+                    56,
+                    189,
+                    248,
+                    0.25
                 );
 
             border-radius: 22px;
@@ -317,7 +317,7 @@
 
         .professional-title {
 
-            color: #eab65b;
+            color: #38bdf8;
 
             font-size: 27px;
 
@@ -340,7 +340,7 @@
 
 
         /* =================================
-           ANIMATED EXPERIENCE CIRCLE
+           EXPERIENCE CIRCLE
         ================================= */
 
         .experience-circle-wrap {
@@ -355,8 +355,6 @@
 
         .experience-circle {
 
-            --progress: 0deg;
-
             width: 220px;
 
             height: 220px;
@@ -365,10 +363,9 @@
 
             background:
                 conic-gradient(
-                    from 0deg,
-                    #eab65b 0deg,
-                    #eab65b var(--progress),
-                    #234667 var(--progress),
+                    #38bdf8 0deg,
+                    #38bdf8 0deg,
+                    #234667 0deg,
                     #234667 360deg
                 );
 
@@ -380,36 +377,20 @@
 
             justify-content: center;
 
-            cursor: pointer;
-
             box-shadow:
                 0 12px 35px
                 rgba(
-                    0,
-                    0,
-                    0,
-                    0.35
-                );
-
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease;
-        }
-
-
-        .experience-circle:hover {
-
-            transform:
-                scale(1.04);
-
-            box-shadow:
-                0 16px 45px
-                rgba(
-                    234,
-                    182,
-                    91,
+                    56,
+                    189,
+                    248,
                     0.25
                 );
+
+            animation:
+                experienceCircleAnimation
+                2s
+                ease-out
+                forwards;
         }
 
 
@@ -452,13 +433,11 @@
 
             display: block;
 
-            color: #eab65b;
+            color: #38bdf8;
 
             font-size: 50px;
 
             line-height: 1.1;
-
-            min-width: 95px;
         }
 
 
@@ -471,6 +450,79 @@
             font-size: 17px;
 
             margin-top: 5px;
+        }
+
+
+        /* =================================
+           CIRCLE AUTO ANIMATION
+        ================================= */
+
+        @keyframes experienceCircleAnimation {
+
+            0% {
+
+                background:
+                    conic-gradient(
+                        #38bdf8 0deg,
+                        #38bdf8 0deg,
+                        #234667 0deg,
+                        #234667 360deg
+                    );
+
+            }
+
+
+            25% {
+
+                background:
+                    conic-gradient(
+                        #38bdf8 0deg,
+                        #38bdf8 90deg,
+                        #234667 90deg,
+                        #234667 360deg
+                    );
+
+            }
+
+
+            50% {
+
+                background:
+                    conic-gradient(
+                        #38bdf8 0deg,
+                        #38bdf8 180deg,
+                        #234667 180deg,
+                        #234667 360deg
+                    );
+
+            }
+
+
+            75% {
+
+                background:
+                    conic-gradient(
+                        #38bdf8 0deg,
+                        #38bdf8 270deg,
+                        #234667 270deg,
+                        #234667 360deg
+                    );
+
+            }
+
+
+            100% {
+
+                background:
+                    conic-gradient(
+                        #38bdf8 0deg,
+                        #38bdf8 360deg,
+                        #234667 360deg,
+                        #234667 360deg
+                    );
+
+            }
+
         }
 
 
@@ -545,7 +597,7 @@
 
         .experience-bar-header span:last-child {
 
-            color: #eab65b;
+            color: #38bdf8;
 
             font-weight: bold;
         }
@@ -574,8 +626,8 @@
             background:
                 linear-gradient(
                     90deg,
-                    #d99d38,
-                    #eab65b
+                    #0284c7,
+                    #38bdf8
                 );
 
             animation:
@@ -630,7 +682,7 @@
 
         .experience-box h3 {
 
-            color: #eab65b;
+            color: #38bdf8;
 
             margin-top: 0;
 
@@ -661,9 +713,9 @@
             border:
                 1px solid
                 rgba(
-                    234,
-                    182,
-                    91,
+                    56,
+                    189,
+                    248,
                     0.3
                 );
 
@@ -699,17 +751,17 @@
             border:
                 1px solid
                 rgba(
-                    234,
-                    182,
-                    91,
-                    0.20
+                    56,
+                    189,
+                    248,
+                    0.25
                 );
         }
 
 
         .accreditation-title {
 
-            color: #eab65b;
+            color: #38bdf8;
 
             font-size: 28px;
 
@@ -779,7 +831,7 @@
                 translateY(-6px);
 
             border-color:
-                #eab65b;
+                #38bdf8;
 
             box-shadow:
                 0 12px 30px
@@ -832,7 +884,7 @@
 
         .academies h3 {
 
-            color: #eab65b;
+            color: #38bdf8;
 
             font-size: 27px;
 
@@ -895,9 +947,9 @@
             border:
                 1px solid
                 rgba(
-                    234,
-                    182,
-                    91,
+                    56,
+                    189,
+                    248,
                     0.25
                 );
 
@@ -969,9 +1021,9 @@
             border:
                 3px solid
                 rgba(
-                    234,
-                    182,
-                    91,
+                    56,
+                    189,
+                    248,
                     0.35
                 );
 
@@ -990,9 +1042,9 @@
 
                 0 0 0 4px
                 rgba(
-                    234,
-                    182,
-                    91,
+                    56,
+                    189,
+                    248,
                     0.20
                 ),
 
@@ -1035,7 +1087,7 @@
 
         .academy-subtitle {
 
-            color: #eab65b;
+            color: #38bdf8;
 
             font-size: 15px;
 
@@ -1096,7 +1148,7 @@
 
             display: block;
 
-            color: #eab65b;
+            color: #38bdf8;
 
             font-size: 19px;
 
@@ -1195,9 +1247,9 @@
             border:
                 1px solid
                 rgba(
-                    234,
-                    182,
-                    91,
+                    56,
+                    189,
+                    248,
                     0.40
                 );
 
@@ -1265,7 +1317,7 @@
 
             border-radius: 50%;
 
-            background: #eab65b;
+            background: #38bdf8;
 
             color: #07182d;
 
@@ -1288,7 +1340,7 @@
             margin:
                 5px 0 3px;
 
-            color: #eab65b;
+            color: #38bdf8;
 
             font-size: 26px;
         }
@@ -1426,7 +1478,7 @@
 
         .popup-link.website {
 
-            background: #eab65b;
+            background: #38bdf8;
 
             color: #07182d;
         }
@@ -1750,7 +1802,7 @@
 
 
         <!-- =================================
-             NEW EXPERIENCE CHART
+             PROFESSIONAL EXPERIENCE
         ================================= -->
 
         <div class="professional-experience">
@@ -1769,17 +1821,12 @@
 
                 <div class="experience-circle-wrap">
 
-                    <div
-                        class="experience-circle"
-                        id="experienceCircle"
-                        onmouseenter="startExperienceAnimation()"
-                        onmouseleave="resetExperienceAnimation()"
-                    >
+                    <div class="experience-circle">
 
                         <div class="experience-number">
 
-                            <strong id="experienceNumber">
-                                0
+                            <strong>
+                                +20
                             </strong>
 
                             <span>
@@ -2009,8 +2056,6 @@
             <div class="accreditation-grid">
 
 
-                <!-- IWCF -->
-
                 <div class="accreditation-card">
 
                     <img
@@ -2024,8 +2069,6 @@
                 </div>
 
 
-
-                <!-- PEARSON -->
 
                 <div class="accreditation-card">
 
@@ -2041,8 +2084,6 @@
 
 
 
-                <!-- IADC -->
-
                 <div class="accreditation-card">
 
                     <img
@@ -2057,8 +2098,6 @@
 
 
 
-                <!-- OSHA -->
-
                 <div class="accreditation-card">
 
                     <img
@@ -2072,8 +2111,6 @@
                 </div>
 
 
-
-                <!-- NEBOSH -->
 
                 <div class="accreditation-card">
 
@@ -2123,10 +2160,6 @@
             </p>
 
 
-
-            <!-- =================================
-                 THREE ACADEMIES
-            ================================= -->
 
             <div class="academy-cards">
 
@@ -2495,7 +2528,7 @@
 
             <a
                 href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
-                style="color:#eab65b;">
+                style="color:#38bdf8;">
 
                 ابدأ رحلتك في القيادة الاستراتيجية
 
@@ -2980,206 +3013,6 @@ document.addEventListener(
 
     }
 );
-
-
-
-/* =================================
-   EXPERIENCE CIRCLE ANIMATION
-================================= */
-
-let experienceAnimation = null;
-
-let resetExperienceAnimationTimer = null;
-
-let experienceValue = 0;
-
-
-/* =================================
-   START: 0 → 20
-================================= */
-
-function startExperienceAnimation() {
-
-    clearInterval(experienceAnimation);
-
-    clearInterval(
-        resetExperienceAnimationTimer
-    );
-
-
-    const circle =
-        document.getElementById(
-            "experienceCircle"
-        );
-
-    const number =
-        document.getElementById(
-            "experienceNumber"
-        );
-
-
-    if (!circle || !number) {
-
-        return;
-
-    }
-
-
-    let currentValue =
-        experienceValue;
-
-
-    experienceAnimation =
-        setInterval(function() {
-
-
-            if (currentValue < 20) {
-
-                currentValue++;
-
-                experienceValue =
-                    currentValue;
-
-
-                /*
-                    20 سنة = 360 درجة
-
-                    كل سنة = 18 درجة
-                */
-
-                const degrees =
-                    (currentValue / 20) * 360;
-
-
-                circle.style.setProperty(
-                    "--progress",
-                    degrees + "deg"
-                );
-
-
-                number.textContent =
-                    currentValue;
-
-            }
-
-            else {
-
-                clearInterval(
-                    experienceAnimation
-                );
-
-
-                circle.style.setProperty(
-                    "--progress",
-                    "360deg"
-                );
-
-
-                number.textContent =
-                    "+20";
-
-            }
-
-
-        }, 70);
-
-}
-
-
-/* =================================
-   RESET: 20 → 0
-================================= */
-
-function resetExperienceAnimation() {
-
-    clearInterval(
-        experienceAnimation
-    );
-
-    clearInterval(
-        resetExperienceAnimationTimer
-    );
-
-
-    const circle =
-        document.getElementById(
-            "experienceCircle"
-        );
-
-    const number =
-        document.getElementById(
-            "experienceNumber"
-        );
-
-
-    if (!circle || !number) {
-
-        return;
-
-    }
-
-
-    let currentValue =
-        experienceValue;
-
-
-    resetExperienceAnimationTimer =
-        setInterval(function() {
-
-
-            if (currentValue > 0) {
-
-                currentValue--;
-
-            }
-
-            else {
-
-                clearInterval(
-                    resetExperienceAnimationTimer
-                );
-
-
-                experienceValue = 0;
-
-
-                circle.style.setProperty(
-                    "--progress",
-                    "0deg"
-                );
-
-
-                number.textContent =
-                    "0";
-
-
-                return;
-
-            }
-
-
-            experienceValue =
-                currentValue;
-
-
-            const degrees =
-                (currentValue / 20) * 360;
-
-
-            circle.style.setProperty(
-                "--progress",
-                degrees + "deg"
-            );
-
-
-            number.textContent =
-                currentValue;
-
-
-        }, 35);
-
-}
-
 
 </script>
 
