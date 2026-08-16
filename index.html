@@ -340,7 +340,7 @@
 
 
         /* =================================
-           CIRCLE
+           ANIMATED EXPERIENCE CIRCLE
         ================================= */
 
         .experience-circle-wrap {
@@ -355,6 +355,8 @@
 
         .experience-circle {
 
+            --progress: 0deg;
+
             width: 220px;
 
             height: 220px;
@@ -363,9 +365,10 @@
 
             background:
                 conic-gradient(
+                    from 0deg,
                     #eab65b 0deg,
-                    #eab65b 288deg,
-                    #234667 288deg,
+                    #eab65b var(--progress),
+                    #234667 var(--progress),
                     #234667 360deg
                 );
 
@@ -377,6 +380,8 @@
 
             justify-content: center;
 
+            cursor: pointer;
+
             box-shadow:
                 0 12px 35px
                 rgba(
@@ -384,6 +389,26 @@
                     0,
                     0,
                     0.35
+                );
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+
+        .experience-circle:hover {
+
+            transform:
+                scale(1.04);
+
+            box-shadow:
+                0 16px 45px
+                rgba(
+                    234,
+                    182,
+                    91,
+                    0.25
                 );
         }
 
@@ -432,6 +457,8 @@
             font-size: 50px;
 
             line-height: 1.1;
+
+            min-width: 95px;
         }
 
 
@@ -1742,12 +1769,17 @@
 
                 <div class="experience-circle-wrap">
 
-                    <div class="experience-circle">
+                    <div
+                        class="experience-circle"
+                        id="experienceCircle"
+                        onmouseenter="startExperienceAnimation()"
+                        onmouseleave="resetExperienceAnimation()"
+                    >
 
                         <div class="experience-number">
 
-                            <strong>
-                                +20
+                            <strong id="experienceNumber">
+                                0
                             </strong>
 
                             <span>
@@ -2948,6 +2980,206 @@ document.addEventListener(
 
     }
 );
+
+
+
+/* =================================
+   EXPERIENCE CIRCLE ANIMATION
+================================= */
+
+let experienceAnimation = null;
+
+let resetExperienceAnimationTimer = null;
+
+let experienceValue = 0;
+
+
+/* =================================
+   START: 0 → 20
+================================= */
+
+function startExperienceAnimation() {
+
+    clearInterval(experienceAnimation);
+
+    clearInterval(
+        resetExperienceAnimationTimer
+    );
+
+
+    const circle =
+        document.getElementById(
+            "experienceCircle"
+        );
+
+    const number =
+        document.getElementById(
+            "experienceNumber"
+        );
+
+
+    if (!circle || !number) {
+
+        return;
+
+    }
+
+
+    let currentValue =
+        experienceValue;
+
+
+    experienceAnimation =
+        setInterval(function() {
+
+
+            if (currentValue < 20) {
+
+                currentValue++;
+
+                experienceValue =
+                    currentValue;
+
+
+                /*
+                    20 سنة = 360 درجة
+
+                    كل سنة = 18 درجة
+                */
+
+                const degrees =
+                    (currentValue / 20) * 360;
+
+
+                circle.style.setProperty(
+                    "--progress",
+                    degrees + "deg"
+                );
+
+
+                number.textContent =
+                    currentValue;
+
+            }
+
+            else {
+
+                clearInterval(
+                    experienceAnimation
+                );
+
+
+                circle.style.setProperty(
+                    "--progress",
+                    "360deg"
+                );
+
+
+                number.textContent =
+                    "+20";
+
+            }
+
+
+        }, 70);
+
+}
+
+
+/* =================================
+   RESET: 20 → 0
+================================= */
+
+function resetExperienceAnimation() {
+
+    clearInterval(
+        experienceAnimation
+    );
+
+    clearInterval(
+        resetExperienceAnimationTimer
+    );
+
+
+    const circle =
+        document.getElementById(
+            "experienceCircle"
+        );
+
+    const number =
+        document.getElementById(
+            "experienceNumber"
+        );
+
+
+    if (!circle || !number) {
+
+        return;
+
+    }
+
+
+    let currentValue =
+        experienceValue;
+
+
+    resetExperienceAnimationTimer =
+        setInterval(function() {
+
+
+            if (currentValue > 0) {
+
+                currentValue--;
+
+            }
+
+            else {
+
+                clearInterval(
+                    resetExperienceAnimationTimer
+                );
+
+
+                experienceValue = 0;
+
+
+                circle.style.setProperty(
+                    "--progress",
+                    "0deg"
+                );
+
+
+                number.textContent =
+                    "0";
+
+
+                return;
+
+            }
+
+
+            experienceValue =
+                currentValue;
+
+
+            const degrees =
+                (currentValue / 20) * 360;
+
+
+            circle.style.setProperty(
+                "--progress",
+                degrees + "deg"
+            );
+
+
+            number.textContent =
+                currentValue;
+
+
+        }, 35);
+
+}
+
 
 </script>
 
