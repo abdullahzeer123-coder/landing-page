@@ -21,6 +21,10 @@
         }
 
 
+        /* =================================
+           BODY
+        ================================= */
+
         body {
 
             margin: 0;
@@ -30,7 +34,9 @@
                 Arial,
                 sans-serif;
 
-            background: #07182d;
+            /* الخلفية الرصاصي */
+
+            background: #808080;
 
             color: #ffffff;
 
@@ -105,7 +111,7 @@
 
             margin: auto;
 
-            color: #d6dfeb;
+            color: #f1f1f1;
 
             font-size: 21px;
 
@@ -140,10 +146,10 @@
             box-shadow:
                 0 8px 25px
                 rgba(
-                    234,
-                    182,
-                    91,
-                    0.25
+                    0,
+                    0,
+                    0,
+                    0.20
                 );
 
             transition:
@@ -159,10 +165,10 @@
             box-shadow:
                 0 12px 30px
                 rgba(
-                    234,
-                    182,
-                    91,
-                    0.4
+                    0,
+                    0,
+                    0,
+                    0.35
                 );
         }
 
@@ -297,7 +303,7 @@
                     56,
                     189,
                     248,
-                    0.25
+                    0.35
                 );
 
             border-radius: 22px;
@@ -363,10 +369,10 @@
 
             background:
                 conic-gradient(
-                    #38bdf8 0deg,
-                    #38bdf8 0deg,
-                    #075985 0deg,
-                    #075985 360deg
+                    #7dd3fc 0deg,
+                    #7dd3fc 0deg,
+                    #234667 0deg,
+                    #234667 360deg
                 );
 
             position: relative;
@@ -397,9 +403,7 @@
         }
 
 
-        /* =================================
-           INNER CIRCLE
-        ================================= */
+        /* الدائرة الداخلية */
 
         .experience-circle::before {
 
@@ -547,20 +551,16 @@
             color: #38bdf8;
 
             font-weight: bold;
-        }
-
-
-        .percentage-number {
-
-            color: #38bdf8;
-
-            font-weight: bold;
 
             min-width: 45px;
 
             text-align: left;
         }
 
+
+        /* =================================
+           BAR BACKGROUND
+        ================================= */
 
         .experience-bar {
 
@@ -575,6 +575,10 @@
             overflow: hidden;
         }
 
+
+        /* =================================
+           BAR FILL
+        ================================= */
 
         .experience-fill {
 
@@ -593,7 +597,7 @@
                 );
 
             transition:
-                width 0.05s linear;
+                width 0.08s linear;
         }
 
 
@@ -1425,7 +1429,7 @@
 
             text-align: center;
 
-            color: #8999ad;
+            color: #eeeeee;
 
             font-size: 14px;
 
@@ -1738,7 +1742,9 @@
              EXPERIENCE CHART
         ================================= -->
 
-        <div class="professional-experience">
+        <div
+            class="professional-experience"
+            id="professionalExperience">
 
             <h3 class="professional-title">
 
@@ -1780,9 +1786,10 @@
 
                 <div class="experience-info">
 
-
                     <h4>
+
                         الخبرة المهنية
+
                     </h4>
 
 
@@ -1798,9 +1805,7 @@
                     <div class="experience-bars">
 
 
-                        <!-- =================================
-                             CONSULTING
-                        ================================= -->
+                        <!-- الاستشارات المؤسسية -->
 
                         <div class="experience-bar-row">
 
@@ -1811,7 +1816,7 @@
                                 </span>
 
                                 <span
-                                    class="percentage-number"
+                                    class="percentage"
                                     data-target="90">
 
                                     0%
@@ -1834,9 +1839,7 @@
 
 
 
-                        <!-- =================================
-                             TRAINING
-                        ================================= -->
+                        <!-- التدريب والتطوير -->
 
                         <div class="experience-bar-row">
 
@@ -1847,7 +1850,7 @@
                                 </span>
 
                                 <span
-                                    class="percentage-number"
+                                    class="percentage"
                                     data-target="85">
 
                                     0%
@@ -1870,9 +1873,7 @@
 
 
 
-                        <!-- =================================
-                             BUSINESS & LEADERSHIP
-                        ================================= -->
+                        <!-- تطوير الأعمال والقيادات -->
 
                         <div class="experience-bar-row">
 
@@ -1883,7 +1884,7 @@
                                 </span>
 
                                 <span
-                                    class="percentage-number"
+                                    class="percentage"
                                     data-target="80">
 
                                     0%
@@ -1903,7 +1904,6 @@
                             </div>
 
                         </div>
-
 
                     </div>
 
@@ -2857,13 +2857,13 @@
 <script>
 
 
-/* =================================
-   EXPERIENCE ELEMENTS
-================================= */
+/* =====================================================
+   EXPERIENCE ANIMATION
+===================================================== */
 
 const professionalExperience =
-    document.querySelector(
-        ".professional-experience"
+    document.getElementById(
+        "professionalExperience"
     );
 
 
@@ -2879,79 +2879,87 @@ const experienceNumber =
     );
 
 
-const percentageNumbers =
-    document.querySelectorAll(
-        ".percentage-number"
-    );
-
-
 const experienceFills =
     document.querySelectorAll(
         ".experience-fill"
     );
 
 
-let experienceAnimation = null;
+const percentages =
+    document.querySelectorAll(
+        ".percentage"
+    );
 
 
+let experienceAnimationFrame = null;
 
-/* =================================
-   RESET EXPERIENCE
-================================= */
+let experienceIsAnimating = false;
+
+
+/* =====================================================
+   RESET
+   يرجع كل شيء إلى 0
+===================================================== */
 
 function resetExperience() {
 
-    /* إيقاف أي حركة سابقة */
+    /*
+        إلغاء الحركة الحالية
+    */
 
-    if (experienceAnimation) {
+    if (experienceAnimationFrame) {
 
         cancelAnimationFrame(
-            experienceAnimation
+            experienceAnimationFrame
         );
 
-        experienceAnimation = null;
+        experienceAnimationFrame = null;
 
     }
 
 
-    /* الرقم الرئيسي */
-
-    experienceNumber.textContent =
-        "0";
+    experienceIsAnimating = false;
 
 
-    /* إعادة الدائرة إلى الصفر */
+    /*
+        الدائرة ترجع إلى صفر
+    */
+
+    experienceNumber.textContent = "0";
+
 
     experienceCircle.style.background =
         `
         conic-gradient(
-            #38bdf8 0deg,
-            #38bdf8 0deg,
-            #075985 0deg,
-            #075985 360deg
+            #7dd3fc 0deg,
+            #7dd3fc 0deg,
+            #234667 0deg,
+            #234667 360deg
         )
         `;
 
 
-    /* إعادة النسب إلى الصفر */
+    /*
+        كل النسب ترجع إلى 0%
+    */
 
-    percentageNumbers.forEach(
-        function(number) {
+    experienceFills.forEach(
+        function(fill) {
 
-            number.textContent =
-                "0%";
+            fill.style.width = "0%";
 
         }
     );
 
 
-    /* إعادة الأشرطة إلى الصفر */
+    /*
+        كل الأرقام ترجع إلى 0%
+    */
 
-    experienceFills.forEach(
-        function(fill) {
+    percentages.forEach(
+        function(percentage) {
 
-            fill.style.width =
-                "0%";
+            percentage.textContent = "0%";
 
         }
     );
@@ -2959,16 +2967,39 @@ function resetExperience() {
 }
 
 
-
-/* =================================
-   START EXPERIENCE
-================================= */
+/* =====================================================
+   START EXPERIENCE ANIMATION
+===================================================== */
 
 function startExperienceAnimation() {
 
-    /* نبدأ من الصفر دائماً */
+    /*
+        إذا كانت الحركة تعمل
+        لا نشغل حركة ثانية
+    */
+
+    if (experienceIsAnimating) {
+
+        return;
+
+    }
+
+
+    experienceIsAnimating = true;
+
+
+    /*
+        نبدأ من الصفر
+    */
 
     resetExperience();
+
+
+    /*
+        نعيد تشغيل حالة الحركة
+    */
+
+    experienceIsAnimating = true;
 
 
     let startTime = null;
@@ -2976,13 +3007,13 @@ function startExperienceAnimation() {
 
     /*
         مدة الحركة
+        2.2 ثانية
     */
 
     const duration = 2200;
 
 
-
-    function animateExperience(timestamp) {
+    function animate(timestamp) {
 
         if (!startTime) {
 
@@ -3018,76 +3049,78 @@ function startExperienceAnimation() {
             );
 
 
+        /* =================================================
+           CIRCLE 0 → 20
+        ================================================= */
 
-        /* =================================
-           YEARS 0 → 20
-        ================================= */
-
-        const years =
+        const experienceValue =
             Math.floor(
                 smoothProgress * 20
             );
 
 
         experienceNumber.textContent =
-            years;
+            experienceValue;
 
 
-
-        /* =================================
-           CIRCLE
-        ================================= */
+        /*
+            زاوية الدائرة
+            0 → 360
+        */
 
         const degrees =
             smoothProgress * 360;
 
 
+        /*
+            تدرج سماوي وأزرق
+        */
+
+        const color1 =
+            "#7dd3fc";
+
+        const color2 =
+            "#38bdf8";
+
+        const color3 =
+            "#0ea5e9";
+
+        const color4 =
+            "#0369a1";
+
+        const color5 =
+            "#075985";
+
+
+        const point1 =
+            degrees * 0.25;
+
+
+        const point2 =
+            degrees * 0.50;
+
+
+        const point3 =
+            degrees * 0.75;
+
+
         experienceCircle.style.background =
             `
             conic-gradient(
-                #7dd3fc 0deg,
-                #38bdf8 ${degrees * 0.25}deg,
-                #0ea5e9 ${degrees * 0.50}deg,
-                #0369a1 ${degrees * 0.75}deg,
-                #075985 ${degrees}deg,
+                ${color1} 0deg,
+                ${color2} ${point1}deg,
+                ${color3} ${point2}deg,
+                ${color4} ${point3}deg,
+                ${color5} ${degrees}deg,
                 #234667 ${degrees}deg,
                 #234667 360deg
             )
             `;
 
 
-
-        /* =================================
-           PERCENTAGES
-        ================================= */
-
-        percentageNumbers.forEach(
-            function(number) {
-
-                const target =
-                    Number(
-                        number.dataset.target
-                    );
-
-
-                const currentValue =
-                    Math.floor(
-                        smoothProgress *
-                        target
-                    );
-
-
-                number.textContent =
-                    currentValue + "%";
-
-            }
-        );
-
-
-
-        /* =================================
-           BAR WIDTH
-        ================================= */
+        /* =================================================
+           BARS
+        ================================================= */
 
         experienceFills.forEach(
             function(fill) {
@@ -3098,28 +3131,54 @@ function startExperienceAnimation() {
                     );
 
 
-                const currentWidth =
+                const currentValue =
                     smoothProgress *
                     target;
 
 
                 fill.style.width =
-                    currentWidth + "%";
+                    currentValue + "%";
 
             }
         );
 
 
+        /* =================================================
+           PERCENTAGE NUMBERS
+        ================================================= */
 
-        /* =================================
-           CONTINUE ANIMATION
-        ================================= */
+        percentages.forEach(
+            function(percentage) {
+
+                const target =
+                    Number(
+                        percentage.dataset.target
+                    );
+
+
+                const currentValue =
+                    Math.floor(
+                        smoothProgress *
+                        target
+                    );
+
+
+                percentage.textContent =
+                    currentValue + "%";
+
+            }
+        );
+
+
+        /* =================================================
+           CONTINUE
+        ================================================= */
 
         if (progress < 1) {
 
-            experienceAnimation =
+            experienceAnimationFrame =
                 requestAnimationFrame(
-                    animateExperience
+                    animate
                 );
 
         }
@@ -3127,7 +3186,7 @@ function startExperienceAnimation() {
         else {
 
             /*
-                الرقم النهائي
+                الدائرة تصل إلى 20
             */
 
             experienceNumber.textContent =
@@ -3135,7 +3194,31 @@ function startExperienceAnimation() {
 
 
             /*
-                الدائرة كاملة
+                النسب النهائية
+            */
+
+            experienceFills.forEach(
+                function(fill) {
+
+                    fill.style.width =
+                        fill.dataset.target + "%";
+
+                }
+            );
+
+
+            percentages.forEach(
+                function(percentage) {
+
+                    percentage.textContent =
+                        percentage.dataset.target + "%";
+
+                }
+            );
+
+
+            /*
+                الدائرة النهائية
             */
 
             experienceCircle.style.background =
@@ -3150,37 +3233,11 @@ function startExperienceAnimation() {
                 `;
 
 
-            /*
-                النسب النهائية
-            */
-
-            percentageNumbers.forEach(
-                function(number) {
-
-                    number.textContent =
-                        number.dataset.target +
-                        "%";
-
-                }
-            );
+            experienceIsAnimating =
+                false;
 
 
-            /*
-                الأشرطة النهائية
-            */
-
-            experienceFills.forEach(
-                function(fill) {
-
-                    fill.style.width =
-                        fill.dataset.target +
-                        "%";
-
-                }
-            );
-
-
-            experienceAnimation =
+            experienceAnimationFrame =
                 null;
 
         }
@@ -3188,18 +3245,18 @@ function startExperienceAnimation() {
     }
 
 
-    experienceAnimation =
+    experienceAnimationFrame =
         requestAnimationFrame(
-            animateExperience
+            animate
         );
 
 }
 
 
 
-/* =================================
+/* =====================================================
    INTERSECTION OBSERVER
-================================= */
+===================================================== */
 
 const experienceObserver =
     new IntersectionObserver(
@@ -3210,7 +3267,8 @@ const experienceObserver =
                 function(entry) {
 
                     /*
-                        القسم ظهر
+                        إذا ظهر القسم
+                        تبدأ الحركة
                     */
 
                     if (
@@ -3221,9 +3279,9 @@ const experienceObserver =
 
                     }
 
-
                     /*
-                        القسم اختفى
+                        إذا خرج القسم من الشاشة
+                        نرجع كل شيء إلى صفر
                     */
 
                     else {
@@ -3239,21 +3297,20 @@ const experienceObserver =
 
         {
             /*
-                تبدأ الحركة عندما يظهر
-                35% من القسم
+                يبدأ عندما يظهر
+                جزء مناسب من القسم
             */
 
-            threshold: 0.35
+            threshold: 0.30
 
         }
 
     );
 
 
-
-/* =================================
-   OBSERVE EXPERIENCE SECTION
-================================= */
+/*
+    مراقبة قسم الخبرة بالكامل
+*/
 
 experienceObserver.observe(
     professionalExperience
@@ -3261,9 +3318,9 @@ experienceObserver.observe(
 
 
 
-/* =================================
+/* =====================================================
    BOSPHORLEAD
-================================= */
+===================================================== */
 
 function openBosphorleadPopup() {
 
@@ -3296,9 +3353,9 @@ function closeBosphorleadPopup(event) {
 
 
 
-/* =================================
+/* =====================================================
    STRATEGENCE
-================================= */
+===================================================== */
 
 function openStrategencePopup() {
 
@@ -3331,9 +3388,9 @@ function closeStrategencePopup(event) {
 
 
 
-/* =================================
+/* =====================================================
    FUTUROLOGY
-================================= */
+===================================================== */
 
 function openFuturologyPopup() {
 
@@ -3366,9 +3423,9 @@ function closeFuturologyPopup(event) {
 
 
 
-/* =================================
+/* =====================================================
    ESC KEY
-================================= */
+===================================================== */
 
 document.addEventListener(
     "keydown",
