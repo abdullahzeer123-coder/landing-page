@@ -5,7 +5,9 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <title>
         دورة القيادة الاستراتيجية
@@ -292,10 +294,10 @@
             border:
                 1px solid
                 rgba(
-                    0,
-                    217,
-                    255,
-                    0.25
+                    234,
+                    182,
+                    91,
+                    0.20
                 );
 
             border-radius: 22px;
@@ -315,7 +317,7 @@
 
         .professional-title {
 
-            color: #00d9ff;
+            color: #eab65b;
 
             font-size: 27px;
 
@@ -367,23 +369,21 @@
 
             justify-content: center;
 
+            /*
+                يبدأ من صفر
+            */
+
             background:
                 conic-gradient(
-                    #00d9ff 0deg,
-                    #00d9ff 0deg,
+                    #7ddfff 0deg,
+                    #36b9e8 0deg,
+                    #1677b8 0deg,
+                    #075985 0deg,
                     #234667 0deg,
                     #234667 360deg
                 );
 
             box-shadow:
-                0 0 25px
-                rgba(
-                    0,
-                    217,
-                    255,
-                    0.20
-                ),
-
                 0 12px 35px
                 rgba(
                     0,
@@ -392,11 +392,18 @@
                     0.35
                 );
 
-            cursor: default;
+            /*
+                دوران الدائرة أثناء التعبئة
+            */
+
+            transform:
+                rotate(0deg);
         }
 
 
-        /* الدائرة الداخلية */
+        /*
+            الدائرة الداخلية
+        */
 
         .experience-circle::before {
 
@@ -423,59 +430,9 @@
         }
 
 
-        /* =================================
-           EXPERIENCE CIRCLE ANIMATION
-        ================================= */
-
-        .experience-circle.animate {
-
-            animation:
-                experienceCircleAnimation
-                2.5s
-                ease-out
-                forwards;
-        }
-
-
-        @keyframes experienceCircleAnimation {
-
-            0% {
-
-                background:
-                    conic-gradient(
-                        #00d9ff 0deg,
-                        #00d9ff 0deg,
-                        #234667 0deg,
-                        #234667 360deg
-                    );
-
-                transform:
-                    rotate(0deg);
-
-            }
-
-
-            100% {
-
-                background:
-                    conic-gradient(
-                        #00d9ff 0deg,
-                        #00d9ff 360deg,
-                        #234667 360deg,
-                        #234667 360deg
-                    );
-
-                transform:
-                    rotate(360deg);
-
-            }
-
-        }
-
-
-        /* =================================
-           EXPERIENCE NUMBER
-        ================================= */
+        /*
+            الرقم
+        */
 
         .experience-number {
 
@@ -491,20 +448,14 @@
 
             display: block;
 
-            color: #00d9ff;
+            color: #7ddfff;
 
             font-size: 50px;
 
             line-height: 1.1;
 
-            text-shadow:
-                0 0 15px
-                rgba(
-                    0,
-                    217,
-                    255,
-                    0.35
-                );
+            transition:
+                color 0.2s ease;
         }
 
 
@@ -591,7 +542,7 @@
 
         .experience-bar-header span:last-child {
 
-            color: #00d9ff;
+            color: #eab65b;
 
             font-weight: bold;
         }
@@ -620,8 +571,8 @@
             background:
                 linear-gradient(
                     90deg,
-                    #0099cc,
-                    #00d9ff
+                    #d99d38,
+                    #eab65b
                 );
 
             animation:
@@ -1402,6 +1353,10 @@
         }
 
 
+        /* =================================
+           POPUP ICON
+        ================================= */
+
         .popup-icon {
 
             width: 26px;
@@ -1792,7 +1747,7 @@
 
 
         <!-- =================================
-             PROFESSIONAL EXPERIENCE
+             EXPERIENCE CHART
         ================================= -->
 
         <div class="professional-experience">
@@ -1815,8 +1770,8 @@
 
                         <div class="experience-number">
 
-                            <strong>
-                                +20
+                            <strong id="experienceNumber">
+                                0
                             </strong>
 
                             <span>
@@ -2150,6 +2105,10 @@
             </p>
 
 
+
+            <!-- =================================
+                 THREE ACADEMIES
+            ================================= -->
 
             <div class="academy-cards">
 
@@ -2886,20 +2845,205 @@
 
 
 /* =================================
-   EXPERIENCE CIRCLE
+   EXPERIENCE 0 → 20 ANIMATION
 ================================= */
 
-const experienceCircle =
-    document.querySelector(
-        ".experience-circle"
+let experienceStarted = false;
+
+
+function startExperienceAnimation() {
+
+    if (experienceStarted) {
+
+        return;
+
+    }
+
+
+    experienceStarted = true;
+
+
+    const circle =
+        document.querySelector(
+            ".experience-circle"
+        );
+
+
+    const number =
+        document.getElementById(
+            "experienceNumber"
+        );
+
+
+    if (!circle || !number) {
+
+        return;
+
+    }
+
+
+    const duration = 3000;
+
+    const startTime =
+        performance.now();
+
+
+    function animateExperience(currentTime) {
+
+        const elapsed =
+            currentTime - startTime;
+
+
+        let progress =
+            elapsed / duration;
+
+
+        if (progress > 1) {
+
+            progress = 1;
+
+        }
+
+
+        /*
+           حركة ناعمة
+        */
+
+        const smoothProgress =
+            1 -
+            Math.pow(
+                1 - progress,
+                3
+            );
+
+
+        /*
+           الدائرة من 0 إلى 360
+        */
+
+        const degrees =
+            360 *
+            smoothProgress;
+
+
+        /*
+           الرقم من 0 إلى 20
+        */
+
+        const value =
+            Math.round(
+                20 *
+                smoothProgress
+            );
+
+
+        number.textContent =
+            value;
+
+
+        /*
+           التدرج من السماوي الفاتح
+           إلى الأزرق الغامق
+        */
+
+        circle.style.background =
+
+            `
+            conic-gradient(
+
+                #9be8ff 0deg,
+
+                #5dd8f5 ${degrees * 0.35}deg,
+
+                #20a9df ${degrees * 0.60}deg,
+
+                #1677b8 ${degrees * 0.80}deg,
+
+                #075985 ${degrees}deg,
+
+                #234667 ${degrees}deg,
+
+                #234667 360deg
+
+            )
+            `;
+
+
+        /*
+           دوران الدائرة
+        */
+
+        circle.style.transform =
+            `rotate(${degrees}deg)`;
+
+
+        if (progress < 1) {
+
+            requestAnimationFrame(
+                animateExperience
+            );
+
+        }
+
+        else {
+
+            /*
+               الرقم النهائي
+            */
+
+            number.textContent =
+                "20";
+
+
+            /*
+               الدائرة مكتملة
+            */
+
+            circle.style.background =
+
+                `
+                conic-gradient(
+
+                    #9be8ff 0deg,
+
+                    #5dd8f5 126deg,
+
+                    #20a9df 216deg,
+
+                    #1677b8 288deg,
+
+                    #075985 360deg
+
+                )
+                `;
+
+
+            /*
+               إيقاف الدوران
+            */
+
+            circle.style.transform =
+                "rotate(0deg)";
+
+        }
+
+    }
+
+
+    requestAnimationFrame(
+        animateExperience
     );
 
+}
 
-/*
- * مراقبة ظهور الدائرة على الشاشة
- */
+
+
+/* =================================
+   START WHEN CIRCLE APPEARS
+================================= */
 
 const experienceObserver =
+
     new IntersectionObserver(
 
         function(entries) {
@@ -2908,43 +3052,11 @@ const experienceObserver =
 
                 function(entry) {
 
-                    /*
-                     * إذا أصبحت الدائرة ظاهرة
-                     */
-
                     if (
                         entry.isIntersecting
                     ) {
 
-                        /*
-                         * إلغاء الحركة القديمة
-                         */
-
-                        experienceCircle
-                            .classList
-                            .remove(
-                                "animate"
-                            );
-
-
-                        /*
-                         * إجبار المتصفح على
-                         * إعادة تشغيل Animation
-                         */
-
-                        void experienceCircle
-                            .offsetWidth;
-
-
-                        /*
-                         * تشغيل الحركة
-                         */
-
-                        experienceCircle
-                            .classList
-                            .add(
-                                "animate"
-                            );
+                        startExperienceAnimation();
 
                     }
 
@@ -2956,25 +3068,21 @@ const experienceObserver =
 
         {
 
-            /*
-             * تبدأ الحركة عندما يظهر
-             * 50% من الدائرة
-             */
-
-            threshold: 0.5
+            threshold: 0.45
 
         }
 
     );
 
 
-/*
- * تشغيل المراقبة
- */
+const experienceCircle =
 
-if (
-    experienceCircle
-) {
+    document.querySelector(
+        ".experience-circle"
+    );
+
+
+if (experienceCircle) {
 
     experienceObserver.observe(
         experienceCircle
@@ -2994,8 +3102,7 @@ function openBosphorleadPopup() {
         .getElementById(
             "bosphorleadPopup"
         )
-        .classList
-        .add("show");
+        .classList.add("show");
 
 }
 
@@ -3005,15 +3112,14 @@ function closeBosphorleadPopup(event) {
     if (
         !event ||
         event.target.id ===
-        "bosphorleadPopup"
+            "bosphorleadPopup"
     ) {
 
         document
             .getElementById(
                 "bosphorleadPopup"
             )
-            .classList
-            .remove("show");
+            .classList.remove("show");
 
     }
 
@@ -3031,8 +3137,7 @@ function openStrategencePopup() {
         .getElementById(
             "strategencePopup"
         )
-        .classList
-        .add("show");
+        .classList.add("show");
 
 }
 
@@ -3042,15 +3147,14 @@ function closeStrategencePopup(event) {
     if (
         !event ||
         event.target.id ===
-        "strategencePopup"
+            "strategencePopup"
     ) {
 
         document
             .getElementById(
                 "strategencePopup"
             )
-            .classList
-            .remove("show");
+            .classList.remove("show");
 
     }
 
@@ -3068,8 +3172,7 @@ function openFuturologyPopup() {
         .getElementById(
             "futurologyPopup"
         )
-        .classList
-        .add("show");
+        .classList.add("show");
 
 }
 
@@ -3079,15 +3182,14 @@ function closeFuturologyPopup(event) {
     if (
         !event ||
         event.target.id ===
-        "futurologyPopup"
+            "futurologyPopup"
     ) {
 
         document
             .getElementById(
                 "futurologyPopup"
             )
-            .classList
-            .remove("show");
+            .classList.remove("show");
 
     }
 
@@ -3100,9 +3202,7 @@ function closeFuturologyPopup(event) {
 ================================= */
 
 document.addEventListener(
-
     "keydown",
-
     function(event) {
 
         if (
@@ -3114,29 +3214,25 @@ document.addEventListener(
                 .getElementById(
                     "bosphorleadPopup"
                 )
-                .classList
-                .remove("show");
+                .classList.remove("show");
 
 
             document
                 .getElementById(
                     "strategencePopup"
                 )
-                .classList
-                .remove("show");
+                .classList.remove("show");
 
 
             document
                 .getElementById(
                     "futurologyPopup"
                 )
-                .classList
-                .remove("show");
+                .classList.remove("show");
 
         }
 
     }
-
 );
 
 </script>
