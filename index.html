@@ -30,7 +30,7 @@
 
         /* ==============================
            HEADER
-        =============================== */
+        ============================== */
 
         .hero {
             text-align: center;
@@ -67,7 +67,7 @@
 
         /* ==============================
            CTA BUTTON
-        =============================== */
+        ============================== */
 
         .cta-button {
             display: inline-block;
@@ -90,7 +90,7 @@
 
         /* ==============================
            VIDEO
-        =============================== */
+        ============================== */
 
         .video-container {
             max-width: 700px;
@@ -106,7 +106,7 @@
 
         /* ==============================
            SECTIONS
-        =============================== */
+        ============================== */
 
         .section {
             background: #0c2543;
@@ -131,7 +131,7 @@
 
         /* ==============================
            ABOUT DR. OMAR
-        =============================== */
+        ============================== */
 
         .doctor-section {
             background: #0c2543;
@@ -158,7 +158,7 @@
 
         /* ==============================
            STATS
-        =============================== */
+        ============================== */
 
         .stats {
             display: grid;
@@ -207,8 +207,8 @@
         }
 
         /* ==============================
-           INTERNATIONAL EXPERIENCE
-        =============================== */
+           EXPERIENCE
+        ============================== */
 
         .experience-box {
             background: #102e50;
@@ -242,7 +242,7 @@
 
         /* ==============================
            GLOBAL TRAINING GROUP
-        =============================== */
+        ============================== */
 
         .academies {
             margin-top: 40px;
@@ -270,80 +270,110 @@
             line-height: 1.9;
         }
 
-        /* Academy Card */
+        /* ==============================
+           ACADEMY CARD
+        ============================== */
 
         .academy-card {
             background: #102e50;
             border: 1px solid rgba(234, 182, 91, 0.2);
             border-radius: 20px;
-            padding: 20px;
-            max-width: 650px;
+            padding: 18px;
+            max-width: 480px;
             margin: auto;
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
         }
 
-        /* Academy Image */
+        /* ==============================
+           ACADEMY IMAGE
+        ============================== */
 
         .academy-image {
             width: 100%;
-            max-width: 550px;
-            height: auto;
+            max-width: 380px;
+            height: 240px;
+            object-fit: contain;
             display: block;
-            margin: 0 auto 20px;
-            border-radius: 16px;
+            margin: 0 auto;
+            border-radius: 14px;
             background: #ffffff;
-            padding: 8px;
+            padding: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .academy-image:hover {
+            transform: scale(1.02);
         }
 
         /* ==============================
            SOCIAL LINKS
-        =============================== */
+           HIDDEN BY DEFAULT
+        ============================== */
 
         .social-links {
-            display: flex;
+            display: none;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 8px;
+            margin-top: 15px;
         }
+
+        /* تظهر عند الضغط على الصورة */
+
+        .academy-card.active .social-links {
+            display: flex;
+        }
+
+        /* ==============================
+           SOCIAL BUTTON
+        ============================== */
 
         .social-link {
             display: flex;
             align-items: center;
-            gap: 7px;
-            padding: 9px 14px;
-            border-radius: 10px;
+            gap: 6px;
+            padding: 8px 12px;
+            border-radius: 9px;
             color: #ffffff;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
             transition: all 0.25s ease;
         }
 
         .social-link:hover {
-            transform: translateY(-3px);
-            color: #ffffff;
+            transform: translateY(-2px);
         }
 
+        /* ==============================
+           SOCIAL ICON
+        ============================== */
+
         .social-icon {
-            width: 25px;
-            height: 25px;
+            width: 22px;
+            height: 22px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
             background: rgba(255,255,255,0.15);
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
         }
 
-        /* Facebook */
+        /* ==============================
+           FACEBOOK
+        ============================== */
 
         .facebook {
             background: #1877f2;
         }
 
-        /* Instagram */
+        /* ==============================
+           INSTAGRAM
+        ============================== */
 
         .instagram {
             background: linear-gradient(
@@ -355,14 +385,18 @@
             );
         }
 
-        /* TikTok */
+        /* ==============================
+           TIKTOK
+        ============================== */
 
         .tiktok {
             background: #050505;
             border: 1px solid #333;
         }
 
-        /* Website */
+        /* ==============================
+           WEBSITE
+        ============================== */
 
         .website {
             background: #eab65b;
@@ -375,7 +409,7 @@
 
         /* ==============================
            FEATURES
-        =============================== */
+        ============================== */
 
         .features {
             display: grid;
@@ -413,7 +447,7 @@
 
         /* ==============================
            BUTTON
-        =============================== */
+        ============================== */
 
         .button {
             display: block;
@@ -430,7 +464,7 @@
 
         /* ==============================
            LINK HOVER
-        =============================== */
+        ============================== */
 
         h2 a:hover {
             color: #0000EE !important;
@@ -438,7 +472,7 @@
 
         /* ==============================
            FOOTER
-        =============================== */
+        ============================== */
 
         footer {
             text-align: center;
@@ -449,7 +483,7 @@
 
         /* ==============================
            MOBILE
-        =============================== */
+        ============================== */
 
         @media (max-width: 650px) {
 
@@ -500,15 +534,21 @@
 
             .academy-card {
                 padding: 15px;
+                max-width: 95%;
+            }
+
+            .academy-image {
+                max-width: 300px;
+                height: 190px;
             }
 
             .social-links {
-                gap: 8px;
+                gap: 7px;
             }
 
             .social-link {
-                padding: 8px 11px;
-                font-size: 13px;
+                padding: 7px 10px;
+                font-size: 12px;
             }
 
         }
@@ -525,7 +565,7 @@
 
     <!-- ==============================
          HEADER
-    =============================== -->
+    ============================== -->
 
     <section class="hero">
 
@@ -534,9 +574,11 @@
         </div>
 
         <h1>
+
             <span>
                 تحوّل من إداري تقليدي إلى قائد استراتيجي يصنع الفارق في مؤسسته
             </span>
+
         </h1>
 
         <p class="subtitle">
@@ -547,6 +589,7 @@
             في بيئة العمل الحديثة.
 
         </p>
+
 
         <!-- CTA -->
 
@@ -563,7 +606,7 @@
 
     <!-- ==============================
          VIDEO
-    =============================== -->
+    ============================== -->
 
     <div class="video-container">
 
@@ -584,8 +627,8 @@
 
 
     <!-- ==============================
-         ABOUT DR. OMAR AL-JABER
-    =============================== -->
+         ABOUT DR. OMAR
+    ============================== -->
 
     <section class="doctor-section">
 
@@ -607,7 +650,7 @@
 
         <!-- ==============================
              STATS
-        =============================== -->
+        ============================== -->
 
         <div class="stats">
 
@@ -683,7 +726,7 @@
 
         <!-- ==============================
              PROFESSIONAL EXPERIENCE
-        =============================== -->
+        ============================== -->
 
         <div class="experience-box">
 
@@ -705,7 +748,7 @@
 
         <!-- ==============================
              INTERNATIONAL EXPERIENCE
-        =============================== -->
+        ============================== -->
 
         <div class="experience-box">
 
@@ -746,7 +789,7 @@
 
         <!-- ==============================
              GLOBAL TRAINING GROUP
-        =============================== -->
+        ============================== -->
 
         <div class="academies">
 
@@ -759,21 +802,35 @@
             </div>
 
             <p>
+
                 مجموعة متخصصة في التدريب والاستشارات وتطوير
                 الأعمال والقيادات، من خلال منظومة من الأكاديميات
                 والبرامج التدريبية المتخصصة.
+
             </p>
 
 
-            <!-- STRATEGENCE -->
+            <!-- ==============================
+                 STRATEGENCE
+            ============================== -->
 
             <div class="academy-card">
+
+
+                <!--
+                    اضغط على الصورة لإظهار الروابط
+                -->
 
                 <img
                     src="Strategence.png"
                     alt="Strategence"
-                    class="academy-image">
+                    class="academy-image"
+                    onclick="toggleSocialLinks(this)">
 
+
+                <!-- ==============================
+                     SOCIAL LINKS
+                ============================== -->
 
                 <div class="social-links">
 
@@ -866,7 +923,7 @@
 
     <!-- ==============================
          ABOUT COURSE
-    =============================== -->
+    ============================== -->
 
     <a
         href="#about"
@@ -899,7 +956,7 @@
 
     <!-- ==============================
          WHAT YOU WILL LEARN
-    =============================== -->
+    ============================== -->
 
     <section class="section">
 
@@ -971,7 +1028,7 @@
 
     <!-- ==============================
          WHAT YOU WILL GET
-    =============================== -->
+    ============================== -->
 
     <section class="section">
 
@@ -989,9 +1046,11 @@
                 </strong>
 
                 <p>
+
                     محتوى تدريبي متكامل ومنظم يساعدك على
                     تطوير مهاراتك وفهم المفاهيم الاستراتيجية
                     بشكل تدريجي وعملي.
+
                 </p>
 
             </div>
@@ -1004,9 +1063,11 @@
                 </strong>
 
                 <p>
+
                     محتوى متخصص يركز على أهم المهارات
                     والمفاهيم التي يحتاجها القادة والمديرون
                     في بيئة العمل الحديثة.
+
                 </p>
 
             </div>
@@ -1019,9 +1080,11 @@
                 </strong>
 
                 <p>
+
                     الاستفادة من التطبيقات والأمثلة العملية
                     التي تساعد على تحويل المعرفة إلى مهارات
                     قابلة للتطبيق في بيئة العمل.
+
                 </p>
 
             </div>
@@ -1034,9 +1097,11 @@
                 </strong>
 
                 <p>
+
                     إمكانية مشاهدة المحتوى والتعلم بالوقت
                     الذي يناسبك، بما يمنحك مرونة أكبر
                     في رحلة التعلم.
+
                 </p>
 
             </div>
@@ -1049,9 +1114,11 @@
                 </strong>
 
                 <p>
+
                     الوصول إلى المحتوى التدريبي من خلال
                     المنصة والاستفادة من تجربة تعلم
                     إلكترونية مرنة ومنظمة.
+
                 </p>
 
             </div>
@@ -1064,8 +1131,10 @@
                 </strong>
 
                 <p>
+
                     الحصول على شهادة إتمام الدورة بعد
                     استكمال متطلبات البرنامج التدريبي.
+
                 </p>
 
             </div>
@@ -1078,7 +1147,7 @@
 
     <!-- ==============================
          START COURSE
-    =============================== -->
+    ============================== -->
 
     <section class="section">
 
@@ -1099,7 +1168,7 @@
 
     <!-- ==============================
          FOOTER
-    =============================== -->
+    ============================== -->
 
     <footer>
 
@@ -1113,6 +1182,24 @@
 
 
 </div>
+
+
+<!-- ==============================
+     JAVASCRIPT
+============================== -->
+
+<script>
+
+function toggleSocialLinks(image) {
+
+    const card = image.closest('.academy-card');
+
+    card.classList.toggle('active');
+
+}
+
+</script>
+
 
 </body>
 
