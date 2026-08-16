@@ -28,9 +28,10 @@
             margin: auto;
         }
 
-        /* ==============================
+
+        /* =================================
            HEADER
-        ============================== */
+        ================================= */
 
         .hero {
             text-align: center;
@@ -65,9 +66,10 @@
             line-height: 1.9;
         }
 
-        /* ==============================
-           CTA
-        ============================== */
+
+        /* =================================
+           CTA BUTTON
+        ================================= */
 
         .cta-button {
             display: inline-block;
@@ -88,9 +90,10 @@
             box-shadow: 0 12px 30px rgba(234, 182, 91, 0.4);
         }
 
-        /* ==============================
+
+        /* =================================
            VIDEO
-        ============================== */
+        ================================= */
 
         .video-container {
             max-width: 700px;
@@ -104,9 +107,10 @@
             border-radius: 12px;
         }
 
-        /* ==============================
+
+        /* =================================
            SECTIONS
-        ============================== */
+        ================================= */
 
         .section {
             background: #0c2543;
@@ -129,9 +133,10 @@
             line-height: 2;
         }
 
-        /* ==============================
-           DOCTOR
-        ============================== */
+
+        /* =================================
+           DOCTOR SECTION
+        ================================= */
 
         .doctor-section {
             background: #0c2543;
@@ -156,9 +161,10 @@
             line-height: 2;
         }
 
-        /* ==============================
+
+        /* =================================
            STATS
-        ============================== */
+        ================================= */
 
         .stats {
             display: grid;
@@ -206,9 +212,10 @@
             line-height: 1.7;
         }
 
-        /* ==============================
+
+        /* =================================
            EXPERIENCE
-        ============================== */
+        ================================= */
 
         .experience-box {
             background: #102e50;
@@ -240,9 +247,10 @@
             font-size: 15px;
         }
 
-        /* ==============================
+
+        /* =================================
            ACADEMIES
-        ============================== */
+        ================================= */
 
         .academies {
             margin-top: 40px;
@@ -270,47 +278,88 @@
             line-height: 1.9;
         }
 
-        /* ==============================
-           TWO ACADEMIES
-        ============================== */
+
+        /* =================================
+           ACADEMY CARDS
+        ================================= */
 
         .academy-cards {
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            max-width: 850px;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            max-width: 1050px;
+
             margin: auto;
-            align-items: center;
+
+            align-items: start;
         }
+
 
         .academy-card {
+
             background: #102e50;
-            border: 1px solid rgba(234, 182, 91, 0.2);
+
+            border: 1px solid
+                rgba(234, 182, 91, 0.25);
+
             border-radius: 20px;
-            padding: 25px;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+
+            padding: 20px 15px 25px;
+
+            min-height: 390px;
+
+            box-shadow:
+                0 12px 35px
+                rgba(0, 0, 0, 0.20);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
         }
 
-        /* ==============================
-           CIRCULAR IMAGES
-        ============================== */
+        .academy-card:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 18px 40px
+                rgba(0, 0, 0, 0.35);
+        }
+
+
+        /* =================================
+           CIRCULAR ACADEMY IMAGE
+        ================================= */
 
         .academy-image {
-            width: 260px;
-            height: 260px;
 
-            object-fit: contain;
+            width: 280px;
+
+            height: 280px;
+
+            max-width: 100%;
 
             display: block;
-            margin: auto;
+
+            margin: 0 auto 18px;
+
+            object-fit: contain;
 
             border-radius: 50%;
 
             background: #ffffff;
 
-            padding: 8px;
+            padding: 5px;
 
             cursor: pointer;
+
+            border: 3px solid
+                rgba(234, 182, 91, 0.35);
 
             transition:
                 transform 0.3s ease,
@@ -318,262 +367,132 @@
         }
 
         .academy-image:hover {
-            transform: scale(1.05);
+
+            transform: scale(1.04);
 
             box-shadow:
-                0 0 0 4px rgba(234, 182, 91, 0.35),
-                0 15px 35px rgba(0, 0, 0, 0.35);
+
+                0 0 0 4px
+                rgba(234, 182, 91, 0.20),
+
+                0 15px 35px
+                rgba(0, 0, 0, 0.35);
         }
 
+
+        /* =================================
+           STRATEGENCE IMAGE
+        ================================= */
+
+        .strategence-image {
+
+            object-fit: contain;
+
+            object-position: center center;
+        }
+
+
+        /* =================================
+           ACADEMY NAME
+        ================================= */
+
         .academy-name {
-            margin-top: 18px;
+
+            margin-top: 5px;
+
             color: #ffffff;
+
             font-size: 21px;
+
             font-weight: bold;
+
+            line-height: 1.4;
         }
 
         .academy-subtitle {
+
             color: #eab65b;
+
             font-size: 15px;
+
             font-weight: bold;
+
             margin-top: 5px;
+
+            line-height: 1.5;
         }
 
-        /* ==============================
-           POPUP
-        ============================== */
 
-        .popup-overlay {
-            display: none;
-
-            position: fixed;
-            inset: 0;
-
-            background: rgba(0, 0, 0, 0.65);
-
-            z-index: 9999;
-
-            align-items: center;
-            justify-content: center;
-
-            padding: 20px;
-        }
-
-        .popup-overlay.show {
-            display: flex;
-        }
-
-        .popup-box {
-            position: relative;
-
-            width: 100%;
-            max-width: 360px;
-
-            background: #0c2543;
-
-            border: 1px solid rgba(234, 182, 91, 0.35);
-
-            border-radius: 20px;
-
-            padding: 30px 22px 25px;
-
-            text-align: center;
-
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-
-            animation: popupAnimation 0.25s ease;
-        }
-
-        @keyframes popupAnimation {
-
-            from {
-                opacity: 0;
-                transform: scale(0.85);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-        }
-
-        /* ==============================
-           CLOSE
-        ============================== */
-
-        .popup-close {
-            position: absolute;
-
-            top: 10px;
-            left: 12px;
-
-            width: 32px;
-            height: 32px;
-
-            border: none;
-
-            border-radius: 50%;
-
-            background: #eab65b;
-
-            color: #07182d;
-
-            font-size: 25px;
-
-            line-height: 30px;
-
-            cursor: pointer;
-
-            font-weight: bold;
-        }
-
-        .popup-box h3 {
-            margin: 5px 0 3px;
-
-            color: #eab65b;
-
-            font-size: 26px;
-        }
-
-        .popup-box p {
-            margin: 0 0 22px;
-
-            color: #d8e0ea;
-
-            font-size: 15px;
-        }
-
-        /* ==============================
-           POPUP LINKS
-        ============================== */
-
-        .popup-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .popup-link {
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            gap: 10px;
-
-            width: 100%;
-
-            padding: 11px;
-
-            border-radius: 10px;
-
-            color: white;
-
-            text-decoration: none;
-
-            font-size: 15px;
-
-            font-weight: bold;
-
-            transition: 0.25s;
-        }
-
-        .popup-link:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
-
-        .popup-icon {
-            width: 26px;
-            height: 26px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: rgba(255,255,255,0.18);
-
-            font-weight: bold;
-        }
-
-        /* ==============================
-           SOCIAL COLORS
-        ============================== */
-
-        .popup-link.facebook {
-            background: #1877f2;
-        }
-
-        .popup-link.instagram {
-            background: linear-gradient(
-                45deg,
-                #f58529,
-                #dd2a7b,
-                #8134af,
-                #515bd4
-            );
-        }
-
-        .popup-link.tiktok {
-            background: #050505;
-            border: 1px solid #333;
-        }
-
-        .popup-link.website {
-            background: #eab65b;
-            color: #07182d;
-        }
-
-        /* ==============================
+        /* =================================
            FEATURES
-        ============================== */
+        ================================= */
 
         .features {
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 15px;
+
             margin-top: 25px;
+
             overflow: visible;
         }
 
         .feature {
+
             background: #102e50;
+
             padding: 20px;
+
             border-radius: 14px;
-            transition: transform 0.3s ease;
+
+            transition:
+                transform 0.3s ease;
+
             position: relative;
+
             z-index: 1;
         }
 
         .feature:hover {
+
             transform: scale(1.05);
+
             z-index: 10;
         }
 
         .feature strong {
+
             display: block;
+
             color: #eab65b;
+
             font-size: 19px;
+
             margin-bottom: 8px;
         }
 
         .feature p {
+
             font-size: 15px;
+
             margin: 0;
         }
 
-        /* ==============================
+
+        /* =================================
            BUTTON
-        ============================== */
+        ================================= */
 
         .button {
+
             display: block;
+
             width: fit-content;
+
             margin: 25px auto 45px;
 
             background: #eab65b;
@@ -591,89 +510,391 @@
             font-size: 19px;
         }
 
-        /* ==============================
+
+        /* =================================
+           POPUP OVERLAY
+        ================================= */
+
+        .popup-overlay {
+
+            display: none;
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(0, 0, 0, 0.70);
+
+            z-index: 9999;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+        }
+
+        .popup-overlay.show {
+
+            display: flex;
+        }
+
+
+        /* =================================
+           POPUP BOX
+        ================================= */
+
+        .popup-box {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 370px;
+
+            background: #0c2543;
+
+            border:
+                1px solid
+                rgba(234, 182, 91, 0.40);
+
+            border-radius: 20px;
+
+            padding: 30px 22px 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 60px
+                rgba(0, 0, 0, 0.55);
+
+            animation:
+                popupAnimation 0.25s ease;
+        }
+
+
+        @keyframes popupAnimation {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    scale(0.85);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    scale(1);
+            }
+        }
+
+
+        /* =================================
+           CLOSE BUTTON
+        ================================= */
+
+        .popup-close {
+
+            position: absolute;
+
+            top: 10px;
+
+            left: 12px;
+
+            width: 32px;
+
+            height: 32px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: #eab65b;
+
+            color: #07182d;
+
+            font-size: 24px;
+
+            line-height: 30px;
+
+            cursor: pointer;
+
+            font-weight: bold;
+        }
+
+
+        .popup-box h3 {
+
+            margin:
+                5px 0 3px;
+
+            color: #eab65b;
+
+            font-size: 25px;
+        }
+
+        .popup-box p {
+
+            margin:
+                0 0 22px;
+
+            color: #d8e0ea;
+
+            font-size: 15px;
+        }
+
+
+        /* =================================
+           POPUP LINKS
+        ================================= */
+
+        .popup-links {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+        }
+
+        .popup-link {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            width: 100%;
+
+            padding: 12px;
+
+            border-radius: 10px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            transition: 0.25s;
+        }
+
+        .popup-link:hover {
+
+            transform:
+                translateY(-2px);
+
+            opacity: 0.9;
+        }
+
+
+        .popup-icon {
+
+            width: 27px;
+
+            height: 27px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,0.18);
+
+            font-weight: bold;
+        }
+
+
+        /* =================================
+           SOCIAL COLORS
+        ================================= */
+
+        .popup-link.facebook {
+
+            background: #1877f2;
+        }
+
+        .popup-link.instagram {
+
+            background:
+                linear-gradient(
+                    45deg,
+                    #f58529,
+                    #dd2a7b,
+                    #8134af,
+                    #515bd4
+                );
+        }
+
+        .popup-link.tiktok {
+
+            background: #050505;
+
+            border:
+                1px solid #333;
+        }
+
+        .popup-link.linkedin {
+
+            background: #0a66c2;
+        }
+
+        .popup-link.website {
+
+            background: #eab65b;
+
+            color: #07182d;
+        }
+
+
+        /* =================================
            FOOTER
-        ============================== */
+        ================================= */
 
         footer {
+
             text-align: center;
+
             color: #8999ad;
+
             font-size: 14px;
+
             padding: 30px 0;
         }
 
-        /* ==============================
+
+        /* =================================
+           TABLET
+        ================================= */
+
+        @media (max-width: 1000px) {
+
+            .academy-cards {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =================================
            MOBILE
-        ============================== */
+        ================================= */
 
         @media (max-width: 650px) {
 
             .hero {
+
                 padding-top: 30px;
             }
 
             h1 {
+
                 font-size: 30px;
             }
 
             .subtitle {
+
                 font-size: 17px;
             }
 
             .stats {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
 
             .features {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
             }
 
             .button {
+
                 width: 90%;
+
                 text-align: center;
             }
 
             .cta-button {
+
                 width: 90%;
+
                 text-align: center;
+
                 font-size: 18px;
-                padding: 15px 20px;
+
+                padding:
+                    15px 20px;
             }
 
             .section,
             .doctor-section {
-                padding: 25px 18px;
+
+                padding:
+                    25px 18px;
             }
 
             .doctor-section h2 {
+
                 font-size: 27px;
             }
 
             .doctor-intro {
+
                 font-size: 16px;
             }
 
-            /* الأكاديميات فوق بعض في الجوال */
+
+            /* الأكاديميات فوق بعض */
 
             .academy-cards {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
+
                 gap: 25px;
             }
 
             .academy-card {
-                padding: 20px;
-                max-width: 330px;
+
+                max-width: 350px;
+
+                width: 100%;
+
                 margin: auto;
             }
 
             .academy-image {
-                width: 230px;
-                height: 230px;
+
+                width: 250px;
+
+                height: 250px;
             }
 
+
             .popup-box {
+
                 max-width: 330px;
-                padding: 28px 18px 22px;
+
+                padding:
+                    28px 18px 22px;
             }
 
         }
@@ -685,12 +906,13 @@
 
 <body>
 
+
 <div class="container">
 
 
-    <!-- ==============================
+    <!-- =================================
          HEADER
-    ============================== -->
+    ================================= -->
 
     <section class="hero">
 
@@ -726,9 +948,9 @@
     </section>
 
 
-    <!-- ==============================
+    <!-- =================================
          VIDEO
-    ============================== -->
+    ================================= -->
 
     <div class="video-container">
 
@@ -748,9 +970,9 @@
     </div>
 
 
-    <!-- ==============================
+    <!-- =================================
          DOCTOR
-    ============================== -->
+    ================================= -->
 
     <section class="doctor-section">
 
@@ -770,9 +992,12 @@
         </p>
 
 
-        <!-- STATS -->
+        <!-- =================================
+             STATS
+        ================================= -->
 
         <div class="stats">
+
 
             <div class="stat-card">
 
@@ -839,10 +1064,13 @@
 
             </div>
 
+
         </div>
 
 
-        <!-- EXPERIENCE -->
+        <!-- =================================
+             EXPERIENCE
+        ================================= -->
 
         <div class="experience-box">
 
@@ -862,7 +1090,9 @@
         </div>
 
 
-        <!-- INTERNATIONAL EXPERIENCE -->
+        <!-- =================================
+             INTERNATIONAL EXPERIENCE
+        ================================= -->
 
         <div class="experience-box">
 
@@ -901,9 +1131,9 @@
         </div>
 
 
-        <!-- ==============================
+        <!-- =================================
              ACADEMIES
-        ============================== -->
+        ================================= -->
 
         <div class="academies">
 
@@ -924,35 +1154,16 @@
             </p>
 
 
-            <!-- ==============================
-                 TWO ACADEMIES
-            ============================== -->
+            <!-- =================================
+                 THREE ACADEMIES
+            ================================= -->
 
             <div class="academy-cards">
 
 
-                <!-- STRATEGENCE -->
-
-                <div class="academy-card">
-
-                    <img
-                        src="Strategence.png"
-                        alt="Strategence"
-                        class="academy-image"
-                        onclick="openStrategencePopup()">
-
-                    <div class="academy-name">
-                        STRATEGENCE
-                    </div>
-
-                    <div class="academy-subtitle">
-                        FOR BUSINESS DEVELOPMENT
-                    </div>
-
-                </div>
-
-
-                <!-- BOSPHORLEAD -->
+                <!-- =================================
+                     BOSPHORLEAD
+                ================================= -->
 
                 <div class="academy-card">
 
@@ -960,7 +1171,8 @@
                         src="Bosphorlead.png"
                         alt="Bosphorlead Academy"
                         class="academy-image"
-                        onclick="openBosphorleadPopup()">
+                        onclick="openBosphorleadPopup()"
+                    >
 
                     <div class="academy-name">
                         BOSPHORLEAD
@@ -973,6 +1185,54 @@
                 </div>
 
 
+                <!-- =================================
+                     STRATEGENCE
+                ================================= -->
+
+                <div class="academy-card">
+
+                    <img
+                        src="Strategence.png"
+                        alt="Strategence"
+                        class="academy-image strategence-image"
+                        onclick="openStrategencePopup()"
+                    >
+
+                    <div class="academy-name">
+                        STRATEGENCE
+                    </div>
+
+                    <div class="academy-subtitle">
+                        FOR BUSINESS DEVELOPMENT
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     FUTUROLOGY
+                ================================= -->
+
+                <div class="academy-card">
+
+                    <img
+                        src="futurology.png"
+                        alt="Futurology"
+                        class="academy-image"
+                        onclick="openFuturologyPopup()"
+                    >
+
+                    <div class="academy-name">
+                        FUTUROLOGY
+                    </div>
+
+                    <div class="academy-subtitle">
+                        FOR DEVELOPMENT
+                    </div>
+
+                </div>
+
+
             </div>
 
         </div>
@@ -980,9 +1240,9 @@
     </section>
 
 
-    <!-- ==============================
+    <!-- =================================
          ABOUT COURSE BUTTON
-    ============================== -->
+    ================================= -->
 
     <a
         href="#about"
@@ -993,9 +1253,9 @@
     </a>
 
 
-    <!-- ==============================
+    <!-- =================================
          ABOUT COURSE
-    ============================== -->
+    ================================= -->
 
     <section
         class="section"
@@ -1017,9 +1277,9 @@
     </section>
 
 
-    <!-- ==============================
+    <!-- =================================
          WHAT YOU WILL LEARN
-    ============================== -->
+    ================================= -->
 
     <section class="section">
 
@@ -1085,9 +1345,9 @@
     </section>
 
 
-    <!-- ==============================
+    <!-- =================================
          WHAT YOU GET
-    ============================== -->
+    ================================= -->
 
     <section class="section">
 
@@ -1181,9 +1441,9 @@
     </section>
 
 
-    <!-- ==============================
+    <!-- =================================
          START COURSE
-    ============================== -->
+    ================================= -->
 
     <section class="section">
 
@@ -1202,9 +1462,9 @@
     </section>
 
 
-    <!-- ==============================
+    <!-- =================================
          FOOTER
-    ============================== -->
+    ================================= -->
 
     <footer>
 
@@ -1220,141 +1480,32 @@
 </div>
 
 
-<!-- =========================================================
-     STRATEGENCE POPUP
-========================================================= -->
 
-<div
-    id="strategencePopup"
-    class="popup-overlay"
-    onclick="closeStrategencePopup(event)">
-
-    <div
-        class="popup-box"
-        onclick="event.stopPropagation()">
-
-
-        <button
-            class="popup-close"
-            onclick="closeStrategencePopup()">
-
-            ×
-
-        </button>
-
-
-        <h3>
-            STRATEGENCE
-        </h3>
-
-        <p>
-            مجموعة العالمية للتدريب والاستشارات
-        </p>
-
-
-        <div class="popup-links">
-
-
-            <!-- FACEBOOK -->
-
-            <a
-                href="https://www.facebook.com/stratence.academy"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="popup-link facebook">
-
-                <span class="popup-icon">
-                    f
-                </span>
-
-                Facebook
-
-            </a>
-
-
-            <!-- INSTAGRAM -->
-
-            <a
-                href="https://www.instagram.com/strategence_academy/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="popup-link instagram">
-
-                <span class="popup-icon">
-                    ◎
-                </span>
-
-                Instagram
-
-            </a>
-
-
-            <!-- TIKTOK -->
-
-            <a
-                href="https://www.tiktok.com/@strategence.academy"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="popup-link tiktok">
-
-                <span class="popup-icon">
-                    ♪
-                </span>
-
-                TikTok
-
-            </a>
-
-
-            <!-- WEBSITE -->
-
-            <a
-                href="https://www.strategenceegy.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="popup-link website">
-
-                <span class="popup-icon">
-                    🌐
-                </span>
-
-                Website
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!-- =========================================================
+<!-- =====================================================
      BOSPHORLEAD POPUP
-========================================================= -->
+===================================================== -->
 
 <div
     id="bosphorleadPopup"
     class="popup-overlay"
-    onclick="closeBosphorleadPopup(event)">
+    onclick="closeBosphorleadPopup(event)"
+>
 
     <div
         class="popup-box"
-        onclick="event.stopPropagation()">
-
+        onclick="event.stopPropagation()"
+    >
 
         <button
             class="popup-close"
-            onclick="closeBosphorleadPopup()">
-
+            onclick="closeBosphorleadPopup()"
+        >
             ×
-
         </button>
 
 
         <h3>
-            BOSPHORLEAD ACADEMY
+            BOSPHORLEAD
         </h3>
 
         <p>
@@ -1371,7 +1522,8 @@
                 href="https://www.facebook.com/Bosphorlead.Academy"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link facebook">
+                class="popup-link facebook"
+            >
 
                 <span class="popup-icon">
                     f
@@ -1388,7 +1540,8 @@
                 href="https://www.instagram.com/bosphorleadacademy123/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link instagram">
+                class="popup-link instagram"
+            >
 
                 <span class="popup-icon">
                     ◎
@@ -1399,13 +1552,14 @@
             </a>
 
 
-            <!-- TIKTOK - NEW -->
+            <!-- TIKTOK -->
 
             <a
                 href="https://www.tiktok.com/@bosphorlead"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link tiktok">
+                class="popup-link tiktok"
+            >
 
                 <span class="popup-icon">
                     ♪
@@ -1422,7 +1576,8 @@
                 href="https://www.bosphorlead.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link website">
+                class="popup-link website"
+            >
 
                 <span class="popup-icon">
                     🌐
@@ -1440,45 +1595,247 @@
 </div>
 
 
-<!-- =========================================================
+
+<!-- =====================================================
+     STRATEGENCE POPUP
+===================================================== -->
+
+<div
+    id="strategencePopup"
+    class="popup-overlay"
+    onclick="closeStrategencePopup(event)"
+>
+
+    <div
+        class="popup-box"
+        onclick="event.stopPropagation()"
+    >
+
+        <button
+            class="popup-close"
+            onclick="closeStrategencePopup()"
+        >
+            ×
+        </button>
+
+
+        <h3>
+            STRATEGENCE
+        </h3>
+
+        <p>
+            For Business Development
+        </p>
+
+
+        <div class="popup-links">
+
+
+            <!-- FACEBOOK -->
+
+            <a
+                href="https://www.facebook.com/stratence.academy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link facebook"
+            >
+
+                <span class="popup-icon">
+                    f
+                </span>
+
+                Facebook
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/strategence_academy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link instagram"
+            >
+
+                <span class="popup-icon">
+                    ◎
+                </span>
+
+                Instagram
+
+            </a>
+
+
+            <!-- TIKTOK -->
+
+            <a
+                href="https://www.tiktok.com/@strategence.academy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link tiktok"
+            >
+
+                <span class="popup-icon">
+                    ♪
+                </span>
+
+                TikTok
+
+            </a>
+
+
+            <!-- WEBSITE -->
+
+            <a
+                href="https://www.strategenceegy.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link website"
+            >
+
+                <span class="popup-icon">
+                    🌐
+                </span>
+
+                Website
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FUTUROLOGY POPUP
+===================================================== -->
+
+<div
+    id="futurologyPopup"
+    class="popup-overlay"
+    onclick="closeFuturologyPopup(event)"
+>
+
+    <div
+        class="popup-box"
+        onclick="event.stopPropagation()"
+    >
+
+        <button
+            class="popup-close"
+            onclick="closeFuturologyPopup()"
+        >
+            ×
+        </button>
+
+
+        <h3>
+            FUTUROLOGY
+        </h3>
+
+        <p>
+            Futurology For Development
+        </p>
+
+
+        <div class="popup-links">
+
+
+            <!-- FACEBOOK -->
+
+            <a
+                href="https://www.facebook.com/share/1E77YLSpn1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link facebook"
+            >
+
+                <span class="popup-icon">
+                    f
+                </span>
+
+                Facebook
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/futurology_academy?igsh=MWUxampzZWd5cWdybQ=="
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link instagram"
+            >
+
+                <span class="popup-icon">
+                    ◎
+                </span>
+
+                Instagram
+
+            </a>
+
+
+            <!-- LINKEDIN -->
+
+            <a
+                href="https://www.linkedin.com/company/futurology-for-development/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link linkedin"
+            >
+
+                <span class="popup-icon">
+                    in
+                </span>
+
+                LinkedIn
+
+            </a>
+
+
+            <!-- WEBSITE -->
+
+            <a
+                href="https://2u.pw/Y1beUG"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link website"
+            >
+
+                <span class="popup-icon">
+                    🌐
+                </span>
+
+                Website
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
      JAVASCRIPT
-========================================================= -->
+===================================================== -->
 
 <script>
 
 
-/* ==============================
-   STRATEGENCE
-============================== */
-
-function openStrategencePopup() {
-
-    document
-        .getElementById("strategencePopup")
-        .classList.add("show");
-
-}
-
-
-function closeStrategencePopup(event) {
-
-    if (
-        !event ||
-        event.target.id === "strategencePopup"
-    ) {
-
-        document
-            .getElementById("strategencePopup")
-            .classList.remove("show");
-
-    }
-
-}
-
-
-/* ==============================
+/* =================================
    BOSPHORLEAD
-============================== */
+================================= */
 
 function openBosphorleadPopup() {
 
@@ -1505,26 +1862,90 @@ function closeBosphorleadPopup(event) {
 }
 
 
-/* ==============================
-   ESC KEY
-============================== */
+/* =================================
+   STRATEGENCE
+================================= */
 
-document.addEventListener("keydown", function(event) {
+function openStrategencePopup() {
 
-    if (event.key === "Escape") {
+    document
+        .getElementById("strategencePopup")
+        .classList.add("show");
+
+}
+
+
+function closeStrategencePopup(event) {
+
+    if (
+        !event ||
+        event.target.id === "strategencePopup"
+    ) {
 
         document
             .getElementById("strategencePopup")
             .classList.remove("show");
 
+    }
+
+}
+
+
+/* =================================
+   FUTUROLOGY
+================================= */
+
+function openFuturologyPopup() {
+
+    document
+        .getElementById("futurologyPopup")
+        .classList.add("show");
+
+}
+
+
+function closeFuturologyPopup(event) {
+
+    if (
+        !event ||
+        event.target.id === "futurologyPopup"
+    ) {
+
         document
-            .getElementById("bosphorleadPopup")
+            .getElementById("futurologyPopup")
             .classList.remove("show");
 
     }
 
-});
+}
 
+
+/* =================================
+   ESC KEY
+================================= */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (event.key === "Escape") {
+
+            document
+                .getElementById("bosphorleadPopup")
+                .classList.remove("show");
+
+            document
+                .getElementById("strategencePopup")
+                .classList.remove("show");
+
+            document
+                .getElementById("futurologyPopup")
+                .classList.remove("show");
+
+        }
+
+    }
+);
 
 </script>
 
