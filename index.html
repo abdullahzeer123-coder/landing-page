@@ -4,9 +4,15 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>دورة القيادة الاستراتيجية</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        دورة القيادة الاستراتيجية
+    </title>
+
 
     <style>
 
@@ -14,17 +20,30 @@
             box-sizing: border-box;
         }
 
+
         body {
+
             margin: 0;
-            font-family: Tahoma, Arial, sans-serif;
+
+            font-family:
+                Tahoma,
+                Arial,
+                sans-serif;
+
             background: #07182d;
+
             color: #ffffff;
+
             line-height: 1.8;
         }
 
+
         .container {
+
             width: 92%;
+
             max-width: 900px;
+
             margin: auto;
         }
 
@@ -34,35 +53,62 @@
         ================================= */
 
         .hero {
+
             text-align: center;
+
             padding: 45px 0 30px;
         }
 
+
         .badge {
+
             display: inline-block;
+
             background: #eab65b;
+
             color: #07182d;
+
             padding: 8px 20px;
+
             border-radius: 30px;
+
             font-weight: bold;
+
             margin-bottom: 20px;
         }
 
+
         h1 {
-            font-size: clamp(32px, 6vw, 55px);
+
+            font-size:
+                clamp(
+                    32px,
+                    6vw,
+                    55px
+                );
+
             margin: 0 0 20px;
+
             line-height: 1.4;
         }
 
+
         h1 span {
+
             color: #eab65b;
         }
 
+
         .subtitle {
+
             max-width: 750px;
+
             margin: auto;
+
             color: #d6dfeb;
+
             font-size: 21px;
+
             line-height: 1.9;
         }
 
@@ -72,22 +118,52 @@
         ================================= */
 
         .cta-button {
+
             display: inline-block;
+
             margin-top: 28px;
+
             padding: 16px 40px;
+
             background: #eab65b;
+
             color: #07182d;
+
             text-decoration: none;
+
             border-radius: 12px;
+
             font-size: 20px;
+
             font-weight: bold;
-            box-shadow: 0 8px 25px rgba(234, 182, 91, 0.25);
-            transition: all 0.3s ease;
+
+            box-shadow:
+                0 8px 25px
+                rgba(
+                    234,
+                    182,
+                    91,
+                    0.25
+                );
+
+            transition:
+                all 0.3s ease;
         }
 
+
         .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(234, 182, 91, 0.4);
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(
+                    234,
+                    182,
+                    91,
+                    0.4
+                );
         }
 
 
@@ -96,14 +172,21 @@
         ================================= */
 
         .video-container {
+
             max-width: 700px;
+
             margin: 30px auto;
         }
 
+
         .video-container video {
+
             width: 100%;
+
             height: auto;
+
             display: block;
+
             border-radius: 12px;
         }
 
@@ -113,23 +196,37 @@
         ================================= */
 
         .section {
+
             background: #0c2543;
+
             border-radius: 20px;
+
             padding: 35px 25px;
+
             margin: 25px 0;
+
             text-align: center;
         }
 
+
         .section h2 {
+
             color: #eab65b;
+
             font-size: 30px;
+
             margin-top: 0;
+
             margin-bottom: 20px;
         }
 
+
         .section p {
+
             color: #d8e0ea;
+
             font-size: 18px;
+
             line-height: 2;
         }
 
@@ -139,142 +236,606 @@
         ================================= */
 
         .doctor-section {
+
             background: #0c2543;
+
             border-radius: 20px;
+
             padding: 40px 25px;
+
             margin: 25px 0;
+
             text-align: center;
         }
 
+
         .doctor-section h2 {
+
             color: #eab65b;
+
             font-size: 32px;
+
             margin-top: 0;
+
             margin-bottom: 20px;
         }
 
+
         .doctor-intro {
+
             max-width: 780px;
-            margin: 0 auto 30px;
+
+            margin:
+                0 auto 30px;
+
             color: #d8e0ea;
+
             font-size: 18px;
+
             line-height: 2;
         }
 
 
         /* =================================
-           STATS
+           NEW PROFESSIONAL EXPERIENCE
         ================================= */
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin: 30px 0;
+        .professional-experience {
+
+            margin-top: 35px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #102e50,
+                    #0c2543
+                );
+
+            border:
+                1px solid
+                rgba(
+                    234,
+                    182,
+                    91,
+                    0.20
+                );
+
+            border-radius: 22px;
+
+            padding: 30px 20px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.18
+                );
         }
 
-        .stat-card {
-            background: #102e50;
-            border: 1px solid rgba(234, 182, 91, 0.18);
-            border-radius: 16px;
-            padding: 25px 15px;
-            transition: transform 0.3s ease;
-        }
 
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
+        .professional-title {
 
-        .stat-icon {
-            font-size: 30px;
-            margin-bottom: 8px;
-        }
-
-        .stat-number {
-            display: block;
             color: #eab65b;
+
             font-size: 27px;
-            font-weight: bold;
-            margin-bottom: 5px;
+
+            margin:
+                0 0 25px;
         }
 
-        .stat-title {
-            display: block;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
 
-        .stat-text {
-            color: #bfcddd;
-            font-size: 14px;
-            line-height: 1.7;
+        .experience-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                260px 1fr;
+
+            gap: 35px;
+
+            align-items: center;
         }
 
 
         /* =================================
-           EXPERIENCE
+           CIRCLE
+        ================================= */
+
+        .experience-circle-wrap {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .experience-circle {
+
+            width: 220px;
+
+            height: 220px;
+
+            border-radius: 50%;
+
+            background:
+                conic-gradient(
+                    #eab65b 0deg,
+                    #eab65b 288deg,
+                    #234667 288deg,
+                    #234667 360deg
+                );
+
+            position: relative;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            box-shadow:
+                0 12px 35px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.35
+                );
+        }
+
+
+        .experience-circle::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 172px;
+
+            height: 172px;
+
+            border-radius: 50%;
+
+            background: #0c2543;
+
+            box-shadow:
+                inset 0 0 20px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.25
+                );
+        }
+
+
+        .experience-number {
+
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+        }
+
+
+        .experience-number strong {
+
+            display: block;
+
+            color: #eab65b;
+
+            font-size: 50px;
+
+            line-height: 1.1;
+        }
+
+
+        .experience-number span {
+
+            display: block;
+
+            color: #ffffff;
+
+            font-size: 17px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =================================
+           EXPERIENCE INFO
+        ================================= */
+
+        .experience-info {
+
+            text-align: right;
+        }
+
+
+        .experience-info h4 {
+
+            color: #ffffff;
+
+            font-size: 23px;
+
+            margin:
+                0 0 8px;
+        }
+
+
+        .experience-info > p {
+
+            color: #cbd6e3;
+
+            font-size: 15px;
+
+            margin:
+                0 0 20px;
+        }
+
+
+        /* =================================
+           PROFESSIONAL BARS
+        ================================= */
+
+        .experience-bars {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 15px;
+        }
+
+
+        .experience-bar-row {
+
+            width: 100%;
+        }
+
+
+        .experience-bar-header {
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            margin-bottom: 5px;
+
+            font-size: 14px;
+
+            color: #ffffff;
+        }
+
+
+        .experience-bar-header span:last-child {
+
+            color: #eab65b;
+
+            font-weight: bold;
+        }
+
+
+        .experience-bar {
+
+            height: 10px;
+
+            width: 100%;
+
+            background: #294966;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+
+        .experience-fill {
+
+            height: 100%;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #d99d38,
+                    #eab65b
+                );
+
+            animation:
+                experienceAnimation
+                1.2s ease;
+        }
+
+
+        .experience-fill.one {
+
+            width: 90%;
+        }
+
+
+        .experience-fill.two {
+
+            width: 85%;
+        }
+
+
+        .experience-fill.three {
+
+            width: 80%;
+        }
+
+
+        @keyframes experienceAnimation {
+
+            from {
+
+                width: 0;
+            }
+
+        }
+
+
+        /* =================================
+           OLD EXPERIENCE BOXES
         ================================= */
 
         .experience-box {
+
             background: #102e50;
+
             border-radius: 16px;
+
             padding: 25px;
+
             margin-top: 25px;
         }
 
+
         .experience-box h3 {
+
             color: #eab65b;
+
             margin-top: 0;
+
             font-size: 22px;
         }
 
+
         .countries {
+
             display: flex;
+
             flex-wrap: wrap;
+
             justify-content: center;
+
             gap: 10px;
+
             margin-top: 15px;
         }
 
+
         .country {
+
             background: #0c2543;
+
             color: #ffffff;
-            border: 1px solid rgba(234, 182, 91, 0.3);
-            padding: 8px 15px;
+
+            border:
+                1px solid
+                rgba(
+                    234,
+                    182,
+                    91,
+                    0.3
+                );
+
+            padding:
+                8px 15px;
+
             border-radius: 25px;
+
             font-size: 15px;
         }
 
 
         /* =================================
-           ACADEMIES
+           INTERNATIONAL ACCREDITATIONS
         ================================= */
 
-        .academies {
-            margin-top: 40px;
-            text-align: center;
+        .accreditation-section {
+
+            margin-top: 35px;
+
+            padding:
+                30px 20px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #102e50,
+                    #0c2543
+                );
+
+            border-radius: 22px;
+
+            border:
+                1px solid
+                rgba(
+                    234,
+                    182,
+                    91,
+                    0.20
+                );
         }
 
-        .academies h3 {
+
+        .accreditation-title {
+
             color: #eab65b;
-            font-size: 27px;
+
+            font-size: 28px;
+
+            margin:
+                0 0 8px;
+        }
+
+
+        .accreditation-description {
+
+            color: #cbd6e3;
+
+            font-size: 15px;
+
+            margin:
+                0 auto 25px;
+
+            max-width: 700px;
+        }
+
+
+        .accreditation-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 14px;
+
+            align-items: stretch;
+        }
+
+
+        .accreditation-card {
+
+            background: #ffffff;
+
+            border-radius: 16px;
+
+            min-height: 145px;
+
+            padding: 15px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            border:
+                2px solid
+                transparent;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        .accreditation-card:hover {
+
+            transform:
+                translateY(-6px);
+
+            border-color:
+                #eab65b;
+
+            box-shadow:
+                0 12px 30px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.30
+                );
+        }
+
+
+        .accreditation-card img {
+
+            width: 115px;
+
+            height: 80px;
+
+            object-fit: contain;
+
+            display: block;
+
             margin-bottom: 8px;
         }
 
-        .branches-title {
-            color: #ffffff;
-            font-size: 22px;
+
+        .accreditation-card span {
+
+            color: #102e50;
+
+            font-size: 14px;
+
             font-weight: bold;
+
+            text-align: center;
+        }
+
+
+        /* =================================
+           GLOBAL TRAINING GROUP
+        ================================= */
+
+        .academies {
+
+            margin-top: 40px;
+
+            text-align: center;
+        }
+
+
+        .academies h3 {
+
+            color: #eab65b;
+
+            font-size: 27px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .branches-title {
+
+            color: #ffffff;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
             margin-bottom: 15px;
         }
 
+
         .academies > p {
+
             max-width: 700px;
-            margin: 0 auto 25px;
+
+            margin:
+                0 auto 25px;
+
             font-size: 16px;
+
             color: #cbd6e3;
+
             line-height: 1.9;
         }
 
@@ -304,31 +865,50 @@
 
             background: #102e50;
 
-            border: 1px solid
-                rgba(234, 182, 91, 0.25);
+            border:
+                1px solid
+                rgba(
+                    234,
+                    182,
+                    91,
+                    0.25
+                );
 
             border-radius: 20px;
 
-            padding: 20px 15px 25px;
+            padding:
+                20px 15px 25px;
 
             min-height: 390px;
 
             box-shadow:
                 0 12px 35px
-                rgba(0, 0, 0, 0.20);
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.20
+                );
 
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
         }
 
+
         .academy-card:hover {
 
-            transform: translateY(-5px);
+            transform:
+                translateY(-5px);
 
             box-shadow:
                 0 18px 40px
-                rgba(0, 0, 0, 0.35);
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.35
+                );
         }
 
 
@@ -346,7 +926,8 @@
 
             display: block;
 
-            margin: 0 auto 18px;
+            margin:
+                0 auto 18px;
 
             object-fit: contain;
 
@@ -358,37 +939,52 @@
 
             cursor: pointer;
 
-            border: 3px solid
-                rgba(234, 182, 91, 0.35);
+            border:
+                3px solid
+                rgba(
+                    234,
+                    182,
+                    91,
+                    0.35
+                );
 
             transition:
                 transform 0.3s ease,
                 box-shadow 0.3s ease;
         }
 
+
         .academy-image:hover {
 
-            transform: scale(1.04);
+            transform:
+                scale(1.04);
 
             box-shadow:
 
                 0 0 0 4px
-                rgba(234, 182, 91, 0.20),
+                rgba(
+                    234,
+                    182,
+                    91,
+                    0.20
+                ),
 
                 0 15px 35px
-                rgba(0, 0, 0, 0.35);
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.35
+                );
         }
 
-
-        /* =================================
-           STRATEGENCE IMAGE
-        ================================= */
 
         .strategence-image {
 
             object-fit: contain;
 
-            object-position: center center;
+            object-position:
+                center center;
         }
 
 
@@ -408,6 +1004,7 @@
 
             line-height: 1.4;
         }
+
 
         .academy-subtitle {
 
@@ -441,6 +1038,7 @@
             overflow: visible;
         }
 
+
         .feature {
 
             background: #102e50;
@@ -457,12 +1055,15 @@
             z-index: 1;
         }
 
+
         .feature:hover {
 
-            transform: scale(1.05);
+            transform:
+                scale(1.05);
 
             z-index: 10;
         }
+
 
         .feature strong {
 
@@ -474,6 +1075,7 @@
 
             margin-bottom: 8px;
         }
+
 
         .feature p {
 
@@ -493,7 +1095,8 @@
 
             width: fit-content;
 
-            margin: 25px auto 45px;
+            margin:
+                25px auto 45px;
 
             background: #eab65b;
 
@@ -501,7 +1104,8 @@
 
             text-decoration: none;
 
-            padding: 15px 35px;
+            padding:
+                15px 35px;
 
             border-radius: 12px;
 
@@ -524,7 +1128,12 @@
             inset: 0;
 
             background:
-                rgba(0, 0, 0, 0.70);
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.70
+                );
 
             z-index: 9999;
 
@@ -534,6 +1143,7 @@
 
             padding: 20px;
         }
+
 
         .popup-overlay.show {
 
@@ -557,20 +1167,32 @@
 
             border:
                 1px solid
-                rgba(234, 182, 91, 0.40);
+                rgba(
+                    234,
+                    182,
+                    91,
+                    0.40
+                );
 
             border-radius: 20px;
 
-            padding: 30px 22px 25px;
+            padding:
+                30px 22px 25px;
 
             text-align: center;
 
             box-shadow:
                 0 20px 60px
-                rgba(0, 0, 0, 0.55);
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.55
+                );
 
             animation:
-                popupAnimation 0.25s ease;
+                popupAnimation
+                0.25s ease;
         }
 
 
@@ -584,6 +1206,7 @@
                     scale(0.85);
             }
 
+
             to {
 
                 opacity: 1;
@@ -591,6 +1214,7 @@
                 transform:
                     scale(1);
             }
+
         }
 
 
@@ -618,7 +1242,7 @@
 
             color: #07182d;
 
-            font-size: 24px;
+            font-size: 25px;
 
             line-height: 30px;
 
@@ -628,6 +1252,10 @@
         }
 
 
+        /* =================================
+           POPUP TITLE
+        ================================= */
+
         .popup-box h3 {
 
             margin:
@@ -635,8 +1263,9 @@
 
             color: #eab65b;
 
-            font-size: 25px;
+            font-size: 26px;
         }
+
 
         .popup-box p {
 
@@ -662,6 +1291,7 @@
             gap: 10px;
         }
 
+
         .popup-link {
 
             display: flex;
@@ -674,7 +1304,7 @@
 
             width: 100%;
 
-            padding: 12px;
+            padding: 11px;
 
             border-radius: 10px;
 
@@ -689,6 +1319,7 @@
             transition: 0.25s;
         }
 
+
         .popup-link:hover {
 
             transform:
@@ -698,11 +1329,15 @@
         }
 
 
+        /* =================================
+           POPUP ICON
+        ================================= */
+
         .popup-icon {
 
-            width: 27px;
+            width: 26px;
 
-            height: 27px;
+            height: 26px;
 
             display: flex;
 
@@ -713,7 +1348,12 @@
             border-radius: 50%;
 
             background:
-                rgba(255,255,255,0.18);
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.18
+                );
 
             font-weight: bold;
         }
@@ -728,6 +1368,7 @@
             background: #1877f2;
         }
 
+
         .popup-link.instagram {
 
             background:
@@ -740,6 +1381,7 @@
                 );
         }
 
+
         .popup-link.tiktok {
 
             background: #050505;
@@ -748,10 +1390,12 @@
                 1px solid #333;
         }
 
+
         .popup-link.linkedin {
 
             background: #0a66c2;
         }
+
 
         .popup-link.website {
 
@@ -789,6 +1433,13 @@
                     repeat(2, 1fr);
             }
 
+
+            .accreditation-grid {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+            }
+
         }
 
 
@@ -803,27 +1454,24 @@
                 padding-top: 30px;
             }
 
+
             h1 {
 
                 font-size: 30px;
             }
+
 
             .subtitle {
 
                 font-size: 17px;
             }
 
-            .stats {
-
-                grid-template-columns:
-                    1fr;
-            }
 
             .features {
 
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
             }
+
 
             .button {
 
@@ -831,6 +1479,7 @@
 
                 text-align: center;
             }
+
 
             .cta-button {
 
@@ -844,6 +1493,7 @@
                     15px 20px;
             }
 
+
             .section,
             .doctor-section {
 
@@ -851,10 +1501,12 @@
                     25px 18px;
             }
 
+
             .doctor-section h2 {
 
                 font-size: 27px;
             }
+
 
             .doctor-intro {
 
@@ -862,15 +1514,78 @@
             }
 
 
-            /* الأكاديميات فوق بعض */
+            /* EXPERIENCE */
 
-            .academy-cards {
+            .experience-layout {
 
-                grid-template-columns:
-                    1fr;
+                grid-template-columns: 1fr;
 
                 gap: 25px;
             }
+
+
+            .experience-info {
+
+                text-align: center;
+            }
+
+
+            .experience-circle {
+
+                width: 195px;
+
+                height: 195px;
+            }
+
+
+            .experience-circle::before {
+
+                width: 150px;
+
+                height: 150px;
+            }
+
+
+            .experience-number strong {
+
+                font-size: 43px;
+            }
+
+
+            /* ACCREDITATIONS */
+
+            .accreditation-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 12px;
+            }
+
+
+            .accreditation-card {
+
+                min-height: 135px;
+            }
+
+
+            .accreditation-card img {
+
+                width: 100px;
+
+                height: 70px;
+            }
+
+
+            /* ACADEMIES */
+
+            .academy-cards {
+
+                grid-template-columns: 1fr;
+
+                gap: 25px;
+            }
+
 
             .academy-card {
 
@@ -880,6 +1595,7 @@
 
                 margin: auto;
             }
+
 
             .academy-image {
 
@@ -917,16 +1633,23 @@
     <section class="hero">
 
         <div class="badge">
+
             دورة تدريبية احترافية
+
         </div>
+
 
         <h1>
 
             <span>
-                تحوّل من إداري تقليدي إلى قائد استراتيجي يصنع الفارق في مؤسسته
+
+                تحوّل من إداري تقليدي إلى قائد استراتيجي
+                يصنع الفارق في مؤسسته
+
             </span>
 
         </h1>
+
 
         <p class="subtitle">
 
@@ -937,6 +1660,7 @@
 
         </p>
 
+
         <a
             href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
             class="cta-button">
@@ -946,6 +1670,7 @@
         </a>
 
     </section>
+
 
 
     <!-- =================================
@@ -970,6 +1695,7 @@
     </div>
 
 
+
     <!-- =================================
          DOCTOR
     ================================= -->
@@ -977,8 +1703,11 @@
     <section class="doctor-section">
 
         <h2>
+
             نبذة عن الدكتور عمر الجبر
+
         </h2>
+
 
         <p class="doctor-intro">
 
@@ -992,80 +1721,157 @@
         </p>
 
 
+
         <!-- =================================
-             STATS
+             NEW EXPERIENCE CHART
         ================================= -->
 
-        <div class="stats">
+        <div class="professional-experience">
+
+            <h3 class="professional-title">
+
+                الخبرة والتميز
+
+            </h3>
 
 
-            <div class="stat-card">
+            <div class="experience-layout">
 
-                <div class="stat-icon">
-                    🏛️
+
+                <!-- CIRCLE -->
+
+                <div class="experience-circle-wrap">
+
+                    <div class="experience-circle">
+
+                        <div class="experience-number">
+
+                            <strong>
+                                +20
+                            </strong>
+
+                            <span>
+                                سنة خبرة
+                            </span>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <span class="stat-number">
-                    +20 سنة
-                </span>
-
-                <span class="stat-title">
-                    خبرة استشارية وتدريبية
-                </span>
-
-                <span class="stat-text">
-                    خبرة متخصصة في الاستشارات والتدريب
-                    وتطوير ونمو العمل المؤسسي.
-                </span>
-
-            </div>
 
 
-            <div class="stat-card">
+                <!-- INFORMATION -->
 
-                <div class="stat-icon">
-                    🌐
+                <div class="experience-info">
+
+                    <h4>
+
+                        أكثر من 20 عاماً من الخبرة
+
+                    </h4>
+
+
+                    <p>
+
+                        خبرة استشارية وتدريبية واسعة في
+                        تطوير القيادات، والاستراتيجيات،
+                        وتطوير الأداء المؤسسي والأعمال.
+
+                    </p>
+
+
+                    <div class="experience-bars">
+
+
+                        <div class="experience-bar-row">
+
+                            <div class="experience-bar-header">
+
+                                <span>
+                                    الاستشارات المؤسسية
+                                </span>
+
+                                <span>
+                                    90%
+                                </span>
+
+                            </div>
+
+
+                            <div class="experience-bar">
+
+                                <div
+                                    class="experience-fill one">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="experience-bar-row">
+
+                            <div class="experience-bar-header">
+
+                                <span>
+                                    التدريب والتطوير
+                                </span>
+
+                                <span>
+                                    85%
+                                </span>
+
+                            </div>
+
+
+                            <div class="experience-bar">
+
+                                <div
+                                    class="experience-fill two">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="experience-bar-row">
+
+                            <div class="experience-bar-header">
+
+                                <span>
+                                    تطوير الأعمال والقيادات
+                                </span>
+
+                                <span>
+                                    80%
+                                </span>
+
+                            </div>
+
+
+                            <div class="experience-bar">
+
+                                <div
+                                    class="experience-fill three">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <span class="stat-number">
-                    خبرات دولية
-                </span>
-
-                <span class="stat-title">
-                    حضور وخبرات متعددة الدول
-                </span>
-
-                <span class="stat-text">
-                    خبرات وبرامج قيادية في بريطانيا
-                    وأمريكا والإمارات والسعودية.
-                </span>
-
             </div>
-
-
-            <div class="stat-card">
-
-                <div class="stat-icon">
-                    💼
-                </div>
-
-                <span class="stat-number">
-                    استشارات مؤسسية
-                </span>
-
-                <span class="stat-title">
-                    مؤسسات وشركات كبرى
-                </span>
-
-                <span class="stat-text">
-                    خبرات عملية مع مؤسسات مثل
-                    STS وPhilips وFMS.
-                </span>
-
-            </div>
-
 
         </div>
+
 
 
         <!-- =================================
@@ -1075,19 +1881,24 @@
         <div class="experience-box">
 
             <h3>
+
                 مجالات الخبرة
+
             </h3>
+
 
             <p>
 
-                تشمل خبراته استشراف المستقبل، وبناء الخطط
-                الاستراتيجية والتشغيلية، والابتكار التغييري،
-                وتصميم الخدمات الحكومية، وتطوير القيادات،
-                واستراتيجيات التدريب، وتطوير الأداء المؤسسي.
+                تشمل خبراته استشراف المستقبل،
+                وبناء الخطط الاستراتيجية والتشغيلية،
+                والابتكار التغييري، وتصميم الخدمات الحكومية،
+                وتطوير القيادات، واستراتيجيات التدريب،
+                وتطوير الأداء المؤسسي.
 
             </p>
 
         </div>
+
 
 
         <!-- =================================
@@ -1097,38 +1908,158 @@
         <div class="experience-box">
 
             <h3>
+
                 خبرات دولية وبرامج قيادية
+
             </h3>
 
+
             <div class="countries">
+
 
                 <span class="country">
                     🇦🇪 الإمارات
                 </span>
 
+
                 <span class="country">
                     🇸🇦 السعودية
                 </span>
+
 
                 <span class="country">
                     🇬🇧 بريطانيا
                 </span>
 
+
                 <span class="country">
                     🇺🇸 أمريكا
                 </span>
+
 
                 <span class="country">
                     🇴🇲 سلطنة عمان
                 </span>
 
+
                 <span class="country">
                     🇯🇴 الأردن
                 </span>
 
+
             </div>
 
         </div>
+
+
+
+        <!-- =================================
+             INTERNATIONAL ACCREDITATIONS
+        ================================= -->
+
+        <div class="accreditation-section">
+
+            <h3 class="accreditation-title">
+
+                الاعتمادات الدولية
+
+            </h3>
+
+
+            <p class="accreditation-description">
+
+                خبرات واعتمادات وشراكات مهنية دولية
+                تدعم جودة البرامج التدريبية والتطويرية.
+
+            </p>
+
+
+            <div class="accreditation-grid">
+
+
+                <!-- IWCF -->
+
+                <div class="accreditation-card">
+
+                    <img
+                        src="iwcf.png"
+                        alt="IWCF">
+
+                    <span>
+                        IWCF
+                    </span>
+
+                </div>
+
+
+
+                <!-- PEARSON -->
+
+                <div class="accreditation-card">
+
+                    <img
+                        src="pearson.png"
+                        alt="Pearson">
+
+                    <span>
+                        Pearson
+                    </span>
+
+                </div>
+
+
+
+                <!-- IADC -->
+
+                <div class="accreditation-card">
+
+                    <img
+                        src="iadc.png"
+                        alt="IADC">
+
+                    <span>
+                        IADC
+                    </span>
+
+                </div>
+
+
+
+                <!-- OSHA -->
+
+                <div class="accreditation-card">
+
+                    <img
+                        src="osha.png"
+                        alt="OSHA">
+
+                    <span>
+                        OSHA
+                    </span>
+
+                </div>
+
+
+
+                <!-- NEBOSH -->
+
+                <div class="accreditation-card">
+
+                    <img
+                        src="nebosh.png"
+                        alt="NEBOSH">
+
+                    <span>
+                        NEBOSH
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
 
 
         <!-- =================================
@@ -1138,12 +2069,18 @@
         <div class="academies">
 
             <h3>
+
                 مجموعة العالمية للتدريب والاستشارات
+
             </h3>
 
+
             <div class="branches-title">
+
                 فروعنا
+
             </div>
+
 
             <p>
 
@@ -1154,6 +2091,7 @@
             </p>
 
 
+
             <!-- =================================
                  THREE ACADEMIES
             ================================= -->
@@ -1161,9 +2099,7 @@
             <div class="academy-cards">
 
 
-                <!-- =================================
-                     BOSPHORLEAD
-                ================================= -->
+                <!-- BOSPHORLEAD -->
 
                 <div class="academy-card">
 
@@ -1174,20 +2110,25 @@
                         onclick="openBosphorleadPopup()"
                     >
 
+
                     <div class="academy-name">
+
                         BOSPHORLEAD
+
                     </div>
 
+
                     <div class="academy-subtitle">
+
                         ACADEMY
+
                     </div>
 
                 </div>
 
 
-                <!-- =================================
-                     STRATEGENCE
-                ================================= -->
+
+                <!-- STRATEGENCE -->
 
                 <div class="academy-card">
 
@@ -1198,20 +2139,25 @@
                         onclick="openStrategencePopup()"
                     >
 
+
                     <div class="academy-name">
+
                         STRATEGENCE
+
                     </div>
 
+
                     <div class="academy-subtitle">
+
                         FOR BUSINESS DEVELOPMENT
+
                     </div>
 
                 </div>
 
 
-                <!-- =================================
-                     FUTUROLOGY
-                ================================= -->
+
+                <!-- FUTUROLOGY -->
 
                 <div class="academy-card">
 
@@ -1222,12 +2168,18 @@
                         onclick="openFuturologyPopup()"
                     >
 
+
                     <div class="academy-name">
+
                         FUTUROLOGY
+
                     </div>
 
+
                     <div class="academy-subtitle">
+
                         FOR DEVELOPMENT
+
                     </div>
 
                 </div>
@@ -1238,6 +2190,7 @@
         </div>
 
     </section>
+
 
 
     <!-- =================================
@@ -1253,6 +2206,7 @@
     </a>
 
 
+
     <!-- =================================
          ABOUT COURSE
     ================================= -->
@@ -1262,8 +2216,11 @@
         id="about">
 
         <h2>
+
             عن دورة القيادة الاستراتيجية
+
         </h2>
+
 
         <p>
 
@@ -1277,6 +2234,7 @@
     </section>
 
 
+
     <!-- =================================
          WHAT YOU WILL LEARN
     ================================= -->
@@ -1284,8 +2242,11 @@
     <section class="section">
 
         <h2>
+
             ماذا ستتعلم؟
+
         </h2>
+
 
         <div class="features">
 
@@ -1293,8 +2254,11 @@
             <div class="feature">
 
                 <strong>
+
                     الإبداع المؤسسي
+
                 </strong>
+
 
                 <p>
 
@@ -1307,11 +2271,15 @@
             </div>
 
 
+
             <div class="feature">
 
                 <strong>
+
                     مؤشرات الأداء
+
                 </strong>
+
 
                 <p>
 
@@ -1324,11 +2292,15 @@
             </div>
 
 
+
             <div class="feature">
 
                 <strong>
+
                     إدارة التغيير
+
                 </strong>
+
 
                 <p>
 
@@ -1345,6 +2317,7 @@
     </section>
 
 
+
     <!-- =================================
          WHAT YOU GET
     ================================= -->
@@ -1352,8 +2325,11 @@
     <section class="section">
 
         <h2>
+
             ماذا ستحصل عليه عند الالتحاق بالدورة؟
+
         </h2>
+
 
         <div class="features">
 
@@ -1361,76 +2337,111 @@
             <div class="feature">
 
                 <strong>
+
                     22 فيديو تدريبي متكامل
+
                 </strong>
 
+
                 <p>
+
                     محتوى تدريبي متكامل ومنظم.
+
                 </p>
 
             </div>
 
 
+
             <div class="feature">
 
                 <strong>
+
                     محتوى تدريبي متخصص
+
                 </strong>
 
+
                 <p>
+
                     محتوى متخصص للقادة والمديرين.
+
                 </p>
 
             </div>
 
 
+
             <div class="feature">
 
                 <strong>
+
                     تطبيقات وأمثلة عملية
+
                 </strong>
 
+
                 <p>
+
                     أمثلة عملية قابلة للتطبيق.
+
                 </p>
 
             </div>
 
 
+
             <div class="feature">
 
                 <strong>
+
                     إمكانية التعلم حسب وقتك
+
                 </strong>
 
+
                 <p>
+
                     تعلم بالوقت الذي يناسبك.
+
                 </p>
 
             </div>
 
 
+
             <div class="feature">
 
                 <strong>
+
                     محتوى متاح عبر المنصة
+
                 </strong>
 
+
                 <p>
+
                     الوصول إلى المحتوى من خلال المنصة.
+
                 </p>
 
             </div>
 
 
+
             <div class="feature">
 
                 <strong>
+
                     شهادة إتمام الدورة
+
                 </strong>
 
+
                 <p>
+
                     شهادة إتمام الدورة بعد استكمال المتطلبات.
+
                 </p>
 
             </div>
@@ -1439,6 +2450,7 @@
         </div>
 
     </section>
+
 
 
     <!-- =================================
@@ -1462,6 +2474,7 @@
     </section>
 
 
+
     <!-- =================================
          FOOTER
     ================================= -->
@@ -1475,7 +2488,6 @@
         دورة القيادة الاستراتيجية © 2026
 
     </footer>
-
 
 </div>
 
@@ -1500,30 +2512,34 @@
             class="popup-close"
             onclick="closeBosphorleadPopup()"
         >
+
             ×
+
         </button>
 
 
         <h3>
+
             BOSPHORLEAD
+
         </h3>
 
+
         <p>
+
             Bosphorlead Academy
+
         </p>
 
 
         <div class="popup-links">
 
 
-            <!-- FACEBOOK -->
-
             <a
                 href="https://www.facebook.com/Bosphorlead.Academy"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link facebook"
-            >
+                class="popup-link facebook">
 
                 <span class="popup-icon">
                     f
@@ -1534,14 +2550,11 @@
             </a>
 
 
-            <!-- INSTAGRAM -->
-
             <a
                 href="https://www.instagram.com/bosphorleadacademy123/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link instagram"
-            >
+                class="popup-link instagram">
 
                 <span class="popup-icon">
                     ◎
@@ -1552,14 +2565,11 @@
             </a>
 
 
-            <!-- TIKTOK -->
-
             <a
                 href="https://www.tiktok.com/@bosphorlead"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link tiktok"
-            >
+                class="popup-link tiktok">
 
                 <span class="popup-icon">
                     ♪
@@ -1570,14 +2580,11 @@
             </a>
 
 
-            <!-- WEBSITE -->
-
             <a
                 href="https://www.bosphorlead.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link website"
-            >
+                class="popup-link website">
 
                 <span class="popup-icon">
                     🌐
@@ -1615,30 +2622,34 @@
             class="popup-close"
             onclick="closeStrategencePopup()"
         >
+
             ×
+
         </button>
 
 
         <h3>
+
             STRATEGENCE
+
         </h3>
 
+
         <p>
-            For Business Development
+
+            مجموعة العالمية للتدريب والاستشارات
+
         </p>
 
 
         <div class="popup-links">
 
 
-            <!-- FACEBOOK -->
-
             <a
                 href="https://www.facebook.com/stratence.academy"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link facebook"
-            >
+                class="popup-link facebook">
 
                 <span class="popup-icon">
                     f
@@ -1649,14 +2660,11 @@
             </a>
 
 
-            <!-- INSTAGRAM -->
-
             <a
                 href="https://www.instagram.com/strategence_academy/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link instagram"
-            >
+                class="popup-link instagram">
 
                 <span class="popup-icon">
                     ◎
@@ -1667,14 +2675,11 @@
             </a>
 
 
-            <!-- TIKTOK -->
-
             <a
                 href="https://www.tiktok.com/@strategence.academy"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link tiktok"
-            >
+                class="popup-link tiktok">
 
                 <span class="popup-icon">
                     ♪
@@ -1685,14 +2690,11 @@
             </a>
 
 
-            <!-- WEBSITE -->
-
             <a
                 href="https://www.strategenceegy.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link website"
-            >
+                class="popup-link website">
 
                 <span class="popup-icon">
                     🌐
@@ -1730,30 +2732,34 @@
             class="popup-close"
             onclick="closeFuturologyPopup()"
         >
+
             ×
+
         </button>
 
 
         <h3>
+
             FUTUROLOGY
+
         </h3>
 
+
         <p>
+
             Futurology For Development
+
         </p>
 
 
         <div class="popup-links">
 
 
-            <!-- FACEBOOK -->
-
             <a
                 href="https://www.facebook.com/share/1E77YLSpn1/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link facebook"
-            >
+                class="popup-link facebook">
 
                 <span class="popup-icon">
                     f
@@ -1764,14 +2770,11 @@
             </a>
 
 
-            <!-- INSTAGRAM -->
-
             <a
                 href="https://www.instagram.com/futurology_academy?igsh=MWUxampzZWd5cWdybQ=="
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link instagram"
-            >
+                class="popup-link instagram">
 
                 <span class="popup-icon">
                     ◎
@@ -1782,14 +2785,11 @@
             </a>
 
 
-            <!-- LINKEDIN -->
-
             <a
                 href="https://www.linkedin.com/company/futurology-for-development/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link linkedin"
-            >
+                class="popup-link linkedin">
 
                 <span class="popup-icon">
                     in
@@ -1800,14 +2800,11 @@
             </a>
 
 
-            <!-- WEBSITE -->
-
             <a
                 href="https://2u.pw/Y1beUG"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="popup-link website"
-            >
+                class="popup-link website">
 
                 <span class="popup-icon">
                     🌐
@@ -1862,6 +2859,7 @@ function closeBosphorleadPopup(event) {
 }
 
 
+
 /* =================================
    STRATEGENCE
 ================================= */
@@ -1889,6 +2887,7 @@ function closeStrategencePopup(event) {
     }
 
 }
+
 
 
 /* =================================
@@ -1920,6 +2919,7 @@ function closeFuturologyPopup(event) {
 }
 
 
+
 /* =================================
    ESC KEY
 ================================= */
@@ -1934,9 +2934,11 @@ document.addEventListener(
                 .getElementById("bosphorleadPopup")
                 .classList.remove("show");
 
+
             document
                 .getElementById("strategencePopup")
                 .classList.remove("show");
+
 
             document
                 .getElementById("futurologyPopup")
