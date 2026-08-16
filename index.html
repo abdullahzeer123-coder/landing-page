@@ -28,6 +28,7 @@
             margin: auto;
         }
 
+
         /* ==============================
            HEADER
         ============================== */
@@ -65,8 +66,9 @@
             line-height: 1.9;
         }
 
+
         /* ==============================
-           CTA BUTTON
+           CTA
         ============================== */
 
         .cta-button {
@@ -88,6 +90,7 @@
             box-shadow: 0 12px 30px rgba(234, 182, 91, 0.4);
         }
 
+
         /* ==============================
            VIDEO
         ============================== */
@@ -103,6 +106,7 @@
             display: block;
             border-radius: 12px;
         }
+
 
         /* ==============================
            SECTIONS
@@ -129,8 +133,9 @@
             line-height: 2;
         }
 
+
         /* ==============================
-           ABOUT DR. OMAR
+           ABOUT DOCTOR
         ============================== */
 
         .doctor-section {
@@ -155,6 +160,7 @@
             font-size: 18px;
             line-height: 2;
         }
+
 
         /* ==============================
            STATS
@@ -206,6 +212,7 @@
             line-height: 1.7;
         }
 
+
         /* ==============================
            EXPERIENCE
         ============================== */
@@ -240,6 +247,7 @@
             font-size: 15px;
         }
 
+
         /* ==============================
            GLOBAL TRAINING GROUP
         ============================== */
@@ -270,6 +278,7 @@
             line-height: 1.9;
         }
 
+
         /* ==============================
            ACADEMY CARD
         ============================== */
@@ -284,6 +293,7 @@
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
         }
 
+
         /* ==============================
            ACADEMY IMAGE
         ============================== */
@@ -294,7 +304,7 @@
             height: 240px;
             object-fit: contain;
             display: block;
-            margin: 0 auto;
+            margin: auto;
             border-radius: 14px;
             background: #ffffff;
             padding: 5px;
@@ -306,76 +316,204 @@
             transform: scale(1.02);
         }
 
+
         /* ==============================
-           SOCIAL LINKS
-           HIDDEN BY DEFAULT
+           POPUP OVERLAY
         ============================== */
 
-        .social-links {
+        .popup-overlay {
             display: none;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 15px;
-        }
 
-        /* تظهر عند الضغط على الصورة */
+            position: fixed;
+            inset: 0;
 
-        .academy-card.active .social-links {
-            display: flex;
-        }
+            background: rgba(0, 0, 0, 0.65);
 
-        /* ==============================
-           SOCIAL BUTTON
-        ============================== */
+            z-index: 9999;
 
-        .social-link {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 8px 12px;
-            border-radius: 9px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: bold;
-            transition: all 0.25s ease;
-        }
-
-        .social-link:hover {
-            transform: translateY(-2px);
-        }
-
-        /* ==============================
-           SOCIAL ICON
-        ============================== */
-
-        .social-icon {
-            width: 22px;
-            height: 22px;
-            display: flex;
             align-items: center;
             justify-content: center;
+
+            padding: 20px;
+        }
+
+
+        /* Show Popup */
+
+        .popup-overlay.show {
+            display: flex;
+        }
+
+
+        /* ==============================
+           SMALL POPUP
+        ============================== */
+
+        .popup-box {
+            position: relative;
+
+            width: 100%;
+            max-width: 360px;
+
+            background: #0c2543;
+
+            border: 1px solid rgba(234, 182, 91, 0.35);
+
+            border-radius: 20px;
+
+            padding: 30px 22px 25px;
+
+            text-align: center;
+
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+
+            animation: popupAnimation 0.25s ease;
+        }
+
+
+        /* ==============================
+           POPUP ANIMATION
+        ============================== */
+
+        @keyframes popupAnimation {
+
+            from {
+                opacity: 0;
+                transform: scale(0.85);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+        }
+
+
+        /* ==============================
+           CLOSE BUTTON
+        ============================== */
+
+        .popup-close {
+            position: absolute;
+
+            top: 10px;
+            left: 12px;
+
+            width: 32px;
+            height: 32px;
+
+            border: none;
+
             border-radius: 50%;
-            background: rgba(255,255,255,0.15);
-            font-size: 14px;
+
+            background: #eab65b;
+
+            color: #07182d;
+
+            font-size: 25px;
+
+            line-height: 30px;
+
+            cursor: pointer;
+
             font-weight: bold;
         }
 
+
         /* ==============================
-           FACEBOOK
+           POPUP TITLE
         ============================== */
 
-        .facebook {
+        .popup-box h3 {
+            margin: 5px 0 3px;
+
+            color: #eab65b;
+
+            font-size: 26px;
+        }
+
+        .popup-box p {
+            margin: 0 0 22px;
+
+            color: #d8e0ea;
+
+            font-size: 15px;
+        }
+
+
+        /* ==============================
+           POPUP LINKS
+        ============================== */
+
+        .popup-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .popup-link {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 10px;
+
+            width: 100%;
+
+            padding: 11px;
+
+            border-radius: 10px;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 15px;
+
+            font-weight: bold;
+
+            transition: 0.25s;
+        }
+
+        .popup-link:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+
+
+        /* ==============================
+           POPUP ICON
+        ============================== */
+
+        .popup-icon {
+            width: 26px;
+            height: 26px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.18);
+
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           SOCIAL COLORS
+        ============================== */
+
+        .popup-link.facebook {
             background: #1877f2;
         }
 
-        /* ==============================
-           INSTAGRAM
-        ============================== */
-
-        .instagram {
+        .popup-link.instagram {
             background: linear-gradient(
                 45deg,
                 #f58529,
@@ -385,27 +523,16 @@
             );
         }
 
-        /* ==============================
-           TIKTOK
-        ============================== */
-
-        .tiktok {
+        .popup-link.tiktok {
             background: #050505;
             border: 1px solid #333;
         }
 
-        /* ==============================
-           WEBSITE
-        ============================== */
-
-        .website {
+        .popup-link.website {
             background: #eab65b;
             color: #07182d;
         }
 
-        .website:hover {
-            color: #07182d;
-        }
 
         /* ==============================
            FEATURES
@@ -445,6 +572,7 @@
             margin: 0;
         }
 
+
         /* ==============================
            BUTTON
         ============================== */
@@ -462,13 +590,6 @@
             font-size: 19px;
         }
 
-        /* ==============================
-           LINK HOVER
-        ============================== */
-
-        h2 a:hover {
-            color: #0000EE !important;
-        }
 
         /* ==============================
            FOOTER
@@ -480,6 +601,7 @@
             font-size: 14px;
             padding: 30px 0;
         }
+
 
         /* ==============================
            MOBILE
@@ -542,13 +664,9 @@
                 height: 190px;
             }
 
-            .social-links {
-                gap: 7px;
-            }
-
-            .social-link {
-                padding: 7px 10px;
-                font-size: 12px;
+            .popup-box {
+                max-width: 330px;
+                padding: 28px 18px 22px;
             }
 
         }
@@ -648,9 +766,7 @@
         </p>
 
 
-        <!-- ==============================
-             STATS
-        ============================== -->
+        <!-- STATS -->
 
         <div class="stats">
 
@@ -720,13 +836,10 @@
 
             </div>
 
-
         </div>
 
 
-        <!-- ==============================
-             PROFESSIONAL EXPERIENCE
-        ============================== -->
+        <!-- EXPERIENCE -->
 
         <div class="experience-box">
 
@@ -746,9 +859,7 @@
         </div>
 
 
-        <!-- ==============================
-             INTERNATIONAL EXPERIENCE
-        ============================== -->
+        <!-- INTERNATIONAL EXPERIENCE -->
 
         <div class="experience-box">
 
@@ -811,112 +922,20 @@
 
 
             <!-- ==============================
-                 STRATEGENCE
+                 STRATEGENCE IMAGE
             ============================== -->
 
             <div class="academy-card">
-
-
-                <!--
-                    اضغط على الصورة لإظهار الروابط
-                -->
 
                 <img
                     src="Strategence.png"
                     alt="Strategence"
                     class="academy-image"
-                    onclick="toggleSocialLinks(this)">
-
-
-                <!-- ==============================
-                     SOCIAL LINKS
-                ============================== -->
-
-                <div class="social-links">
-
-
-                    <!-- Facebook -->
-
-                    <a
-                        href="https://www.facebook.com/stratence.academy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="social-link facebook">
-
-                        <span class="social-icon">
-                            f
-                        </span>
-
-                        <span>
-                            Facebook
-                        </span>
-
-                    </a>
-
-
-                    <!-- Instagram -->
-
-                    <a
-                        href="https://www.instagram.com/strategence_academy/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="social-link instagram">
-
-                        <span class="social-icon">
-                            ◎
-                        </span>
-
-                        <span>
-                            Instagram
-                        </span>
-
-                    </a>
-
-
-                    <!-- TikTok -->
-
-                    <a
-                        href="https://www.tiktok.com/@strategence.academy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="social-link tiktok">
-
-                        <span class="social-icon">
-                            ♪
-                        </span>
-
-                        <span>
-                            TikTok
-                        </span>
-
-                    </a>
-
-
-                    <!-- Website -->
-
-                    <a
-                        href="https://www.strategenceegy.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="social-link website">
-
-                        <span class="social-icon">
-                            🌐
-                        </span>
-
-                        <span>
-                            Website
-                        </span>
-
-                    </a>
-
-
-                </div>
+                    onclick="openStrategencePopup()">
 
             </div>
 
         </div>
-
 
     </section>
 
@@ -1166,9 +1185,7 @@
     </section>
 
 
-    <!-- ==============================
-         FOOTER
-    ============================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -1185,16 +1202,144 @@
 
 
 <!-- ==============================
+     STRATEGENCE POPUP
+============================== -->
+
+<div
+    id="strategencePopup"
+    class="popup-overlay"
+    onclick="closeStrategencePopup(event)">
+
+    <div
+        class="popup-box"
+        onclick="event.stopPropagation()">
+
+
+        <!-- CLOSE -->
+
+        <button
+            class="popup-close"
+            onclick="closeStrategencePopup()">
+
+            ×
+
+        </button>
+
+
+        <h3>
+            STRATEGENCE
+        </h3>
+
+        <p>
+            مجموعة العالمية للتدريب والاستشارات
+        </p>
+
+
+        <div class="popup-links">
+
+
+            <!-- FACEBOOK -->
+
+            <a
+                href="https://www.facebook.com/stratence.academy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link facebook">
+
+                <span class="popup-icon">
+                    f
+                </span>
+
+                Facebook
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/strategence_academy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link instagram">
+
+                <span class="popup-icon">
+                    ◎
+                </span>
+
+                Instagram
+
+            </a>
+
+
+            <!-- TIKTOK -->
+
+            <a
+                href="https://www.tiktok.com/@strategence.academy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link tiktok">
+
+                <span class="popup-icon">
+                    ♪
+                </span>
+
+                TikTok
+
+            </a>
+
+
+            <!-- WEBSITE -->
+
+            <a
+                href="https://www.strategenceegy.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link website">
+
+                <span class="popup-icon">
+                    🌐
+                </span>
+
+                Website
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ==============================
      JAVASCRIPT
 ============================== -->
 
 <script>
 
-function toggleSocialLinks(image) {
+function openStrategencePopup() {
 
-    const card = image.closest('.academy-card');
+    document
+        .getElementById("strategencePopup")
+        .classList.add("show");
 
-    card.classList.toggle('active');
+}
+
+
+function closeStrategencePopup(event) {
+
+    if (
+        !event ||
+        event.target.id === "strategencePopup"
+    ) {
+
+        document
+            .getElementById("strategencePopup")
+            .classList.remove("show");
+
+    }
 
 }
 
