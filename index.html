@@ -86,22 +86,16 @@
 
         /* Video */
 
-        .video-section {
-            margin: 30px 0;
+        .video-container {
+            max-width: 700px;
+            margin: 30px auto;
         }
 
-        .video-box {
-            background: #000000;
-            border: 2px solid #46576b;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
-        }
-
-        .video-box video {
+        .video-container video {
             width: 100%;
+            height: auto;
             display: block;
-            background: #000000;
+            border-radius: 12px;
         }
 
         /* Button */
@@ -227,6 +221,7 @@
             .section {
                 padding: 25px 18px;
             }
+
         }
 
     </style>
@@ -250,7 +245,9 @@
         </div>
 
         <h1>
-            <span>تحوّل من إداري تقليدي إلى قائد استراتيجي يصنع الفارق في مؤسسته</span>
+            <span>
+                تحوّل من إداري تقليدي إلى قائد استراتيجي يصنع الفارق في مؤسسته
+            </span>
         </h1>
 
         <p class="subtitle">
@@ -263,10 +260,13 @@
         </p>
 
         <!-- CTA -->
+
         <a
             href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
             class="cta-button">
+
             اشترك في الدورة الآن
+
         </a>
 
     </section>
@@ -276,26 +276,22 @@
          VIDEO
     =============================== -->
 
-    <section class="video-section">
+    <div class="video-container">
 
-        <div class="video-box">
+        <video
+            controls
+            playsinline
+            preload="metadata">
 
-            <video
-                controls
-                playsinline
-                preload="metadata">
+            <source
+                src="video.mp4"
+                type="video/mp4">
 
-                <source
-                    src="./video.mp4"
-                    type="video/mp4">
+            عذراً، متصفحك لا يدعم تشغيل الفيديو.
 
-                عذراً، متصفحك لا يدعم تشغيل الفيديو.
+        </video>
 
-            </video>
-
-        </div>
-
-    </section>
+    </div>
 
 
     <!-- ==============================
