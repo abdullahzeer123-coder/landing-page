@@ -28,7 +28,6 @@
             margin: auto;
         }
 
-
         /* ==============================
            HEADER
         ============================== */
@@ -66,7 +65,6 @@
             line-height: 1.9;
         }
 
-
         /* ==============================
            CTA
         ============================== */
@@ -90,7 +88,6 @@
             box-shadow: 0 12px 30px rgba(234, 182, 91, 0.4);
         }
 
-
         /* ==============================
            VIDEO
         ============================== */
@@ -106,7 +103,6 @@
             display: block;
             border-radius: 12px;
         }
-
 
         /* ==============================
            SECTIONS
@@ -133,9 +129,8 @@
             line-height: 2;
         }
 
-
         /* ==============================
-           ABOUT DOCTOR
+           DOCTOR
         ============================== */
 
         .doctor-section {
@@ -160,7 +155,6 @@
             font-size: 18px;
             line-height: 2;
         }
-
 
         /* ==============================
            STATS
@@ -212,7 +206,6 @@
             line-height: 1.7;
         }
 
-
         /* ==============================
            EXPERIENCE
         ============================== */
@@ -247,9 +240,8 @@
             font-size: 15px;
         }
 
-
         /* ==============================
-           GLOBAL TRAINING GROUP
+           ACADEMIES
         ============================== */
 
         .academies {
@@ -278,47 +270,77 @@
             line-height: 1.9;
         }
 
-
         /* ==============================
-           ACADEMY CARD
+           TWO ACADEMIES
         ============================== */
+
+        .academy-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 850px;
+            margin: auto;
+            align-items: center;
+        }
 
         .academy-card {
             background: #102e50;
             border: 1px solid rgba(234, 182, 91, 0.2);
             border-radius: 20px;
-            padding: 18px;
-            max-width: 480px;
-            margin: auto;
+            padding: 25px;
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
         }
 
-
         /* ==============================
-           ACADEMY IMAGE
+           CIRCULAR IMAGES
         ============================== */
 
         .academy-image {
-            width: 100%;
-            max-width: 380px;
-            height: 240px;
+            width: 260px;
+            height: 260px;
+
             object-fit: contain;
+
             display: block;
             margin: auto;
-            border-radius: 14px;
+
+            border-radius: 50%;
+
             background: #ffffff;
-            padding: 5px;
+
+            padding: 8px;
+
             cursor: pointer;
-            transition: transform 0.3s ease;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
         }
 
         .academy-image:hover {
-            transform: scale(1.02);
+            transform: scale(1.05);
+
+            box-shadow:
+                0 0 0 4px rgba(234, 182, 91, 0.35),
+                0 15px 35px rgba(0, 0, 0, 0.35);
         }
 
+        .academy-name {
+            margin-top: 18px;
+            color: #ffffff;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .academy-subtitle {
+            color: #eab65b;
+            font-size: 15px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
 
         /* ==============================
-           POPUP OVERLAY
+           POPUP
         ============================== */
 
         .popup-overlay {
@@ -337,17 +359,9 @@
             padding: 20px;
         }
 
-
-        /* Show Popup */
-
         .popup-overlay.show {
             display: flex;
         }
-
-
-        /* ==============================
-           SMALL POPUP
-        ============================== */
 
         .popup-box {
             position: relative;
@@ -370,11 +384,6 @@
             animation: popupAnimation 0.25s ease;
         }
 
-
-        /* ==============================
-           POPUP ANIMATION
-        ============================== */
-
         @keyframes popupAnimation {
 
             from {
@@ -389,9 +398,8 @@
 
         }
 
-
         /* ==============================
-           CLOSE BUTTON
+           CLOSE
         ============================== */
 
         .popup-close {
@@ -420,11 +428,6 @@
             font-weight: bold;
         }
 
-
-        /* ==============================
-           POPUP TITLE
-        ============================== */
-
         .popup-box h3 {
             margin: 5px 0 3px;
 
@@ -440,7 +443,6 @@
 
             font-size: 15px;
         }
-
 
         /* ==============================
            POPUP LINKS
@@ -483,11 +485,6 @@
             opacity: 0.9;
         }
 
-
-        /* ==============================
-           POPUP ICON
-        ============================== */
-
         .popup-icon {
             width: 26px;
             height: 26px;
@@ -503,7 +500,6 @@
 
             font-weight: bold;
         }
-
 
         /* ==============================
            SOCIAL COLORS
@@ -532,7 +528,6 @@
             background: #eab65b;
             color: #07182d;
         }
-
 
         /* ==============================
            FEATURES
@@ -572,7 +567,6 @@
             margin: 0;
         }
 
-
         /* ==============================
            BUTTON
         ============================== */
@@ -581,15 +575,21 @@
             display: block;
             width: fit-content;
             margin: 25px auto 45px;
+
             background: #eab65b;
+
             color: #07182d;
+
             text-decoration: none;
+
             padding: 15px 35px;
+
             border-radius: 12px;
+
             font-weight: bold;
+
             font-size: 19px;
         }
-
 
         /* ==============================
            FOOTER
@@ -601,7 +601,6 @@
             font-size: 14px;
             padding: 30px 0;
         }
-
 
         /* ==============================
            MOBILE
@@ -654,14 +653,22 @@
                 font-size: 16px;
             }
 
+            /* الأكاديميات فوق بعض في الجوال */
+
+            .academy-cards {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
             .academy-card {
-                padding: 15px;
-                max-width: 95%;
+                padding: 20px;
+                max-width: 330px;
+                margin: auto;
             }
 
             .academy-image {
-                max-width: 300px;
-                height: 190px;
+                width: 230px;
+                height: 230px;
             }
 
             .popup-box {
@@ -708,9 +715,6 @@
 
         </p>
 
-
-        <!-- CTA -->
-
         <a
             href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
             class="cta-button">
@@ -745,7 +749,7 @@
 
 
     <!-- ==============================
-         ABOUT DR. OMAR
+         DOCTOR
     ============================== -->
 
     <section class="doctor-section">
@@ -769,7 +773,6 @@
         <!-- STATS -->
 
         <div class="stats">
-
 
             <div class="stat-card">
 
@@ -899,7 +902,7 @@
 
 
         <!-- ==============================
-             GLOBAL TRAINING GROUP
+             ACADEMIES
         ============================== -->
 
         <div class="academies">
@@ -922,16 +925,53 @@
 
 
             <!-- ==============================
-                 STRATEGENCE IMAGE
+                 TWO ACADEMIES
             ============================== -->
 
-            <div class="academy-card">
+            <div class="academy-cards">
 
-                <img
-                    src="Strategence.png"
-                    alt="Strategence"
-                    class="academy-image"
-                    onclick="openStrategencePopup()">
+
+                <!-- STRATEGENCE -->
+
+                <div class="academy-card">
+
+                    <img
+                        src="Strategence.png"
+                        alt="Strategence"
+                        class="academy-image"
+                        onclick="openStrategencePopup()">
+
+                    <div class="academy-name">
+                        STRATEGENCE
+                    </div>
+
+                    <div class="academy-subtitle">
+                        FOR BUSINESS DEVELOPMENT
+                    </div>
+
+                </div>
+
+
+                <!-- BOSPHORLEAD -->
+
+                <div class="academy-card">
+
+                    <img
+                        src="Bosphorlead.png"
+                        alt="Bosphorlead Academy"
+                        class="academy-image"
+                        onclick="openBosphorleadPopup()">
+
+                    <div class="academy-name">
+                        BOSPHORLEAD
+                    </div>
+
+                    <div class="academy-subtitle">
+                        ACADEMY
+                    </div>
+
+                </div>
+
 
             </div>
 
@@ -941,7 +981,7 @@
 
 
     <!-- ==============================
-         ABOUT COURSE
+         ABOUT COURSE BUTTON
     ============================== -->
 
     <a
@@ -952,6 +992,10 @@
 
     </a>
 
+
+    <!-- ==============================
+         ABOUT COURSE
+    ============================== -->
 
     <section
         class="section"
@@ -996,8 +1040,7 @@
 
                     الإبداع المؤسسي هو قدرة المنظمة على ابتكار
                     أفكار وحلول جديدة تُحسّن الأداء وتمنحها
-                    ميزة تنافسية. يعتمد على تشجيع التفكير
-                    خارج الصندوق.
+                    ميزة تنافسية.
 
                 </p>
 
@@ -1013,9 +1056,8 @@
                 <p>
 
                     مؤشرات الأداء (KPIs) هي أدوات قياس تُستخدم
-                    لتحديد مدى تحقيق الأهداف داخل المؤسسة بشكل
-                    دقيق وواضح. تُحوّل الأهداف العامة إلى أرقام
-                    قابلة للمتابعة والتحليل.
+                    لتحديد مدى تحقيق الأهداف داخل المؤسسة
+                    بشكل دقيق وواضح.
 
                 </p>
 
@@ -1031,9 +1073,7 @@
                 <p>
 
                     إدارة التغيير هي عملية منظمة تهدف إلى نقل
-                    المؤسسة من وضعها الحالي إلى وضع أفضل،
-                    من خلال التخطيط للتغيير وتنفيذه بطريقة تقلل
-                    المقاومة وتزيد فرص النجاح.
+                    المؤسسة من وضعها الحالي إلى وضع أفضل.
 
                 </p>
 
@@ -1046,7 +1086,7 @@
 
 
     <!-- ==============================
-         WHAT YOU WILL GET
+         WHAT YOU GET
     ============================== -->
 
     <section class="section">
@@ -1065,11 +1105,7 @@
                 </strong>
 
                 <p>
-
-                    محتوى تدريبي متكامل ومنظم يساعدك على
-                    تطوير مهاراتك وفهم المفاهيم الاستراتيجية
-                    بشكل تدريجي وعملي.
-
+                    محتوى تدريبي متكامل ومنظم.
                 </p>
 
             </div>
@@ -1082,11 +1118,7 @@
                 </strong>
 
                 <p>
-
-                    محتوى متخصص يركز على أهم المهارات
-                    والمفاهيم التي يحتاجها القادة والمديرون
-                    في بيئة العمل الحديثة.
-
+                    محتوى متخصص للقادة والمديرين.
                 </p>
 
             </div>
@@ -1099,11 +1131,7 @@
                 </strong>
 
                 <p>
-
-                    الاستفادة من التطبيقات والأمثلة العملية
-                    التي تساعد على تحويل المعرفة إلى مهارات
-                    قابلة للتطبيق في بيئة العمل.
-
+                    أمثلة عملية قابلة للتطبيق.
                 </p>
 
             </div>
@@ -1116,11 +1144,7 @@
                 </strong>
 
                 <p>
-
-                    إمكانية مشاهدة المحتوى والتعلم بالوقت
-                    الذي يناسبك، بما يمنحك مرونة أكبر
-                    في رحلة التعلم.
-
+                    تعلم بالوقت الذي يناسبك.
                 </p>
 
             </div>
@@ -1133,11 +1157,7 @@
                 </strong>
 
                 <p>
-
-                    الوصول إلى المحتوى التدريبي من خلال
-                    المنصة والاستفادة من تجربة تعلم
-                    إلكترونية مرنة ومنظمة.
-
+                    الوصول إلى المحتوى من خلال المنصة.
                 </p>
 
             </div>
@@ -1150,10 +1170,7 @@
                 </strong>
 
                 <p>
-
-                    الحصول على شهادة إتمام الدورة بعد
-                    استكمال متطلبات البرنامج التدريبي.
-
+                    شهادة إتمام الدورة بعد استكمال المتطلبات.
                 </p>
 
             </div>
@@ -1185,7 +1202,9 @@
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- ==============================
+         FOOTER
+    ============================== -->
 
     <footer>
 
@@ -1201,9 +1220,9 @@
 </div>
 
 
-<!-- ==============================
+<!-- =========================================================
      STRATEGENCE POPUP
-============================== -->
+========================================================= -->
 
 <div
     id="strategencePopup"
@@ -1214,8 +1233,6 @@
         class="popup-box"
         onclick="event.stopPropagation()">
 
-
-        <!-- CLOSE -->
 
         <button
             class="popup-close"
@@ -1313,11 +1330,126 @@
 </div>
 
 
-<!-- ==============================
+<!-- =========================================================
+     BOSPHORLEAD POPUP
+========================================================= -->
+
+<div
+    id="bosphorleadPopup"
+    class="popup-overlay"
+    onclick="closeBosphorleadPopup(event)">
+
+    <div
+        class="popup-box"
+        onclick="event.stopPropagation()">
+
+
+        <button
+            class="popup-close"
+            onclick="closeBosphorleadPopup()">
+
+            ×
+
+        </button>
+
+
+        <h3>
+            BOSPHORLEAD ACADEMY
+        </h3>
+
+        <p>
+            Bosphorlead Academy
+        </p>
+
+
+        <div class="popup-links">
+
+
+            <!-- FACEBOOK -->
+
+            <a
+                href="https://www.facebook.com/Bosphorlead.Academy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link facebook">
+
+                <span class="popup-icon">
+                    f
+                </span>
+
+                Facebook
+
+            </a>
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/bosphorleadacademy123/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link instagram">
+
+                <span class="popup-icon">
+                    ◎
+                </span>
+
+                Instagram
+
+            </a>
+
+
+            <!-- TIKTOK - NEW -->
+
+            <a
+                href="https://www.tiktok.com/@bosphorlead"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link tiktok">
+
+                <span class="popup-icon">
+                    ♪
+                </span>
+
+                TikTok
+
+            </a>
+
+
+            <!-- WEBSITE -->
+
+            <a
+                href="https://www.bosphorlead.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="popup-link website">
+
+                <span class="popup-icon">
+                    🌐
+                </span>
+
+                Website
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
      JAVASCRIPT
-============================== -->
+========================================================= -->
 
 <script>
+
+
+/* ==============================
+   STRATEGENCE
+============================== */
 
 function openStrategencePopup() {
 
@@ -1342,6 +1474,57 @@ function closeStrategencePopup(event) {
     }
 
 }
+
+
+/* ==============================
+   BOSPHORLEAD
+============================== */
+
+function openBosphorleadPopup() {
+
+    document
+        .getElementById("bosphorleadPopup")
+        .classList.add("show");
+
+}
+
+
+function closeBosphorleadPopup(event) {
+
+    if (
+        !event ||
+        event.target.id === "bosphorleadPopup"
+    ) {
+
+        document
+            .getElementById("bosphorleadPopup")
+            .classList.remove("show");
+
+    }
+
+}
+
+
+/* ==============================
+   ESC KEY
+============================== */
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        document
+            .getElementById("strategencePopup")
+            .classList.remove("show");
+
+        document
+            .getElementById("bosphorleadPopup")
+            .classList.remove("show");
+
+    }
+
+});
+
 
 </script>
 
