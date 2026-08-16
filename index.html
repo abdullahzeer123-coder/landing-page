@@ -28,7 +28,9 @@
             margin: auto;
         }
 
-        /* Header */
+        /* ==============================
+           HEADER
+        =============================== */
 
         .hero {
             text-align: center;
@@ -63,7 +65,9 @@
             line-height: 1.9;
         }
 
-        /* CTA Button */
+        /* ==============================
+           CTA BUTTON
+        =============================== */
 
         .cta-button {
             display: inline-block;
@@ -84,7 +88,9 @@
             box-shadow: 0 12px 30px rgba(234, 182, 91, 0.4);
         }
 
-        /* Video */
+        /* ==============================
+           VIDEO
+        =============================== */
 
         .video-container {
             max-width: 700px;
@@ -98,27 +104,14 @@
             border-radius: 12px;
         }
 
-        /* Button */
-
-        .button {
-            display: block;
-            width: fit-content;
-            margin: 25px auto 45px;
-            background: #eab65b;
-            color: #07182d;
-            text-decoration: none;
-            padding: 15px 35px;
-            border-radius: 12px;
-            font-weight: bold;
-            font-size: 19px;
-        }
-
-        /* Sections */
+        /* ==============================
+           SECTIONS
+        =============================== */
 
         .section {
             background: #0c2543;
             border-radius: 20px;
-            padding: 30px 25px;
+            padding: 35px 25px;
             margin: 25px 0;
             text-align: center;
         }
@@ -127,6 +120,7 @@
             color: #eab65b;
             font-size: 30px;
             margin-top: 0;
+            margin-bottom: 20px;
         }
 
         .section p {
@@ -135,7 +129,152 @@
             line-height: 2;
         }
 
-        /* Features */
+        /* ==============================
+           ABOUT DR. OMAR
+        =============================== */
+
+        .doctor-section {
+            background: #0c2543;
+            border-radius: 20px;
+            padding: 40px 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .doctor-section h2 {
+            color: #eab65b;
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .doctor-intro {
+            max-width: 780px;
+            margin: 0 auto 30px;
+            color: #d8e0ea;
+            font-size: 18px;
+            line-height: 2;
+        }
+
+        /* ==============================
+           STATS
+        =============================== */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: #102e50;
+            border: 1px solid rgba(234, 182, 91, 0.18);
+            border-radius: 16px;
+            padding: 25px 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-icon {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .stat-number {
+            display: block;
+            color: #eab65b;
+            font-size: 27px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-title {
+            display: block;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-text {
+            color: #bfcddd;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* ==============================
+           INTERNATIONAL EXPERIENCE
+        =============================== */
+
+        .experience-box {
+            background: #102e50;
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 25px;
+        }
+
+        .experience-box h3 {
+            color: #eab65b;
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .countries {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .country {
+            background: #0c2543;
+            color: #ffffff;
+            border: 1px solid rgba(234, 182, 91, 0.3);
+            padding: 8px 15px;
+            border-radius: 25px;
+            font-size: 15px;
+        }
+
+        /* ==============================
+           ACADEMIES IMAGE
+        =============================== */
+
+        .academies {
+            margin-top: 35px;
+        }
+
+        .academies h3 {
+            color: #eab65b;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .academies p {
+            font-size: 16px;
+            color: #cbd6e3;
+            margin-bottom: 20px;
+        }
+
+        .academies-image {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 16px;
+            background: #ffffff;
+            padding: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        /* ==============================
+           FEATURES
+        =============================== */
 
         .features {
             display: grid;
@@ -155,7 +294,7 @@
         }
 
         .feature:hover {
-            transform: scale(1.08);
+            transform: scale(1.05);
             z-index: 10;
         }
 
@@ -171,13 +310,34 @@
             margin: 0;
         }
 
-        /* Link Hover */
+        /* ==============================
+           BUTTON
+        =============================== */
+
+        .button {
+            display: block;
+            width: fit-content;
+            margin: 25px auto 45px;
+            background: #eab65b;
+            color: #07182d;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 19px;
+        }
+
+        /* ==============================
+           LINK HOVER
+        =============================== */
 
         h2 a:hover {
             color: #0000EE !important;
         }
 
-        /* Footer */
+        /* ==============================
+           FOOTER
+        =============================== */
 
         footer {
             text-align: center;
@@ -186,7 +346,9 @@
             padding: 30px 0;
         }
 
-        /* Mobile */
+        /* ==============================
+           MOBILE
+        =============================== */
 
         @media (max-width: 650px) {
 
@@ -200,6 +362,10 @@
 
             .subtitle {
                 font-size: 17px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
             }
 
             .features {
@@ -218,8 +384,17 @@
                 padding: 15px 20px;
             }
 
-            .section {
+            .section,
+            .doctor-section {
                 padding: 25px 18px;
+            }
+
+            .doctor-section h2 {
+                font-size: 27px;
+            }
+
+            .doctor-intro {
+                font-size: 16px;
             }
 
         }
@@ -298,47 +473,193 @@
          ABOUT DR. OMAR AL-JABER
     =============================== -->
 
-    <section class="section">
+    <section class="doctor-section">
 
         <h2>
             نبذة عن الدكتور عمر الجبر
         </h2>
 
-        <p>
+        <p class="doctor-intro">
 
-            مستشار وخبير متخصص في استشراف المستقبل وابتكار وتصميم
-            استراتيجيات تلبي متطلبات تحقيق الأجندة الوطنية الخاصة برؤية
-            دولة الإمارات 2021 ومئوية الإمارات 2071، ومتطلبات منظومة
-            الجيل الرابع في التميز الحكومي والمسرعات الحكومية واستراتيجية
-            الدولة في الابتكار.
-
-        </p>
-
-        <p>
-
-            إضافة إلى ذلك، فهو مدرب متخصص في استشراف المستقبل وبناء
-            الخطط الاستراتيجية والتشغيلية، وورشات الابتكار التغييري،
-            وتصميم الخدمات الحكومية التي تستهدف تحقيق إنجاز المدن الذكية.
+            الدكتور عمر الجبر مستشار وخبير متخصص في استشراف المستقبل
+            وبناء وتصميم الاستراتيجيات وتطوير ونمو العمل المؤسسي.
+            يمتلك خبرة عملية واسعة في مجال الاستشارات والتدريب
+            الاستراتيجي، ويعمل مع المؤسسات في تطوير القيادات،
+            وتحسين الأداء، وبناء الخطط الاستراتيجية والتشغيلية،
+            ودعم الابتكار والتغيير المؤسسي.
 
         </p>
 
-        <p>
 
-            خبير ومستشار متخصص في استراتيجيات التدريب وتطوير ونمو العمل
-            المؤسسي لأكثر من 20 عاماً، عمل لدى كبرى المؤسسات العربية
-            والعالمية كمستشار ومدرب استراتيجي وفي القطاعين العام والخاص،
-            ويمتلك خبرات عملية في مؤسسات كبرى مثل STS وPhilips وFMS وغيرها.
+        <!-- ==============================
+             STATS
+        =============================== -->
 
-        </p>
+        <div class="stats">
 
-        <p>
 
-            كما قدم الاستشارات والتدريب المتخصص لكبرى الوزارات والمؤسسات
-            في دولة الإمارات العربية المتحدة والمملكة العربية السعودية
-            وسلطنة عمان وبعض دول الخليج العربي والأردن، ونفذ العديد من
-            البرامج القيادية في بريطانيا وأمريكا.
+            <!-- 20 YEARS -->
 
-        </p>
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🏛️
+                </div>
+
+                <span class="stat-number">
+                    +20 سنة
+                </span>
+
+                <span class="stat-title">
+                    خبرة استشارية وتدريبية
+                </span>
+
+                <span class="stat-text">
+                    خبرة متخصصة في الاستشارات والتدريب
+                    وتطوير ونمو العمل المؤسسي.
+                </span>
+
+            </div>
+
+
+            <!-- INTERNATIONAL -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    🌐
+                </div>
+
+                <span class="stat-number">
+                    خبرات دولية
+                </span>
+
+                <span class="stat-title">
+                    حضور وخبرات متعددة الدول
+                </span>
+
+                <span class="stat-text">
+                    خبرات وبرامج قيادية في بريطانيا
+                    وأمريكا والإمارات والسعودية.
+                </span>
+
+            </div>
+
+
+            <!-- CONSULTING -->
+
+            <div class="stat-card">
+
+                <div class="stat-icon">
+                    💼
+                </div>
+
+                <span class="stat-number">
+                    استشارات مؤسسية
+                </span>
+
+                <span class="stat-title">
+                    مؤسسات وشركات كبرى
+                </span>
+
+                <span class="stat-text">
+                    خبرات عملية مع مؤسسات مثل
+                    STS وPhilips وFMS.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ==============================
+             PROFESSIONAL EXPERIENCE
+        =============================== -->
+
+        <div class="experience-box">
+
+            <h3>
+                مجالات الخبرة
+            </h3>
+
+            <p>
+
+                تشمل خبراته استشراف المستقبل، وبناء الخطط
+                الاستراتيجية والتشغيلية، والابتكار التغييري،
+                وتصميم الخدمات الحكومية، وتطوير القيادات،
+                واستراتيجيات التدريب، وتطوير الأداء المؤسسي.
+
+            </p>
+
+        </div>
+
+
+        <!-- ==============================
+             INTERNATIONAL EXPERIENCE
+        =============================== -->
+
+        <div class="experience-box">
+
+            <h3>
+                خبرات دولية وبرامج قيادية
+            </h3>
+
+            <div class="countries">
+
+                <span class="country">
+                    🇦🇪 الإمارات
+                </span>
+
+                <span class="country">
+                    🇸🇦 السعودية
+                </span>
+
+                <span class="country">
+                    🇬🇧 بريطانيا
+                </span>
+
+                <span class="country">
+                    🇺🇸 أمريكا
+                </span>
+
+                <span class="country">
+                    🇴🇲 سلطنة عمان
+                </span>
+
+                <span class="country">
+                    🇯🇴 الأردن
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==============================
+             ACADEMIES
+        =============================== -->
+
+        <div class="academies">
+
+            <h3>
+                الأكاديميات والمؤسسات المرتبطة بالدكتور
+            </h3>
+
+            <p>
+
+                يظهر من الهوية التعريفية للدكتور ارتباطه بثلاث
+                أكاديميات ومؤسسات تدريب وتطوير أعمال:
+
+            </p>
+
+            <img
+                src="philips.png"
+                alt="أكاديميات الدكتور عمر الجبر"
+                class="academies-image">
+
+        </div>
+
 
     </section>
 
@@ -385,7 +706,7 @@
         <div class="features">
 
 
-            <!-- الإبداع المؤسسي -->
+            <!-- 1 -->
 
             <div class="feature">
 
@@ -405,7 +726,7 @@
             </div>
 
 
-            <!-- مؤشرات الأداء -->
+            <!-- 2 -->
 
             <div class="feature">
 
@@ -425,7 +746,7 @@
             </div>
 
 
-            <!-- إدارة التغيير -->
+            <!-- 3 -->
 
             <div class="feature">
 
@@ -463,8 +784,6 @@
         <div class="features">
 
 
-            <!-- 1 -->
-
             <div class="feature">
 
                 <strong>
@@ -479,8 +798,6 @@
 
             </div>
 
-
-            <!-- 2 -->
 
             <div class="feature">
 
@@ -497,8 +814,6 @@
             </div>
 
 
-            <!-- 3 -->
-
             <div class="feature">
 
                 <strong>
@@ -513,8 +828,6 @@
 
             </div>
 
-
-            <!-- 4 -->
 
             <div class="feature">
 
@@ -531,8 +844,6 @@
             </div>
 
 
-            <!-- 5 -->
-
             <div class="feature">
 
                 <strong>
@@ -547,8 +858,6 @@
 
             </div>
 
-
-            <!-- 6 -->
 
             <div class="feature">
 
