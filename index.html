@@ -1769,7 +1769,7 @@
                         <div class="experience-number">
 
                             <strong id="experienceNumber">
-                                0
+                                7
                             </strong>
 
                             <span>
@@ -1821,7 +1821,7 @@
                                     class="percentage"
                                     data-target="90">
 
-                                    0%
+                                    7%
 
                                 </span>
 
@@ -1855,7 +1855,7 @@
                                     class="percentage"
                                     data-target="85">
 
-                                    0%
+                                    7%
 
                                 </span>
 
@@ -1889,7 +1889,7 @@
                                     class="percentage"
                                     data-target="80">
 
-                                    0%
+                                    7%
 
                                 </span>
 
@@ -2924,44 +2924,53 @@ function resetExperience() {
 
 
     /*
-        الدائرة ترجع إلى صفر
+        الدائرة ترجع إلى 7
     */
 
-    experienceNumber.textContent = "0";
+    experienceNumber.textContent = "7";
+
+
+    /*
+        زاوية البداية المقابلة للرقم 7
+        7 من 20 = 126 درجة
+    */
+
+    const startDegrees =
+        (7 / 20) * 360;
 
 
     experienceCircle.style.background =
         `
         conic-gradient(
             #7dd3fc 0deg,
-            #7dd3fc 0deg,
-            #234667 0deg,
+            #7dd3fc ${startDegrees}deg,
+            #234667 ${startDegrees}deg,
             #234667 360deg
         )
         `;
 
 
     /*
-        كل النسب ترجع إلى 0%
+        كل النسب ترجع إلى 7%
     */
 
     experienceFills.forEach(
         function(fill) {
 
-            fill.style.width = "0%";
+            fill.style.width = "7%";
 
         }
     );
 
 
     /*
-        كل الأرقام ترجع إلى 0%
+        كل الأرقام ترجع إلى 7%
     */
 
     percentages.forEach(
         function(percentage) {
 
-            percentage.textContent = "0%";
+            percentage.textContent = "7%";
 
         }
     );
@@ -2991,7 +3000,7 @@ function startExperienceAnimation() {
 
 
     /*
-        نبدأ من الصفر
+        نبدأ من 7
     */
 
     resetExperience();
@@ -3052,12 +3061,13 @@ function startExperienceAnimation() {
 
 
         /* =================================================
-           CIRCLE 0 → 20
+           CIRCLE 7 → 20
         ================================================= */
 
         const experienceValue =
             Math.floor(
-                smoothProgress * 20
+                7 +
+                smoothProgress * (20 - 7)
             );
 
 
@@ -3067,11 +3077,15 @@ function startExperienceAnimation() {
 
         /*
             زاوية الدائرة
-            0 → 360
+            7 → 20
         */
 
+        const startDegrees =
+            (7 / 20) * 360;
+
         const degrees =
-            smoothProgress * 360;
+            startDegrees +
+            smoothProgress * (360 - startDegrees);
 
 
         /*
@@ -3095,15 +3109,18 @@ function startExperienceAnimation() {
 
 
         const point1 =
-            degrees * 0.25;
+            startDegrees +
+            (degrees - startDegrees) * 0.25;
 
 
         const point2 =
-            degrees * 0.50;
+            startDegrees +
+            (degrees - startDegrees) * 0.50;
 
 
         const point3 =
-            degrees * 0.75;
+            startDegrees +
+            (degrees - startDegrees) * 0.75;
 
 
         experienceCircle.style.background =
@@ -3134,8 +3151,9 @@ function startExperienceAnimation() {
 
 
                 const currentValue =
+                    7 +
                     smoothProgress *
-                    target;
+                    (target - 7);
 
 
                 fill.style.width =
@@ -3160,8 +3178,9 @@ function startExperienceAnimation() {
 
                 const currentValue =
                     Math.floor(
+                        7 +
                         smoothProgress *
-                        target
+                        (target - 7)
                     );
 
 
@@ -3283,7 +3302,7 @@ const experienceObserver =
 
                     /*
                         إذا خرج القسم من الشاشة
-                        نرجع كل شيء إلى صفر
+                        نرجع كل شيء إلى 7
                     */
 
                     else {
