@@ -1327,40 +1327,64 @@ body::after {
 
 
 /* =====================================================
-   DOCTOR IMAGE
+   DOCTOR IMAGES
 ===================================================== */
 
-.doctor-image {
+.doctor-images {
 
-    width: 65%;
+    display: flex;
 
-    max-width: 620px;
+    justify-content: center;
 
-    margin:
-        35px auto 35px;
+    align-items: center;
 
-    padding: 8px;
+    gap: 22px;
 
-    border-radius: 22px;
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+.doctor-image-box {
+
+    width: 300px;
+
+    padding: 7px;
+
+    border-radius: 20px;
 
     background:
         linear-gradient(
             135deg,
-            rgba(255,255,255,0.60),
-            rgba(255,255,255,0.12)
+            rgba(255,255,255,0.55),
+            rgba(255,255,255,0.10)
         );
 
     box-shadow:
-        0 18px 45px
-        rgba(0,0,0,0.24);
+        0 15px 35px
+        rgba(0,0,0,0.25);
 
     overflow: hidden;
 
-    text-align: center;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
 
-.doctor-image img {
+.doctor-image-box:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 20px 40px
+        rgba(0,0,0,0.30);
+}
+
+
+.doctor-image-box img {
 
     width: 100%;
 
@@ -1368,7 +1392,7 @@ body::after {
 
     display: block;
 
-    border-radius: 16px;
+    border-radius: 15px;
 
     object-fit: contain;
 }
@@ -2033,12 +2057,21 @@ footer {
     }
 
 
-    .doctor-image {
+    /* الصور الجديدة في الموبايل */
 
-        width: 92%;
+    .doctor-images {
 
-        max-width: 500px;
+        flex-direction: column;
 
+        gap: 18px;
+    }
+
+
+    .doctor-image-box {
+
+        width: 90%;
+
+        max-width: 320px;
     }
 
 
@@ -2181,7 +2214,6 @@ footer {
 
 <!-- =====================================================
      COURSE ADVERTISEMENT
-     بدون رابط
 ===================================================== -->
 
 <div class="course-ad reveal">
@@ -2510,7 +2542,9 @@ footer {
     </p>
 
 
-    <!-- EXPERIENCE -->
+    <!-- =====================================================
+         EXPERIENCE
+    ===================================================== -->
 
     <div
         class="professional-experience"
@@ -2664,7 +2698,9 @@ footer {
     </div>
 
 
-    <!-- EXPERIENCE BOX -->
+    <!-- =====================================================
+         EXPERIENCE BOX
+    ===================================================== -->
 
     <div class="experience-box">
 
@@ -2686,7 +2722,9 @@ footer {
     </div>
 
 
-    <!-- COUNTRIES -->
+    <!-- =====================================================
+         COUNTRIES
+    ===================================================== -->
 
     <div class="experience-box">
 
@@ -2734,7 +2772,9 @@ footer {
     </div>
 
 
-    <!-- ACCREDITATIONS -->
+    <!-- =====================================================
+         ACCREDITATIONS
+    ===================================================== -->
 
     <div class="accreditation-section">
 
@@ -2824,16 +2864,30 @@ footer {
     </div>
 
 
-    <!-- =================================================
-         DOCTOR IMAGE
-         بدون رابط
-    ================================================== -->
+    <!-- =====================================================
+         DOCTOR IMAGES
+    ===================================================== -->
 
-    <div class="doctor-image reveal">
+    <div class="doctor-images">
 
-        <img
-            src="دكتور_عمر.jpeg"
-            alt="الدكتور عمر الجبر">
+
+        <div class="doctor-image-box">
+
+            <img
+                src="دكتور_عمر.jpeg"
+                alt="الدكتور عمر الجبر">
+
+        </div>
+
+
+        <div class="doctor-image-box">
+
+            <img
+                src="دكتور _عمر 2.jpeg"
+                alt="الدكتور عمر الجبر">
+
+        </div>
+
 
     </div>
 
