@@ -2004,6 +2004,45 @@ footer {
 
 }
 
+/* =====================================================
+   COURSE ADVERTISEMENT IMAGE
+===================================================== */
+
+.course-ad {
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px auto 35px;
+    padding: 8px;
+    border-radius: 24px;
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.65),
+        rgba(255,255,255,0.12)
+    );
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+.course-ad a {
+    display: block;
+    text-decoration: none;
+}
+
+.course-ad img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.course-ad:hover img {
+    transform: scale(1.02);
+}
+
+
 </style>
 
 </head>
@@ -2064,6 +2103,23 @@ footer {
 
 </section>
 
+
+
+<!-- =====================================================
+     COURSE ADVERTISEMENT
+===================================================== -->
+
+<div class="course-ad reveal">
+
+    <a href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14">
+
+        <img
+            src="strategic-leadership.jfif"
+            alt="إعلان دورة القيادة الاستراتيجية">
+
+    </a>
+
+</div>
 
 
 <!-- =====================================================
