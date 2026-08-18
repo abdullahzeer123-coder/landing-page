@@ -25,18 +25,10 @@ html {
 }
 
 body {
-
     margin: 0;
-
-    font-family:
-        Tahoma,
-        Arial,
-        sans-serif;
-
+    font-family: Tahoma, Arial, sans-serif;
     color: #ffffff;
-
     line-height: 1.8;
-
     min-height: 100vh;
 
     background:
@@ -49,9 +41,7 @@ body {
         );
 
     background-attachment: fixed;
-
     overflow-x: hidden;
-
     position: relative;
 }
 
@@ -61,17 +51,12 @@ body {
 ===================================================== */
 
 body::before {
-
     content: "";
-
     position: fixed;
-
     top: -250px;
     right: -180px;
-
     width: 600px;
     height: 600px;
-
     border-radius: 50%;
 
     background:
@@ -83,26 +68,18 @@ body::before {
         );
 
     pointer-events: none;
-
     z-index: -1;
 
-    animation:
-        glowMove 8s ease-in-out infinite alternate;
+    animation: glowMove 8s ease-in-out infinite alternate;
 }
 
-
 body::after {
-
     content: "";
-
     position: fixed;
-
     bottom: -250px;
     left: -180px;
-
     width: 650px;
     height: 650px;
-
     border-radius: 50%;
 
     background:
@@ -114,16 +91,12 @@ body::after {
         );
 
     pointer-events: none;
-
     z-index: -1;
 
-    animation:
-        glowMove2 10s ease-in-out infinite alternate;
+    animation: glowMove2 10s ease-in-out infinite alternate;
 }
 
-
 @keyframes glowMove {
-
     from {
         transform: translate(0,0);
     }
@@ -133,9 +106,7 @@ body::after {
     }
 }
 
-
 @keyframes glowMove2 {
-
     from {
         transform: translate(0,0);
     }
@@ -151,15 +122,10 @@ body::after {
 ===================================================== */
 
 .container {
-
     width: 92%;
-
     max-width: 1000px;
-
     margin: auto;
-
     position: relative;
-
     z-index: 1;
 }
 
@@ -169,18 +135,12 @@ body::after {
 ===================================================== */
 
 .hero {
-
     text-align: center;
-
-    padding:
-        65px 20px 35px;
-
+    padding: 65px 20px 35px;
     position: relative;
 }
 
-
 .badge {
-
     display: inline-block;
 
     background:
@@ -192,13 +152,9 @@ body::after {
 
     color: #14233d;
 
-    padding:
-        9px 24px;
-
+    padding: 9px 24px;
     border-radius: 30px;
-
     font-weight: bold;
-
     margin-bottom: 22px;
 
     box-shadow:
@@ -209,9 +165,7 @@ body::after {
         badgeFloat 3s ease-in-out infinite;
 }
 
-
 @keyframes badgeFloat {
-
     0%,100% {
         transform: translateY(0);
     }
@@ -221,21 +175,10 @@ body::after {
     }
 }
 
-
 .hero h1 {
-
-    font-size:
-        clamp(
-            32px,
-            6vw,
-            55px
-        );
-
-    margin:
-        0 0 12px;
-
+    font-size: clamp(32px,6vw,55px);
+    margin: 0 0 12px;
     line-height: 1.4;
-
     color: #ffffff;
 
     text-shadow:
@@ -243,25 +186,13 @@ body::after {
         rgba(0,0,0,0.20);
 }
 
-
 .hero h2 {
-
-    font-size:
-        clamp(
-            22px,
-            4vw,
-            34px
-        );
-
-    margin:
-        5px 0;
-
+    font-size: clamp(22px,4vw,34px);
+    margin: 5px 0;
     color: #fff;
 }
 
-
 .hero h2 span {
-
     color: #ffe09a;
 
     text-shadow:
@@ -269,18 +200,11 @@ body::after {
         rgba(0,0,0,0.18);
 }
 
-
 .hero-description {
-
     max-width: 760px;
-
-    margin:
-        22px auto 0;
-
+    margin: 22px auto 0;
     color: #f8fbff;
-
     font-size: 19px;
-
     line-height: 2;
 }
 
@@ -290,13 +214,10 @@ body::after {
 ===================================================== */
 
 .cta-button {
-
     display: inline-block;
 
     margin-top: 28px;
-
-    padding:
-        16px 42px;
+    padding: 16px 42px;
 
     background:
         linear-gradient(
@@ -306,37 +227,25 @@ body::after {
         );
 
     color: #13233b;
-
     text-decoration: none;
-
     border-radius: 14px;
-
     font-size: 20px;
-
     font-weight: bold;
 
     box-shadow:
         0 10px 30px
         rgba(0,0,0,0.22);
 
-    transition:
-        all 0.3s ease;
-
+    transition: all 0.3s ease;
     position: relative;
-
     overflow: hidden;
 }
 
-
 .cta-button::before {
-
     content: "";
-
     position: absolute;
-
     top: 0;
     left: -120%;
-
     width: 70%;
     height: 100%;
 
@@ -348,22 +257,15 @@ body::after {
             transparent
         );
 
-    transform:
-        skewX(-20deg);
-
-    transition:
-        left 0.7s ease;
+    transform: skewX(-20deg);
+    transition: left 0.7s ease;
 }
 
-
 .cta-button:hover::before {
-
     left: 140%;
 }
 
-
 .cta-button:hover {
-
     transform:
         translateY(-5px)
         scale(1.03);
@@ -379,12 +281,8 @@ body::after {
 ===================================================== */
 
 .video-container {
-
     max-width: 450px;
-
-    margin:
-        30px auto 40px;
-
+    margin: 30px auto 40px;
     padding: 8px;
 
     border-radius: 22px;
@@ -401,17 +299,44 @@ body::after {
         rgba(0,0,0,0.22);
 }
 
-
 .video-container video {
-
     width: 100%;
-
     height: auto;
+    display: block;
+    border-radius: 17px;
+    background: #0c2543;
+}
 
+
+/* =====================================================
+   VIDEO UNDER ABOUT COURSE
+===================================================== */
+
+.about-video {
+    max-width: 650px;
+    margin: 25px auto 40px;
+    padding: 8px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.65),
+            rgba(255,255,255,0.12)
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.25);
+}
+
+.about-video video {
+    width: 100%;
+    height: auto;
     display: block;
 
     border-radius: 17px;
-
     background: #0c2543;
 }
 
@@ -422,7 +347,6 @@ body::after {
 
 .section,
 .doctor-section {
-
     background:
         linear-gradient(
             145deg,
@@ -435,13 +359,8 @@ body::after {
         rgba(255,255,255,0.13);
 
     border-radius: 24px;
-
-    padding:
-        40px 28px;
-
-    margin:
-        28px 0;
-
+    padding: 40px 28px;
+    margin: 28px 0;
     text-align: center;
 
     box-shadow:
@@ -449,21 +368,15 @@ body::after {
         rgba(0,0,0,0.18);
 
     position: relative;
-
     overflow: hidden;
 }
 
-
 .section::before,
 .doctor-section::before {
-
     content: "";
-
     position: absolute;
-
     top: -100px;
     right: -100px;
-
     width: 250px;
     height: 250px;
 
@@ -477,29 +390,20 @@ body::after {
     pointer-events: none;
 }
 
-
 .section h2,
 .doctor-section h2 {
-
     color: #f5ca72;
-
     font-size: 30px;
-
-    margin:
-        0 0 20px;
+    margin: 0 0 20px;
 
     text-shadow:
         0 3px 12px
         rgba(0,0,0,0.20);
 }
 
-
 .section p {
-
     color: #e7eef7;
-
     font-size: 18px;
-
     line-height: 2;
 }
 
@@ -509,39 +413,24 @@ body::after {
 ===================================================== */
 
 .marketing-intro {
-
     text-align: center;
-
-    padding:
-        20px 10px 10px;
+    padding: 20px 10px 10px;
 }
 
-
 .marketing-intro h2 {
-
-    font-size:
-        clamp(28px,5vw,42px);
-
+    font-size: clamp(28px,5vw,42px);
     margin-bottom: 12px;
-
     color: #ffffff;
 }
 
-
 .marketing-intro h2 span {
-
     color: #ffe09a;
 }
 
-
 .marketing-intro p {
-
     max-width: 760px;
-
     margin: auto;
-
     color: #f4f8fc;
-
     font-size: 18px;
 }
 
@@ -551,20 +440,13 @@ body::after {
 ===================================================== */
 
 .why-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns: repeat(4,1fr);
     gap: 16px;
-
     margin-top: 25px;
 }
 
-
 .why-card {
-
     background:
         linear-gradient(
             145deg,
@@ -577,7 +459,6 @@ body::after {
         rgba(255,255,255,0.14);
 
     border-radius: 18px;
-
     padding: 25px 16px;
 
     transition:
@@ -585,66 +466,42 @@ body::after {
         box-shadow 0.35s ease;
 
     position: relative;
-
     overflow: hidden;
 }
 
-
 .why-card::before {
-
     content: "";
-
     position: absolute;
-
     top: -80px;
     left: -100px;
-
     width: 180px;
     height: 180px;
-
     border-radius: 50%;
-
-    background:
-        rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.08);
 }
 
-
 .why-card:hover {
-
-    transform:
-        translateY(-8px);
+    transform: translateY(-8px);
 
     box-shadow:
         0 18px 35px
         rgba(0,0,0,0.25);
 }
 
-
 .icon {
-
     font-size: 38px;
-
     margin-bottom: 10px;
 }
 
-
 .why-card h3 {
-
     color: #ffe09a;
-
-    margin:
-        5px 0 10px;
-
+    margin: 5px 0 10px;
     font-size: 20px;
 }
 
-
 .why-card p {
-
     color: #dce8f5;
-
     font-size: 14px;
-
     margin: 0;
 }
 
@@ -654,24 +511,15 @@ body::after {
 ===================================================== */
 
 .audience-list {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(2,1fr);
-
+    grid-template-columns: repeat(2,1fr);
     gap: 12px;
-
     margin-top: 25px;
 }
 
-
 .audience-item {
-
     text-align: right;
-
-    padding:
-        15px 18px;
+    padding: 15px 18px;
 
     border-radius: 14px;
 
@@ -689,25 +537,15 @@ body::after {
         background 0.3s ease;
 }
 
-
 .audience-item:hover {
-
-    transform:
-        translateX(-5px);
-
-    background:
-        rgba(255,255,255,0.12);
+    transform: translateX(-5px);
+    background: rgba(255,255,255,0.12);
 }
 
-
 .audience-item::before {
-
     content: "✓";
-
     color: #ffe09a;
-
     font-weight: bold;
-
     margin-left: 10px;
 }
 
@@ -717,24 +555,15 @@ body::after {
 ===================================================== */
 
 .journey {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns: repeat(3,1fr);
     gap: 18px;
-
     margin-top: 30px;
 }
 
-
 .journey-card {
-
     position: relative;
-
-    padding:
-        25px 18px;
+    padding: 25px 18px;
 
     background:
         linear-gradient(
@@ -749,34 +578,24 @@ body::after {
         1px solid
         rgba(125,211,252,0.22);
 
-    transition:
-        all 0.35s ease;
+    transition: all 0.35s ease;
 }
 
-
 .journey-card:hover {
-
-    transform:
-        translateY(-7px);
+    transform: translateY(-7px);
 
     box-shadow:
         0 15px 35px
         rgba(0,0,0,0.25);
 }
 
-
 .journey-number {
-
     width: 45px;
     height: 45px;
-
-    margin:
-        0 auto 12px;
+    margin: 0 auto 12px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     border-radius: 50%;
@@ -789,30 +608,19 @@ body::after {
         );
 
     color: #17253c;
-
     font-weight: bold;
-
     font-size: 18px;
 }
 
-
 .journey-card h3 {
-
     color: #ffffff;
-
     font-size: 19px;
-
-    margin:
-        5px 0 8px;
+    margin: 5px 0 8px;
 }
 
-
 .journey-card p {
-
     color: #cddbea;
-
     font-size: 14px;
-
     margin: 0;
 }
 
@@ -822,16 +630,10 @@ body::after {
 ===================================================== */
 
 .doctor-intro {
-
     max-width: 780px;
-
-    margin:
-        0 auto 30px;
-
+    margin: 0 auto 30px;
     color: #e1eaf4;
-
     font-size: 18px;
-
     line-height: 2;
 }
 
@@ -841,7 +643,6 @@ body::after {
 ===================================================== */
 
 .professional-experience {
-
     margin-top: 35px;
 
     background:
@@ -856,56 +657,35 @@ body::after {
         rgba(125,211,252,0.35);
 
     border-radius: 22px;
-
-    padding:
-        30px 20px;
+    padding: 30px 20px;
 
     box-shadow:
         0 15px 40px
         rgba(0,0,0,0.18);
 }
 
-
 .professional-title {
-
     color: #7dd3fc;
-
     font-size: 27px;
-
-    margin:
-        0 0 25px;
+    margin: 0 0 25px;
 }
-
 
 .experience-layout {
-
     display: grid;
-
-    grid-template-columns:
-        260px 1fr;
-
+    grid-template-columns: 260px 1fr;
     gap: 35px;
-
     align-items: center;
 }
-
 
 .experience-circle-wrap {
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 }
 
-
 .experience-circle {
-
     width: 220px;
-
     height: 220px;
-
     border-radius: 50%;
 
     background:
@@ -917,9 +697,7 @@ body::after {
     position: relative;
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     box-shadow:
@@ -930,19 +708,12 @@ body::after {
         rgba(0,0,0,0.35);
 }
 
-
 .experience-circle::before {
-
     content: "";
-
     position: absolute;
-
     width: 172px;
-
     height: 172px;
-
     border-radius: 50%;
-
     background: #102d4c;
 
     box-shadow:
@@ -950,68 +721,41 @@ body::after {
         rgba(0,0,0,0.30);
 }
 
-
 .experience-number {
-
     position: relative;
-
     z-index: 2;
-
     text-align: center;
 }
 
-
 .experience-number strong {
-
     display: block;
-
     color: #9ee4ff;
-
     font-size: 50px;
-
     line-height: 1.1;
-
     font-weight: bold;
 }
 
-
 .experience-number span {
-
     display: block;
-
     color: #ffffff;
-
     font-size: 17px;
-
     margin-top: 5px;
 }
 
-
 .experience-info {
-
     text-align: right;
 }
 
-
 .experience-info h4 {
-
     color: #ffffff;
-
     font-size: 23px;
-
-    margin:
-        0 0 8px;
+    margin: 0 0 8px;
 }
 
-
 .experience-info > p {
-
     color: #cbd6e3;
-
     font-size: 15px;
-
-    margin:
-        0 0 20px;
+    margin: 0 0 20px;
 }
 
 
@@ -1020,70 +764,42 @@ body::after {
 ===================================================== */
 
 .experience-bars {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 15px;
 }
 
-
 .experience-bar-row {
-
     width: 100%;
 }
 
-
 .experience-bar-header {
-
     display: flex;
-
-    justify-content:
-        space-between;
-
+    justify-content: space-between;
     align-items: center;
-
     margin-bottom: 6px;
-
     font-size: 14px;
-
     color: #ffffff;
 }
 
-
 .experience-bar-header span:last-child {
-
     color: #7dd3fc;
-
     font-weight: bold;
-
     min-width: 45px;
-
     text-align: left;
 }
 
-
 .experience-bar {
-
     height: 11px;
-
     width: 100%;
-
     background: #294966;
-
     border-radius: 20px;
-
     overflow: hidden;
 }
 
-
 .experience-fill {
-
     height: 100%;
-
     width: 0%;
-
     border-radius: 20px;
 
     background:
@@ -1105,7 +821,6 @@ body::after {
 ===================================================== */
 
 .experience-box {
-
     background:
         linear-gradient(
             145deg,
@@ -1114,9 +829,7 @@ body::after {
         );
 
     border-radius: 18px;
-
     padding: 25px;
-
     margin-top: 25px;
 
     border:
@@ -1124,21 +837,14 @@ body::after {
         rgba(255,255,255,0.08);
 }
 
-
 .experience-box h3 {
-
     color: #f2c86e;
-
     margin-top: 0;
-
     font-size: 22px;
 }
 
-
 .experience-box p {
-
     color: #d8e3ef;
-
     font-size: 16px;
 }
 
@@ -1148,21 +854,14 @@ body::after {
 ===================================================== */
 
 .countries {
-
     display: flex;
-
     flex-wrap: wrap;
-
     justify-content: center;
-
     gap: 10px;
-
     margin-top: 15px;
 }
 
-
 .country {
-
     background:
         rgba(255,255,255,0.08);
 
@@ -1172,11 +871,8 @@ body::after {
         1px solid
         rgba(234,182,91,0.35);
 
-    padding:
-        8px 15px;
-
+    padding: 8px 15px;
     border-radius: 25px;
-
     font-size: 15px;
 
     transition:
@@ -1184,14 +880,9 @@ body::after {
         background 0.3s ease;
 }
 
-
 .country:hover {
-
-    transform:
-        translateY(-3px);
-
-    background:
-        rgba(255,255,255,0.14);
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.14);
 }
 
 
@@ -1200,11 +891,8 @@ body::after {
 ===================================================== */
 
 .accreditation-section {
-
     margin-top: 35px;
-
-    padding:
-        30px 20px;
+    padding: 30px 20px;
 
     background:
         linear-gradient(
@@ -1220,65 +908,38 @@ body::after {
         rgba(234,182,91,0.20);
 }
 
-
 .accreditation-title {
-
     color: #f2c86e;
-
     font-size: 28px;
-
-    margin:
-        0 0 8px;
+    margin: 0 0 8px;
 }
 
-
 .accreditation-description {
-
     color: #cbd6e3;
-
     font-size: 15px;
-
-    margin:
-        0 auto 25px;
-
+    margin: 0 auto 25px;
     max-width: 700px;
 }
 
-
 .accreditation-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(5,1fr);
-
+    grid-template-columns: repeat(5,1fr);
     gap: 14px;
-
     align-items: stretch;
 }
 
-
 .accreditation-card {
-
     background: #ffffff;
-
     border-radius: 16px;
-
     min-height: 145px;
-
     padding: 15px;
 
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
 
-    border:
-        2px solid
-        transparent;
+    border: 2px solid transparent;
 
     transition:
         transform 0.3s ease,
@@ -1286,12 +947,8 @@ body::after {
         border-color 0.3s ease;
 }
 
-
 .accreditation-card:hover {
-
-    transform:
-        translateY(-6px);
-
+    transform: translateY(-6px);
     border-color: #eab65b;
 
     box-shadow:
@@ -1299,29 +956,18 @@ body::after {
         rgba(0,0,0,0.30);
 }
 
-
 .accreditation-card img {
-
     width: 115px;
-
     height: 80px;
-
     object-fit: contain;
-
     display: block;
-
     margin-bottom: 8px;
 }
 
-
 .accreditation-card span {
-
     color: #102e50;
-
     font-size: 14px;
-
     font-weight: bold;
-
     text-align: center;
 }
 
@@ -1331,27 +977,17 @@ body::after {
 ===================================================== */
 
 .doctor-images {
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     gap: 22px;
-
     margin-top: 30px;
-
     flex-wrap: wrap;
 }
 
-
 .doctor-image-box {
-
     width: 300px;
-
     padding: 7px;
-
     border-radius: 20px;
 
     background:
@@ -1372,28 +1008,19 @@ body::after {
         box-shadow 0.35s ease;
 }
 
-
 .doctor-image-box:hover {
-
-    transform:
-        translateY(-6px);
+    transform: translateY(-6px);
 
     box-shadow:
         0 20px 40px
         rgba(0,0,0,0.30);
 }
 
-
 .doctor-image-box img {
-
     width: 100%;
-
     height: auto;
-
     display: block;
-
     border-radius: 15px;
-
     object-fit: contain;
 }
 
@@ -1403,22 +1030,14 @@ body::after {
 ===================================================== */
 
 .features {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns: repeat(3,1fr);
     gap: 15px;
-
     margin-top: 25px;
-
     overflow: visible;
 }
 
-
 .feature {
-
     background:
         linear-gradient(
             145deg,
@@ -1427,7 +1046,6 @@ body::after {
         );
 
     padding: 22px;
-
     border-radius: 16px;
 
     transition:
@@ -1435,20 +1053,14 @@ body::after {
         box-shadow 0.3s ease;
 
     position: relative;
-
     overflow: hidden;
 }
 
-
 .feature::before {
-
     content: "";
-
     position: absolute;
-
     top: 0;
     left: -100%;
-
     width: 80%;
     height: 100%;
 
@@ -1460,49 +1072,32 @@ body::after {
             transparent
         );
 
-    transform:
-        skewX(-20deg);
-
-    transition:
-        left 0.7s ease;
+    transform: skewX(-20deg);
+    transition: left 0.7s ease;
 }
 
-
 .feature:hover::before {
-
     left: 130%;
 }
 
-
 .feature:hover {
-
-    transform:
-        translateY(-6px);
+    transform: translateY(-6px);
 
     box-shadow:
         0 15px 30px
         rgba(0,0,0,0.25);
 }
 
-
 .feature strong {
-
     display: block;
-
     color: #ffe09a;
-
     font-size: 19px;
-
     margin-bottom: 8px;
 }
 
-
 .feature p {
-
     font-size: 15px;
-
     margin: 0;
-
     color: #d8e3ef;
 }
 
@@ -1512,22 +1107,14 @@ body::after {
 ===================================================== */
 
 .benefits-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
+    grid-template-columns: repeat(3,1fr);
     gap: 15px;
-
     margin-top: 25px;
 }
 
-
 .benefit {
-
     padding: 22px;
-
     border-radius: 17px;
 
     background:
@@ -1540,32 +1127,20 @@ body::after {
     text-align: center;
 }
 
-
 .benefit-icon {
-
     font-size: 34px;
-
     margin-bottom: 8px;
 }
 
-
 .benefit h3 {
-
     color: #ffe09a;
-
     font-size: 18px;
-
-    margin:
-        5px 0 8px;
+    margin: 5px 0 8px;
 }
 
-
 .benefit p {
-
     color: #d9e5f1;
-
     font-size: 14px;
-
     margin: 0;
 }
 
@@ -1575,15 +1150,9 @@ body::after {
 ===================================================== */
 
 .offer-section {
-
     text-align: center;
-
-    margin:
-        35px 0;
-
-    padding:
-        45px 25px;
-
+    margin: 35px 0;
+    padding: 45px 25px;
     border-radius: 25px;
 
     background:
@@ -1602,64 +1171,36 @@ body::after {
         rgba(0,0,0,0.22);
 
     position: relative;
-
     overflow: hidden;
 }
 
-
 .offer-section::before {
-
     content: "";
-
     position: absolute;
-
     width: 300px;
-
     height: 300px;
-
     top: -160px;
-
     right: -100px;
-
     border-radius: 50%;
-
-    background:
-        rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.08);
 }
-
 
 .offer-section h2 {
-
     color: #ffe09a;
-
-    font-size:
-        clamp(26px,5vw,38px);
-
-    margin:
-        0 0 10px;
+    font-size: clamp(26px,5vw,38px);
+    margin: 0 0 10px;
 }
-
 
 .offer-section p {
-
     color: #e6eef7;
-
     font-size: 18px;
-
     max-width: 650px;
-
-    margin:
-        0 auto 22px;
+    margin: 0 auto 22px;
 }
 
-
 .offer-button {
-
     display: inline-block;
-
-    padding:
-        16px 45px;
-
+    padding: 16px 45px;
     border-radius: 14px;
 
     background:
@@ -1670,24 +1211,18 @@ body::after {
         );
 
     color: #17243a;
-
     text-decoration: none;
-
     font-size: 20px;
-
     font-weight: bold;
 
     box-shadow:
         0 10px 30px
         rgba(0,0,0,0.25);
 
-    transition:
-        all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-
 .offer-button:hover {
-
     transform:
         translateY(-5px)
         scale(1.03);
@@ -1703,22 +1238,14 @@ body::after {
 ===================================================== */
 
 .faq-container {
-
     max-width: 800px;
-
-    margin:
-        25px auto 0;
-
+    margin: 25px auto 0;
     text-align: right;
 }
 
-
 .faq-item {
-
     margin-bottom: 12px;
-
     border-radius: 14px;
-
     overflow: hidden;
 
     background:
@@ -1729,70 +1256,47 @@ body::after {
         rgba(255,255,255,0.10);
 }
 
-
 .faq-question {
-
     width: 100%;
-
     border: 0;
-
     background: transparent;
-
     color: #ffffff;
 
-    padding:
-        18px 20px;
+    padding: 18px 20px;
 
     font-family: inherit;
-
     font-size: 17px;
-
     font-weight: bold;
-
     text-align: right;
 
     cursor: pointer;
 
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
 }
 
-
 .faq-question span:last-child {
-
     color: #ffe09a;
-
     font-size: 24px;
 }
 
-
 .faq-answer {
-
     max-height: 0;
-
     overflow: hidden;
 
     transition:
         max-height 0.35s ease;
 
-    padding:
-        0 20px;
+    padding: 0 20px;
 
     color: #d9e5f1;
-
     font-size: 15px;
 }
 
-
 .faq-item.active .faq-answer {
-
     max-height: 200px;
-
-    padding:
-        0 20px 18px;
+    padding: 0 20px 18px;
 }
 
 
@@ -1801,13 +1305,9 @@ body::after {
 ===================================================== */
 
 .button {
-
     display: block;
-
     width: fit-content;
-
-    margin:
-        25px auto 45px;
+    margin: 25px auto 45px;
 
     background:
         linear-gradient(
@@ -1817,27 +1317,19 @@ body::after {
         );
 
     color: #07182d;
-
     text-decoration: none;
 
-    padding:
-        15px 35px;
-
+    padding: 15px 35px;
     border-radius: 12px;
 
     font-weight: bold;
-
     font-size: 19px;
 
-    transition:
-        all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-
 .button:hover {
-
-    transform:
-        translateY(-4px);
+    transform: translateY(-4px);
 
     box-shadow:
         0 12px 30px
@@ -1850,15 +1342,10 @@ body::after {
 ===================================================== */
 
 footer {
-
     text-align: center;
-
     color: #f1f5f9;
-
     font-size: 14px;
-
-    padding:
-        35px 0 45px;
+    padding: 35px 0 45px;
 }
 
 
@@ -1867,232 +1354,17 @@ footer {
 ===================================================== */
 
 .reveal {
-
     opacity: 0;
-
-    transform:
-        translateY(35px);
+    transform: translateY(35px);
 
     transition:
         opacity 0.7s ease,
         transform 0.7s ease;
 }
 
-
 .reveal.visible {
-
     opacity: 1;
-
-    transform:
-        translateY(0);
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 1000px) {
-
-    .why-grid {
-
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-
-    .accreditation-grid {
-
-        grid-template-columns:
-            repeat(3,1fr);
-    }
-
-
-    .benefits-grid {
-
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width: 650px) {
-
-    .container {
-
-        width: 94%;
-    }
-
-
-    .hero {
-
-        padding-top: 35px;
-    }
-
-
-    .hero h1 {
-
-        font-size: 30px;
-    }
-
-
-    .hero h2 {
-
-        font-size: 23px;
-    }
-
-
-    .hero-description {
-
-        font-size: 16px;
-    }
-
-
-    .section,
-    .doctor-section {
-
-        padding:
-            28px 17px;
-    }
-
-
-    .section h2,
-    .doctor-section h2 {
-
-        font-size: 26px;
-    }
-
-
-    .why-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .audience-list {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .journey {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .features {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .benefits-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .experience-layout {
-
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-    }
-
-
-    .experience-info {
-
-        text-align: center;
-    }
-
-
-    .experience-circle {
-
-        width: 195px;
-
-        height: 195px;
-    }
-
-
-    .experience-circle::before {
-
-        width: 150px;
-
-        height: 150px;
-    }
-
-
-    .experience-number strong {
-
-        font-size: 43px;
-    }
-
-
-    .accreditation-grid {
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-        gap: 12px;
-    }
-
-
-    .accreditation-card {
-
-        min-height: 135px;
-    }
-
-
-    .accreditation-card img {
-
-        width: 100px;
-
-        height: 70px;
-    }
-
-
-    /* الصور الجديدة في الموبايل */
-
-    .doctor-images {
-
-        flex-direction: column;
-
-        gap: 18px;
-    }
-
-
-    .doctor-image-box {
-
-        width: 90%;
-
-        max-width: 320px;
-    }
-
-
-    .cta-button,
-    .offer-button {
-
-        width: 90%;
-
-        text-align: center;
-
-        font-size: 18px;
-    }
-
-
-    .button {
-
-        width: 90%;
-
-        text-align: center;
-    }
-
+    transform: translateY(0);
 }
 
 
@@ -2101,16 +1373,10 @@ footer {
 ===================================================== */
 
 .course-ad {
-
     width: 100%;
-
     max-width: 1000px;
-
-    margin:
-        10px auto 35px;
-
+    margin: 10px auto 35px;
     padding: 8px;
-
     border-radius: 24px;
 
     background:
@@ -2127,28 +1393,161 @@ footer {
     overflow: hidden;
 }
 
-
 .course-ad img {
-
     width: 100%;
-
     height: auto;
-
     display: block;
-
     border-radius: 18px;
-
     object-fit: cover;
 
     transition:
         transform 0.4s ease;
 }
 
-
 .course-ad:hover img {
+    transform: scale(1.02);
+}
 
-    transform:
-        scale(1.02);
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .why-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .accreditation-grid {
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .container {
+        width: 94%;
+    }
+
+    .hero {
+        padding-top: 35px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .section,
+    .doctor-section {
+        padding: 28px 17px;
+    }
+
+    .section h2,
+    .doctor-section h2 {
+        font-size: 26px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-list {
+        grid-template-columns: 1fr;
+    }
+
+    .journey {
+        grid-template-columns: 1fr;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .experience-info {
+        text-align: center;
+    }
+
+    .experience-circle {
+        width: 195px;
+        height: 195px;
+    }
+
+    .experience-circle::before {
+        width: 150px;
+        height: 150px;
+    }
+
+    .experience-number strong {
+        font-size: 43px;
+    }
+
+    .accreditation-grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 12px;
+    }
+
+    .accreditation-card {
+        min-height: 135px;
+    }
+
+    .accreditation-card img {
+        width: 100px;
+        height: 70px;
+    }
+
+    .doctor-images {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .doctor-image-box {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .cta-button,
+    .offer-button {
+        width: 90%;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .button {
+        width: 90%;
+        text-align: center;
+    }
+
+    .about-video {
+        width: 100%;
+        margin-top: 20px;
+    }
 }
 
 </style>
@@ -2172,11 +1571,9 @@ footer {
         دورة تدريبية احترافية
     </div>
 
-
     <h1>
         هل أنت مدير... أم قائد يصنع الفرق؟
     </h1>
-
 
     <h2>
         <span>
@@ -2184,13 +1581,11 @@ footer {
         </span>
     </h2>
 
-
     <h2>
         <span>
             يصنع الفارق في مؤسسته
         </span>
     </h2>
-
 
     <p class="hero-description">
 
@@ -2199,7 +1594,6 @@ footer {
         وقُد فرقك نحو نتائج أفضل.
 
     </p>
-
 
     <a
         href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
@@ -2226,7 +1620,7 @@ footer {
 
 
 <!-- =====================================================
-     VIDEO
+     FIRST VIDEO
 ===================================================== -->
 
 <div class="video-container reveal">
@@ -2257,7 +1651,6 @@ footer {
         لماذا دورة القيادة الاستراتيجية؟
     </h2>
 
-
     <p>
 
         لأن القيادة الحديثة تحتاج إلى أكثر من الإدارة اليومية.
@@ -2266,9 +1659,7 @@ footer {
 
     </p>
 
-
     <div class="why-grid">
-
 
         <div class="why-card">
 
@@ -2337,7 +1728,6 @@ footer {
 
         </div>
 
-
     </div>
 
 </section>
@@ -2353,39 +1743,31 @@ footer {
         هذه الدورة مناسبة لك إذا كنت...
     </h2>
 
-
     <div class="audience-list">
-
 
         <div class="audience-item">
             مديرًا أو قائد فريق.
         </div>
 
-
         <div class="audience-item">
             تستعد لتولي منصب قيادي.
         </div>
-
 
         <div class="audience-item">
             مسؤولًا عن تطوير الأداء المؤسسي.
         </div>
 
-
         <div class="audience-item">
             تعمل في التخطيط والاستراتيجية.
         </div>
-
 
         <div class="audience-item">
             مسؤولًا عن تطوير الأعمال.
         </div>
 
-
         <div class="audience-item">
             ترغب في تطوير مهاراتك القيادية.
         </div>
-
 
     </div>
 
@@ -2402,15 +1784,12 @@ footer {
         رحلتك في الدورة
     </h2>
 
-
     <p>
         محتوى تدريبي منظم يساعدك على الانتقال خطوة بخطوة
         نحو قيادة أكثر فاعلية.
     </p>
 
-
     <div class="journey">
-
 
         <div class="journey-card">
 
@@ -2513,7 +1892,6 @@ footer {
 
         </div>
 
-
     </div>
 
 </section>
@@ -2529,7 +1907,6 @@ footer {
         نبذة عن الدكتور عمر الجبر
     </h2>
 
-
     <p class="doctor-intro">
 
         الدكتور عمر الجبر مستشار وخبير متخصص في استشراف المستقبل
@@ -2542,29 +1919,23 @@ footer {
     </p>
 
 
-    <!-- =====================================================
-         EXPERIENCE
-    ===================================================== -->
+    <!-- EXPERIENCE -->
 
     <div
         class="professional-experience"
         id="professionalExperience">
 
-
         <h3 class="professional-title">
             الخبرة والتميز
         </h3>
 
-
         <div class="experience-layout">
-
 
             <div class="experience-circle-wrap">
 
                 <div
                     class="experience-circle"
                     id="experienceCircle">
-
 
                     <div class="experience-number">
 
@@ -2589,7 +1960,6 @@ footer {
                     الخبرة المهنية
                 </h4>
 
-
                 <p>
 
                     خبرة استشارية وتدريبية واسعة في
@@ -2598,9 +1968,7 @@ footer {
 
                 </p>
 
-
                 <div class="experience-bars">
-
 
                     <div class="experience-bar-row">
 
@@ -2617,7 +1985,6 @@ footer {
                             </span>
 
                         </div>
-
 
                         <div class="experience-bar">
 
@@ -2647,7 +2014,6 @@ footer {
 
                         </div>
 
-
                         <div class="experience-bar">
 
                             <div
@@ -2676,7 +2042,6 @@ footer {
 
                         </div>
 
-
                         <div class="experience-bar">
 
                             <div
@@ -2688,7 +2053,6 @@ footer {
 
                     </div>
 
-
                 </div>
 
             </div>
@@ -2698,16 +2062,13 @@ footer {
     </div>
 
 
-    <!-- =====================================================
-         EXPERIENCE BOX
-    ===================================================== -->
+    <!-- EXPERIENCE BOX -->
 
     <div class="experience-box">
 
         <h3>
             مجالات الخبرة
         </h3>
-
 
         <p>
 
@@ -2722,16 +2083,13 @@ footer {
     </div>
 
 
-    <!-- =====================================================
-         COUNTRIES
-    ===================================================== -->
+    <!-- COUNTRIES -->
 
     <div class="experience-box">
 
         <h3>
             خبرات دولية وبرامج قيادية
         </h3>
-
 
         <div class="countries">
 
@@ -2772,16 +2130,13 @@ footer {
     </div>
 
 
-    <!-- =====================================================
-         ACCREDITATIONS
-    ===================================================== -->
+    <!-- ACCREDITATIONS -->
 
     <div class="accreditation-section">
 
         <h3 class="accreditation-title">
             الاعتمادات الدولية
         </h3>
-
 
         <p class="accreditation-description">
 
@@ -2790,9 +2145,7 @@ footer {
 
         </p>
 
-
         <div class="accreditation-grid">
-
 
             <div class="accreditation-card">
 
@@ -2858,18 +2211,14 @@ footer {
 
             </div>
 
-
         </div>
 
     </div>
 
 
-    <!-- =====================================================
-         DOCTOR IMAGES
-    ===================================================== -->
+    <!-- DOCTOR IMAGES -->
 
     <div class="doctor-images">
-
 
         <div class="doctor-image-box">
 
@@ -2888,9 +2237,7 @@ footer {
 
         </div>
 
-
     </div>
-
 
 </section>
 
@@ -2907,7 +2254,6 @@ footer {
         عن دورة القيادة الاستراتيجية
     </h2>
 
-
     <p>
 
         دورة متخصصة تهدف إلى تطوير مهارات القادة
@@ -2921,6 +2267,28 @@ footer {
 
 
 <!-- =====================================================
+     NEW VIDEO UNDER ABOUT COURSE
+===================================================== -->
+
+<div class="about-video reveal">
+
+    <video
+        controls
+        playsinline
+        preload="metadata">
+
+        <source
+            src="video 2.mp4"
+            type="video/mp4">
+
+        عذراً، متصفحك لا يدعم تشغيل الفيديو.
+
+    </video>
+
+</div>
+
+
+<!-- =====================================================
      WHAT YOU WILL LEARN
 ===================================================== -->
 
@@ -2930,9 +2298,7 @@ footer {
         ماذا ستتعلم؟
     </h2>
 
-
     <div class="features">
-
 
         <div class="feature">
 
@@ -2981,7 +2347,6 @@ footer {
 
         </div>
 
-
     </div>
 
 </section>
@@ -2997,9 +2362,7 @@ footer {
         ماذا ستحصل عليه عند الالتحاق بالدورة؟
     </h2>
 
-
     <div class="benefits-grid">
-
 
         <div class="benefit">
 
@@ -3102,7 +2465,6 @@ footer {
 
         </div>
 
-
     </div>
 
 </section>
@@ -3118,14 +2480,12 @@ footer {
         جاهز لتطوير قيادتك؟
     </h2>
 
-
     <p>
 
         ابدأ الآن رحلتك في القيادة الاستراتيجية،
         وطوّر أدواتك لتكون قائدًا أكثر تأثيرًا.
 
     </p>
-
 
     <a
         href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
@@ -3148,9 +2508,7 @@ footer {
         الأسئلة الشائعة
     </h2>
 
-
     <div class="faq-container">
-
 
         <div class="faq-item">
 
@@ -3165,7 +2523,6 @@ footer {
                 </span>
 
             </button>
-
 
             <div class="faq-answer">
 
@@ -3192,7 +2549,6 @@ footer {
 
             </button>
 
-
             <div class="faq-answer">
 
                 تحتوي الدورة على 22 فيديو تدريبي متكامل.
@@ -3215,7 +2571,6 @@ footer {
                 </span>
 
             </button>
-
 
             <div class="faq-answer">
 
@@ -3241,7 +2596,6 @@ footer {
 
             </button>
 
-
             <div class="faq-answer">
 
                 نعم، توجد شهادة إتمام الدورة بعد استكمال
@@ -3266,7 +2620,6 @@ footer {
 
             </button>
 
-
             <div class="faq-answer">
 
                 اضغط على زر "اشترك في الدورة الآن"
@@ -3275,7 +2628,6 @@ footer {
             </div>
 
         </div>
-
 
     </div>
 
@@ -3292,14 +2644,12 @@ footer {
         ابدأ رحلتك في القيادة الاستراتيجية
     </h2>
 
-
     <p>
 
         الاستثمار في تطوير مهاراتك القيادية
         هو استثمار في مستقبلك ومستقبل مؤسستك.
 
     </p>
-
 
     <a
         href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
@@ -3346,7 +2696,6 @@ if ("scrollRestoration" in history) {
 
 }
 
-
 if (window.location.hash) {
 
     history.replaceState(
@@ -3358,9 +2707,7 @@ if (window.location.hash) {
 
 }
 
-
 window.scrollTo(0, 0);
-
 
 window.addEventListener(
     "load",
@@ -3370,7 +2717,6 @@ window.addEventListener(
 
     }
 );
-
 
 window.addEventListener(
     "pageshow",
@@ -3391,30 +2737,25 @@ const professionalExperience =
         "professionalExperience"
     );
 
-
 const experienceCircle =
     document.getElementById(
         "experienceCircle"
     );
-
 
 const experienceNumber =
     document.getElementById(
         "experienceNumber"
     );
 
-
 const experienceFills =
     document.querySelectorAll(
         ".experience-fill"
     );
 
-
 const percentages =
     document.querySelectorAll(
         ".percentage"
     );
-
 
 let experienceAnimationFrame = null;
 
@@ -3433,13 +2774,9 @@ function resetExperience() {
 
     }
 
-
     experienceIsAnimating = false;
 
-
-    experienceNumber.textContent =
-        "0";
-
+    experienceNumber.textContent = "0";
 
     experienceCircle.style.background =
         `
@@ -3450,22 +2787,18 @@ function resetExperience() {
         )
         `;
 
-
     experienceFills.forEach(
         function(fill) {
 
-            fill.style.width =
-                "0%";
+            fill.style.width = "0%";
 
         }
     );
 
-
     percentages.forEach(
         function(percentage) {
 
-            percentage.textContent =
-                "0%";
+            percentage.textContent = "0%";
 
         }
     );
@@ -3481,15 +2814,11 @@ function startExperienceAnimation() {
 
     }
 
-
     resetExperience();
-
 
     experienceIsAnimating = true;
 
-
     let startTime = null;
-
 
     const duration = 2200;
 
@@ -3502,23 +2831,19 @@ function startExperienceAnimation() {
 
         }
 
-
         const elapsed =
             timestamp -
             startTime;
 
-
         let progress =
             elapsed /
             duration;
-
 
         if (progress > 1) {
 
             progress = 1;
 
         }
-
 
         const smoothProgress =
             1 -
@@ -3527,20 +2852,16 @@ function startExperienceAnimation() {
                 3
             );
 
-
         const experienceValue =
             Math.floor(
                 smoothProgress * 20
             );
 
-
         experienceNumber.textContent =
             experienceValue;
 
-
         const degrees =
             smoothProgress * 360;
-
 
         experienceCircle.style.background =
             `
@@ -3555,7 +2876,6 @@ function startExperienceAnimation() {
             )
             `;
 
-
         experienceFills.forEach(
             function(fill) {
 
@@ -3564,11 +2884,9 @@ function startExperienceAnimation() {
                         fill.dataset.target
                     );
 
-
                 const currentValue =
                     smoothProgress *
                     target;
-
 
                 fill.style.width =
                     currentValue +
@@ -3576,7 +2894,6 @@ function startExperienceAnimation() {
 
             }
         );
-
 
         percentages.forEach(
             function(percentage) {
@@ -3586,13 +2903,11 @@ function startExperienceAnimation() {
                         percentage.dataset.target
                     );
 
-
                 const currentValue =
                     Math.floor(
                         smoothProgress *
                         target
                     );
-
 
                 percentage.textContent =
                     currentValue +
@@ -3600,7 +2915,6 @@ function startExperienceAnimation() {
 
             }
         );
-
 
         if (progress < 1) {
 
@@ -3616,7 +2930,6 @@ function startExperienceAnimation() {
             experienceNumber.textContent =
                 "+20";
 
-
             experienceFills.forEach(
                 function(fill) {
 
@@ -3626,7 +2939,6 @@ function startExperienceAnimation() {
 
                 }
             );
-
 
             percentages.forEach(
                 function(percentage) {
@@ -3638,10 +2950,8 @@ function startExperienceAnimation() {
                 }
             );
 
-
             experienceIsAnimating =
                 false;
-
 
             experienceAnimationFrame =
                 null;
@@ -3706,7 +3016,6 @@ const revealElements =
     document.querySelectorAll(
         ".reveal"
     );
-
 
 const revealObserver =
     new IntersectionObserver(
@@ -3777,7 +3086,6 @@ faqQuestions.forEach(
                 const item =
                     this.parentElement;
 
-
                 const isActive =
                     item.classList.contains(
                         "active"
@@ -3795,12 +3103,10 @@ faqQuestions.forEach(
                                 "active"
                             );
 
-
                             const icon =
                                 otherItem.querySelector(
                                     ".faq-question span:last-child"
                                 );
-
 
                             if (icon) {
 
@@ -3819,12 +3125,10 @@ faqQuestions.forEach(
                         "active"
                     );
 
-
                     const icon =
                         this.querySelector(
                             "span:last-child"
                         );
-
 
                     if (icon) {
 
