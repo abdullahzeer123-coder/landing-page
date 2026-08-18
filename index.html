@@ -505,6 +505,48 @@ body::after {
 
 
 /* =====================================================
+   MARKETING INTRO
+===================================================== */
+
+.marketing-intro {
+
+    text-align: center;
+
+    padding:
+        20px 10px 10px;
+}
+
+
+.marketing-intro h2 {
+
+    font-size:
+        clamp(28px,5vw,42px);
+
+    margin-bottom: 12px;
+
+    color: #ffffff;
+}
+
+
+.marketing-intro h2 span {
+
+    color: #ffe09a;
+}
+
+
+.marketing-intro p {
+
+    max-width: 760px;
+
+    margin: auto;
+
+    color: #f4f8fc;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
    WHY COURSE
 ===================================================== */
 
@@ -1285,38 +1327,40 @@ body::after {
 
 
 /* =====================================================
-   DR. OMAR IMAGE
+   DOCTOR IMAGE
 ===================================================== */
 
-.doctor-image-box {
+.doctor-image {
 
-    width: 100%;
+    width: 65%;
 
-    max-width: 420px;
+    max-width: 620px;
 
     margin:
-        35px auto 5px;
+        35px auto 35px;
 
-    padding: 7px;
+    padding: 8px;
 
-    border-radius: 20px;
+    border-radius: 22px;
 
     background:
         linear-gradient(
             135deg,
-            rgba(255,255,255,0.45),
-            rgba(255,255,255,0.10)
+            rgba(255,255,255,0.60),
+            rgba(255,255,255,0.12)
         );
 
     box-shadow:
-        0 15px 35px
-        rgba(0,0,0,0.25);
+        0 18px 45px
+        rgba(0,0,0,0.24);
 
     overflow: hidden;
+
+    text-align: center;
 }
 
 
-.doctor-image-box img {
+.doctor-image img {
 
     width: 100%;
 
@@ -1324,7 +1368,7 @@ body::after {
 
     display: block;
 
-    border-radius: 15px;
+    border-radius: 16px;
 
     object-fit: contain;
 }
@@ -1821,70 +1865,6 @@ footer {
 
 
 /* =====================================================
-   COURSE ADVERTISEMENT IMAGE
-===================================================== */
-
-.course-ad {
-
-    width: 100%;
-
-    max-width: 1000px;
-
-    margin:
-        10px auto 35px;
-
-    padding: 8px;
-
-    border-radius: 24px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,0.65),
-            rgba(255,255,255,0.12)
-        );
-
-    box-shadow:
-        0 20px 50px
-        rgba(0,0,0,0.25);
-
-    overflow: hidden;
-}
-
-
-.course-ad a {
-
-    display: block;
-
-    text-decoration: none;
-}
-
-
-.course-ad img {
-
-    width: 100%;
-
-    height: auto;
-
-    display: block;
-
-    border-radius: 18px;
-
-    object-fit: cover;
-
-    transition:
-        transform 0.4s ease;
-}
-
-
-.course-ad:hover img {
-
-    transform:
-        scale(1.02);
-}
-
-
-/* =====================================================
    TABLET
 ===================================================== */
 
@@ -2053,11 +2033,11 @@ footer {
     }
 
 
-    .doctor-image-box {
+    .doctor-image {
 
-        max-width: 330px;
+        width: 92%;
 
-        margin-top: 28px;
+        max-width: 500px;
 
     }
 
@@ -2080,6 +2060,62 @@ footer {
         text-align: center;
     }
 
+}
+
+
+/* =====================================================
+   COURSE ADVERTISEMENT IMAGE
+===================================================== */
+
+.course-ad {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin:
+        10px auto 35px;
+
+    padding: 8px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.65),
+            rgba(255,255,255,0.12)
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.25);
+
+    overflow: hidden;
+}
+
+
+.course-ad img {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    border-radius: 18px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.course-ad:hover img {
+
+    transform:
+        scale(1.02);
 }
 
 </style>
@@ -2145,18 +2181,14 @@ footer {
 
 <!-- =====================================================
      COURSE ADVERTISEMENT
+     بدون رابط
 ===================================================== -->
 
 <div class="course-ad reveal">
 
-    <a
-        href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14">
-
-        <img
-            src="strategic-leadership.jfif"
-            alt="إعلان دورة القيادة الاستراتيجية">
-
-    </a>
+    <img
+        src="strategic-leadership.jfif"
+        alt="إعلان دورة القيادة الاستراتيجية">
 
 </div>
 
@@ -2789,20 +2821,22 @@ footer {
 
         </div>
 
+    </div>
 
-        <!-- =================================================
-             DR. OMAR IMAGE
-        ================================================== -->
 
-        <div class="doctor-image-box">
+    <!-- =================================================
+         DOCTOR IMAGE
+         بدون رابط
+    ================================================== -->
 
-            <img
-                src="دكتور_عمر.jpeg"
-                alt="الدكتور عمر الجبر">
+    <div class="doctor-image reveal">
 
-        </div>
+        <img
+            src="دكتور_عمر.jpeg"
+            alt="الدكتور عمر الجبر">
 
     </div>
+
 
 </section>
 
