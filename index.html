@@ -3,933 +3,2008 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>دورة القيادة الاستراتيجية</title>
+<title>دورة القيادة الاستراتيجية | STRATEGENCE</title>
 
-    <style>
+<style>
 
-        * {
-            box-sizing: border-box;
-        }
+/* =====================================================
+   GENERAL
+===================================================== */
 
-        /* =================================
-           BODY
-        ================================= */
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
+html {
+    scroll-behavior: smooth;
+}
 
-            font-family:
-                Tahoma,
-                Arial,
-                sans-serif;
+body {
 
-            /* اللون الجديد */
-            background:
-                linear-gradient(
-                    135deg,
-                    #6256A8 0%,
-                    #5878C0 50%,
-                    #4D8FD2 100%
-                );
+    margin: 0;
 
-            color: #ffffff;
+    font-family:
+        Tahoma,
+        Arial,
+        sans-serif;
 
-            line-height: 1.8;
+    color: #ffffff;
 
-            min-height: 100vh;
-        }
+    line-height: 1.8;
 
+    min-height: 100vh;
 
-        .container {
-            width: 92%;
-            max-width: 900px;
-            margin: auto;
-        }
+    background:
+        linear-gradient(
+            135deg,
+            #5548a0 0%,
+            #637cc4 35%,
+            #63a6df 70%,
+            #6dbbe8 100%
+        );
 
+    background-attachment: fixed;
 
-        /* =================================
-           HEADER
-        ================================= */
+    overflow-x: hidden;
 
-        .hero {
-            text-align: center;
-            padding: 45px 0 30px;
-        }
+    position: relative;
+}
 
 
-        .badge {
-            display: inline-block;
+/* =====================================================
+   GLOSSY BACKGROUND
+===================================================== */
 
-            background: #eab65b;
+body::before {
 
-            color: #07182d;
+    content: "";
 
-            padding: 8px 20px;
+    position: fixed;
 
-            border-radius: 30px;
+    top: -250px;
+    right: -180px;
 
-            font-weight: bold;
+    width: 600px;
+    height: 600px;
 
-            margin-bottom: 20px;
-        }
+    border-radius: 50%;
 
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.25) 0%,
+            rgba(255,255,255,0.08) 35%,
+            transparent 70%
+        );
 
-        h1 {
-            font-size:
-                clamp(
-                    32px,
-                    6vw,
-                    55px
-                );
+    pointer-events: none;
 
-            margin: 0 0 20px;
+    z-index: -1;
 
-            line-height: 1.4;
-        }
+    animation:
+        glowMove 8s ease-in-out infinite alternate;
+}
 
 
-        h1 span {
-            color: #eab65b;
-        }
+body::after {
 
+    content: "";
 
-        .subtitle {
-            max-width: 750px;
+    position: fixed;
 
-            margin: auto;
+    bottom: -250px;
+    left: -180px;
 
-            color: #f1f1f1;
+    width: 650px;
+    height: 650px;
 
-            font-size: 21px;
+    border-radius: 50%;
 
-            line-height: 1.9;
-        }
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.18) 0%,
+            rgba(255,255,255,0.05) 35%,
+            transparent 70%
+        );
 
+    pointer-events: none;
 
-        /* =================================
-           CTA BUTTON
-        ================================= */
+    z-index: -1;
 
-        .cta-button {
-            display: inline-block;
+    animation:
+        glowMove2 10s ease-in-out infinite alternate;
+}
 
-            margin-top: 28px;
 
-            padding: 16px 40px;
+@keyframes glowMove {
 
-            background: #eab65b;
+    from {
+        transform: translate(0,0);
+    }
 
-            color: #07182d;
+    to {
+        transform: translate(-80px,100px);
+    }
+}
 
-            text-decoration: none;
 
-            border-radius: 12px;
+@keyframes glowMove2 {
 
-            font-size: 20px;
+    from {
+        transform: translate(0,0);
+    }
 
-            font-weight: bold;
+    to {
+        transform: translate(100px,-80px);
+    }
+}
 
-            box-shadow:
-                0 8px 25px
-                rgba(0, 0, 0, 0.20);
 
-            transition:
-                all 0.3s ease;
-        }
+/* =====================================================
+   CONTAINER
+===================================================== */
 
+.container {
 
-        .cta-button:hover {
-            transform: translateY(-3px);
+    width: 92%;
 
-            box-shadow:
-                0 12px 30px
-                rgba(0, 0, 0, 0.35);
-        }
+    max-width: 1000px;
 
+    margin: auto;
 
-        /* =================================
-           VIDEO
-        ================================= */
+    position: relative;
 
-        .video-container {
-            max-width: 700px;
+    z-index: 1;
+}
 
-            margin: 30px auto;
-        }
 
+/* =====================================================
+   HERO
+===================================================== */
 
-        .video-container video {
-            width: 100%;
+.hero {
 
-            height: auto;
+    text-align: center;
 
-            display: block;
+    padding:
+        65px 20px 35px;
 
-            border-radius: 12px;
-        }
+    position: relative;
+}
 
 
-        /* =================================
-           SECTIONS
-        ================================= */
+.badge {
 
-        .section {
-            background: #0c2543;
+    display: inline-block;
 
-            border-radius: 20px;
+    background:
+        linear-gradient(
+            135deg,
+            #f5cf78,
+            #eab65b
+        );
 
-            padding: 35px 25px;
+    color: #14233d;
 
-            margin: 25px 0;
+    padding:
+        9px 24px;
 
-            text-align: center;
-        }
+    border-radius: 30px;
 
+    font-weight: bold;
 
-        .section h2 {
-            color: #eab65b;
+    margin-bottom: 22px;
 
-            font-size: 30px;
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.18);
 
-            margin-top: 0;
+    animation:
+        badgeFloat 3s ease-in-out infinite;
+}
 
-            margin-bottom: 20px;
-        }
 
+@keyframes badgeFloat {
 
-        .section p {
-            color: #d8e0ea;
+    0%,100% {
+        transform: translateY(0);
+    }
 
-            font-size: 18px;
+    50% {
+        transform: translateY(-5px);
+    }
+}
 
-            line-height: 2;
-        }
 
+.hero h1 {
 
-        /* =================================
-           DOCTOR SECTION
-        ================================= */
+    font-size:
+        clamp(
+            32px,
+            6vw,
+            55px
+        );
 
-        .doctor-section {
-            background: #0c2543;
+    margin:
+        0 0 12px;
 
-            border-radius: 20px;
+    line-height: 1.4;
 
-            padding: 40px 25px;
+    color: #ffffff;
 
-            margin: 25px 0;
+    text-shadow:
+        0 4px 20px
+        rgba(0,0,0,0.20);
+}
 
-            text-align: center;
-        }
 
+.hero h2 {
 
-        .doctor-section h2 {
-            color: #eab65b;
+    font-size:
+        clamp(
+            22px,
+            4vw,
+            34px
+        );
 
-            font-size: 32px;
+    margin:
+        5px 0;
 
-            margin-top: 0;
+    color: #fff;
+}
 
-            margin-bottom: 20px;
-        }
 
+.hero h2 span {
 
-        .doctor-intro {
-            max-width: 780px;
+    color: #ffe09a;
 
-            margin:
-                0 auto 30px;
+    text-shadow:
+        0 3px 15px
+        rgba(0,0,0,0.18);
+}
 
-            color: #d8e0ea;
 
-            font-size: 18px;
+.hero-description {
 
-            line-height: 2;
-        }
+    max-width: 760px;
 
+    margin:
+        22px auto 0;
 
-        /* =================================
-           PROFESSIONAL EXPERIENCE
-        ================================= */
+    color: #f8fbff;
 
-        .professional-experience {
-            margin-top: 35px;
+    font-size: 19px;
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #102e50,
-                    #0c2543
-                );
+    line-height: 2;
+}
 
-            border:
-                1px solid
-                rgba(56, 189, 248, 0.35);
 
-            border-radius: 22px;
+/* =====================================================
+   CTA
+===================================================== */
 
-            padding: 30px 20px;
+.cta-button {
 
-            box-shadow:
-                0 15px 40px
-                rgba(0, 0, 0, 0.18);
-        }
+    display: inline-block;
 
+    margin-top: 28px;
 
-        .professional-title {
-            color: #38bdf8;
+    padding:
+        16px 42px;
 
-            font-size: 27px;
+    background:
+        linear-gradient(
+            135deg,
+            #f7d481,
+            #eab65b
+        );
 
-            margin:
-                0 0 25px;
-        }
+    color: #13233b;
 
+    text-decoration: none;
 
-        .experience-layout {
-            display: grid;
+    border-radius: 14px;
 
-            grid-template-columns:
-                260px 1fr;
+    font-size: 20px;
 
-            gap: 35px;
+    font-weight: bold;
 
-            align-items: center;
-        }
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.22);
 
+    transition:
+        all 0.3s ease;
 
-        /* =================================
-           EXPERIENCE CIRCLE
-        ================================= */
+    position: relative;
 
-        .experience-circle-wrap {
-            display: flex;
+    overflow: hidden;
+}
 
-            justify-content: center;
 
-            align-items: center;
-        }
+.cta-button::before {
 
+    content: "";
 
-        .experience-circle {
-            width: 220px;
+    position: absolute;
 
-            height: 220px;
+    top: 0;
+    left: -120%;
 
-            border-radius: 50%;
+    width: 70%;
+    height: 100%;
 
-            background:
-                conic-gradient(
-                    #7dd3fc 0deg,
-                    #7dd3fc 0deg,
-                    #234667 0deg,
-                    #234667 360deg
-                );
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.55),
+            transparent
+        );
 
-            position: relative;
+    transform:
+        skewX(-20deg);
 
-            display: flex;
+    transition:
+        left 0.7s ease;
+}
 
-            align-items: center;
 
-            justify-content: center;
+.cta-button:hover::before {
 
-            box-shadow:
-                0 0 25px
-                rgba(56, 189, 248, 0.20),
+    left: 140%;
+}
 
-                0 12px 35px
-                rgba(0, 0, 0, 0.35);
-        }
 
+.cta-button:hover {
 
-        .experience-circle::before {
-            content: "";
+    transform:
+        translateY(-5px)
+        scale(1.03);
 
-            position: absolute;
+    box-shadow:
+        0 16px 35px
+        rgba(0,0,0,0.30);
+}
 
-            width: 172px;
 
-            height: 172px;
+/* =====================================================
+   VIDEO
+===================================================== */
 
-            border-radius: 50%;
+.video-container {
 
-            background: #0c2543;
+    max-width: 760px;
 
-            box-shadow:
-                inset 0 0 20px
-                rgba(0, 0, 0, 0.30);
-        }
+    margin:
+        30px auto 40px;
 
+    padding: 8px;
 
-        /* =================================
-           EXPERIENCE NUMBER
-        ================================= */
+    border-radius: 22px;
 
-        .experience-number {
-            position: relative;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.65),
+            rgba(255,255,255,0.12)
+        );
 
-            z-index: 2;
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.22);
+}
 
-            text-align: center;
 
-            direction: rtl;
-        }
+.video-container video {
 
+    width: 100%;
 
-        .experience-number strong {
-            display: block;
+    height: auto;
 
-            color: #7dd3fc;
+    display: block;
 
-            font-size: 50px;
+    border-radius: 17px;
 
-            line-height: 1.1;
+    background: #0c2543;
+}
 
-            font-weight: bold;
 
-            transform: none;
-        }
+/* =====================================================
+   GLASS SECTIONS
+===================================================== */
 
+.section,
+.doctor-section {
 
-        .experience-number span {
-            display: block;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(12,37,67,0.93),
+            rgba(18,52,88,0.91)
+        );
 
-            color: #ffffff;
+    border:
+        1px solid
+        rgba(255,255,255,0.13);
 
-            font-size: 17px;
+    border-radius: 24px;
 
-            margin-top: 5px;
+    padding:
+        40px 28px;
 
-            transform: none;
-        }
+    margin:
+        28px 0;
 
+    text-align: center;
 
-        /* =================================
-           EXPERIENCE INFO
-        ================================= */
+    box-shadow:
+        0 18px 45px
+        rgba(0,0,0,0.18);
 
-        .experience-info {
-            text-align: right;
-        }
+    position: relative;
 
+    overflow: hidden;
+}
 
-        .experience-info h4 {
-            color: #ffffff;
 
-            font-size: 23px;
+.section::before,
+.doctor-section::before {
 
-            margin:
-                0 0 8px;
-        }
+    content: "";
 
+    position: absolute;
 
-        .experience-info > p {
-            color: #cbd6e3;
+    top: -100px;
+    right: -100px;
 
-            font-size: 15px;
+    width: 250px;
+    height: 250px;
 
-            margin:
-                0 0 20px;
-        }
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.10),
+            transparent 70%
+        );
 
+    pointer-events: none;
+}
 
-        /* =================================
-           PROFESSIONAL BARS
-        ================================= */
 
-        .experience-bars {
-            display: flex;
+.section h2,
+.doctor-section h2 {
 
-            flex-direction: column;
+    color: #f5ca72;
 
-            gap: 15px;
-        }
+    font-size: 30px;
 
+    margin:
+        0 0 20px;
 
-        .experience-bar-row {
-            width: 100%;
-        }
+    text-shadow:
+        0 3px 12px
+        rgba(0,0,0,0.20);
+}
 
 
-        .experience-bar-header {
-            display: flex;
+.section p {
 
-            justify-content:
-                space-between;
+    color: #e7eef7;
 
-            align-items: center;
+    font-size: 18px;
 
-            margin-bottom: 5px;
+    line-height: 2;
+}
 
-            font-size: 14px;
 
-            color: #ffffff;
-        }
+/* =====================================================
+   MARKETING INTRO
+===================================================== */
 
+.marketing-intro {
 
-        .experience-bar-header span:last-child {
-            color: #38bdf8;
+    text-align: center;
 
-            font-weight: bold;
+    padding:
+        20px 10px 10px;
+}
 
-            min-width: 45px;
 
-            text-align: left;
-        }
+.marketing-intro h2 {
 
+    font-size:
+        clamp(28px,5vw,42px);
 
-        .experience-bar {
-            height: 10px;
+    margin-bottom: 12px;
 
-            width: 100%;
+    color: #ffffff;
+}
 
-            background: #294966;
 
-            border-radius: 20px;
+.marketing-intro h2 span {
 
-            overflow: hidden;
-        }
+    color: #ffe09a;
+}
 
 
-        .experience-fill {
-            height: 100%;
+.marketing-intro p {
 
-            width: 0%;
+    max-width: 760px;
 
-            border-radius: 20px;
+    margin: auto;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    #075985,
-                    #0ea5e9,
-                    #38bdf8
-                );
+    color: #f4f8fc;
 
-            transition:
-                width 0.08s linear;
-        }
+    font-size: 18px;
+}
 
 
-        /* =================================
-           OLD EXPERIENCE BOXES
-        ================================= */
+/* =====================================================
+   WHY COURSE
+===================================================== */
 
-        .experience-box {
-            background: #102e50;
+.why-grid {
 
-            border-radius: 16px;
+    display: grid;
 
-            padding: 25px;
+    grid-template-columns:
+        repeat(4,1fr);
 
-            margin-top: 25px;
-        }
+    gap: 16px;
 
+    margin-top: 25px;
+}
 
-        .experience-box h3 {
-            color: #eab65b;
 
-            margin-top: 0;
+.why-card {
 
-            font-size: 22px;
-        }
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.13),
+            rgba(255,255,255,0.05)
+        );
 
+    border:
+        1px solid
+        rgba(255,255,255,0.14);
 
-        .countries {
-            display: flex;
+    border-radius: 18px;
 
-            flex-wrap: wrap;
+    padding: 25px 16px;
 
-            justify-content: center;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 
-            gap: 10px;
+    position: relative;
 
-            margin-top: 15px;
-        }
+    overflow: hidden;
+}
 
 
-        .country {
-            background: #0c2543;
+.why-card::before {
 
-            color: #ffffff;
+    content: "";
 
-            border:
-                1px solid
-                rgba(234, 182, 91, 0.3);
+    position: absolute;
 
-            padding:
-                8px 15px;
+    top: -80px;
+    left: -100px;
 
-            border-radius: 25px;
+    width: 180px;
+    height: 180px;
 
-            font-size: 15px;
-        }
+    border-radius: 50%;
 
+    background:
+        rgba(255,255,255,0.08);
+}
 
-        /* =================================
-           INTERNATIONAL ACCREDITATIONS
-        ================================= */
 
-        .accreditation-section {
-            margin-top: 35px;
+.why-card:hover {
 
-            padding:
-                30px 20px;
+    transform:
+        translateY(-8px);
 
-            background:
-                linear-gradient(
-                    145deg,
-                    #102e50,
-                    #0c2543
-                );
+    box-shadow:
+        0 18px 35px
+        rgba(0,0,0,0.25);
+}
 
-            border-radius: 22px;
 
-            border:
-                1px solid
-                rgba(234, 182, 91, 0.20);
-        }
+.icon {
 
+    font-size: 38px;
 
-        .accreditation-title {
-            color: #eab65b;
+    margin-bottom: 10px;
+}
 
-            font-size: 28px;
 
-            margin:
-                0 0 8px;
-        }
+.why-card h3 {
 
+    color: #ffe09a;
 
-        .accreditation-description {
-            color: #cbd6e3;
+    margin:
+        5px 0 10px;
 
-            font-size: 15px;
+    font-size: 20px;
+}
 
-            margin:
-                0 auto 25px;
 
-            max-width: 700px;
-        }
+.why-card p {
 
+    color: #dce8f5;
 
-        .accreditation-grid {
-            display: grid;
+    font-size: 14px;
 
-            grid-template-columns:
-                repeat(5, 1fr);
+    margin: 0;
+}
 
-            gap: 14px;
 
-            align-items: stretch;
-        }
+/* =====================================================
+   TARGET AUDIENCE
+===================================================== */
 
+.audience-list {
 
-        .accreditation-card {
-            background: #ffffff;
+    display: grid;
 
-            border-radius: 16px;
+    grid-template-columns:
+        repeat(2,1fr);
 
-            min-height: 145px;
+    gap: 12px;
 
-            padding: 15px;
+    margin-top: 25px;
+}
 
-            display: flex;
 
-            flex-direction: column;
+.audience-item {
 
-            justify-content: center;
+    text-align: right;
 
-            align-items: center;
+    padding:
+        15px 18px;
 
-            border:
-                2px solid
-                transparent;
+    border-radius: 14px;
 
-            transition:
-                transform 0.3s ease,
-                box-shadow 0.3s ease,
-                border-color 0.3s ease;
-        }
+    background:
+        rgba(255,255,255,0.07);
 
+    border:
+        1px solid
+        rgba(255,255,255,0.10);
 
-        .accreditation-card:hover {
-            transform: translateY(-6px);
+    color: #ffffff;
 
-            border-color: #eab65b;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
 
-            box-shadow:
-                0 12px 30px
-                rgba(0, 0, 0, 0.30);
-        }
 
+.audience-item:hover {
 
-        .accreditation-card img {
-            width: 115px;
+    transform:
+        translateX(-5px);
 
-            height: 80px;
+    background:
+        rgba(255,255,255,0.12);
+}
 
-            object-fit: contain;
 
-            display: block;
+.audience-item::before {
 
-            margin-bottom: 8px;
-        }
+    content: "✓";
 
+    color: #ffe09a;
 
-        .accreditation-card span {
-            color: #102e50;
+    font-weight: bold;
 
-            font-size: 14px;
+    margin-left: 10px;
+}
 
-            font-weight: bold;
 
-            text-align: center;
-        }
+/* =====================================================
+   COURSE JOURNEY
+===================================================== */
 
+.journey {
 
-        /* =================================
-           FEATURES
-        ================================= */
+    display: grid;
 
-        .features {
-            display: grid;
+    grid-template-columns:
+        repeat(3,1fr);
 
-            grid-template-columns:
-                repeat(3, 1fr);
+    gap: 18px;
 
-            gap: 15px;
+    margin-top: 30px;
+}
 
-            margin-top: 25px;
 
-            overflow: visible;
-        }
+.journey-card {
 
+    position: relative;
 
-        .feature {
-            background: #102e50;
+    padding:
+        25px 18px;
 
-            padding: 20px;
+    background:
+        linear-gradient(
+            145deg,
+            #173b62,
+            #102d4c
+        );
 
-            border-radius: 14px;
+    border-radius: 18px;
 
-            transition:
-                transform 0.3s ease;
+    border:
+        1px solid
+        rgba(125,211,252,0.22);
 
-            position: relative;
+    transition:
+        all 0.35s ease;
+}
 
-            z-index: 1;
-        }
 
+.journey-card:hover {
 
-        .feature:hover {
-            transform:
-                scale(1.05);
+    transform:
+        translateY(-7px);
 
-            z-index: 10;
-        }
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,0.25);
+}
 
 
-        .feature strong {
-            display: block;
+.journey-number {
 
-            color: #eab65b;
+    width: 45px;
+    height: 45px;
 
-            font-size: 19px;
+    margin:
+        0 auto 12px;
 
-            margin-bottom: 8px;
-        }
+    display: flex;
 
+    align-items: center;
 
-        .feature p {
-            font-size: 15px;
+    justify-content: center;
 
-            margin: 0;
-        }
+    border-radius: 50%;
 
+    background:
+        linear-gradient(
+            135deg,
+            #f5d17d,
+            #eab65b
+        );
 
-        /* =================================
-           BUTTON
-        ================================= */
+    color: #17253c;
 
-        .button {
-            display: block;
+    font-weight: bold;
 
-            width: fit-content;
+    font-size: 18px;
+}
 
-            margin:
-                25px auto 45px;
 
-            background: #eab65b;
+.journey-card h3 {
 
-            color: #07182d;
+    color: #ffffff;
 
-            text-decoration: none;
+    font-size: 19px;
 
-            padding:
-                15px 35px;
+    margin:
+        5px 0 8px;
+}
 
-            border-radius: 12px;
 
-            font-weight: bold;
+.journey-card p {
 
-            font-size: 19px;
-        }
+    color: #cddbea;
 
+    font-size: 14px;
 
-        /* =================================
-           FOOTER
-        ================================= */
+    margin: 0;
+}
 
-        footer {
-            text-align: center;
 
-            color: #eeeeee;
+/* =====================================================
+   DOCTOR
+===================================================== */
 
-            font-size: 14px;
+.doctor-intro {
 
-            padding: 30px 0;
-        }
+    max-width: 780px;
 
+    margin:
+        0 auto 30px;
 
-        /* =================================
-           TABLET
-        ================================= */
+    color: #e1eaf4;
 
-        @media (max-width: 1000px) {
+    font-size: 18px;
 
-            .accreditation-grid {
-                grid-template-columns:
-                    repeat(3, 1fr);
-            }
+    line-height: 2;
+}
 
-        }
 
+/* =====================================================
+   EXPERIENCE
+===================================================== */
 
-        /* =================================
-           MOBILE
-        ================================= */
+.professional-experience {
 
-        @media (max-width: 650px) {
+    margin-top: 35px;
 
-            .hero {
-                padding-top: 30px;
-            }
+    background:
+        linear-gradient(
+            145deg,
+            #15395e,
+            #0d2947
+        );
 
+    border:
+        1px solid
+        rgba(125,211,252,0.35);
 
-            h1 {
-                font-size: 30px;
-            }
+    border-radius: 22px;
 
+    padding:
+        30px 20px;
 
-            .subtitle {
-                font-size: 17px;
-            }
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.18);
+}
 
 
-            .features {
-                grid-template-columns: 1fr;
-            }
+.professional-title {
 
+    color: #7dd3fc;
 
-            .button {
-                width: 90%;
+    font-size: 27px;
 
-                text-align: center;
-            }
+    margin:
+        0 0 25px;
+}
 
 
-            .cta-button {
-                width: 90%;
+.experience-layout {
 
-                text-align: center;
+    display: grid;
 
-                font-size: 18px;
+    grid-template-columns:
+        260px 1fr;
 
-                padding:
-                    15px 20px;
-            }
+    gap: 35px;
 
+    align-items: center;
+}
 
-            .section,
-            .doctor-section {
-                padding:
-                    25px 18px;
-            }
 
+.experience-circle-wrap {
 
-            .doctor-section h2 {
-                font-size: 27px;
-            }
+    display: flex;
 
+    justify-content: center;
 
-            .doctor-intro {
-                font-size: 16px;
-            }
+    align-items: center;
+}
 
 
-            /* EXPERIENCE */
+.experience-circle {
 
-            .experience-layout {
-                grid-template-columns: 1fr;
+    width: 220px;
 
-                gap: 25px;
-            }
+    height: 220px;
 
+    border-radius: 50%;
 
-            .experience-info {
-                text-align: center;
-            }
+    background:
+        conic-gradient(
+            #7dd3fc 0deg,
+            #234667 0deg
+        );
 
+    position: relative;
 
-            .experience-circle {
-                width: 195px;
+    display: flex;
 
-                height: 195px;
-            }
+    align-items: center;
 
+    justify-content: center;
 
-            .experience-circle::before {
-                width: 150px;
+    box-shadow:
+        0 0 35px
+        rgba(125,211,252,0.25),
 
-                height: 150px;
-            }
+        0 12px 35px
+        rgba(0,0,0,0.35);
+}
 
 
-            .experience-number strong {
-                font-size: 43px;
-            }
+.experience-circle::before {
 
+    content: "";
 
-            /* ACCREDITATIONS */
+    position: absolute;
 
-            .accreditation-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
+    width: 172px;
 
-                gap: 12px;
-            }
+    height: 172px;
 
+    border-radius: 50%;
 
-            .accreditation-card {
-                min-height: 135px;
-            }
+    background: #102d4c;
 
+    box-shadow:
+        inset 0 0 20px
+        rgba(0,0,0,0.30);
+}
 
-            .accreditation-card img {
-                width: 100px;
 
-                height: 70px;
-            }
+.experience-number {
 
-        }
+    position: relative;
 
-    </style>
+    z-index: 2;
+
+    text-align: center;
+}
+
+
+.experience-number strong {
+
+    display: block;
+
+    color: #9ee4ff;
+
+    font-size: 50px;
+
+    line-height: 1.1;
+
+    font-weight: bold;
+}
+
+
+.experience-number span {
+
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    margin-top: 5px;
+}
+
+
+.experience-info {
+
+    text-align: right;
+}
+
+
+.experience-info h4 {
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    margin:
+        0 0 8px;
+}
+
+
+.experience-info > p {
+
+    color: #cbd6e3;
+
+    font-size: 15px;
+
+    margin:
+        0 0 20px;
+}
+
+
+/* =====================================================
+   BARS
+===================================================== */
+
+.experience-bars {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.experience-bar-row {
+
+    width: 100%;
+}
+
+
+.experience-bar-header {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+
+    color: #ffffff;
+}
+
+
+.experience-bar-header span:last-child {
+
+    color: #7dd3fc;
+
+    font-weight: bold;
+
+    min-width: 45px;
+
+    text-align: left;
+}
+
+
+.experience-bar {
+
+    height: 11px;
+
+    width: 100%;
+
+    background: #294966;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+
+.experience-fill {
+
+    height: 100%;
+
+    width: 0%;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #5baee0,
+            #7dd3fc,
+            #b7efff
+        );
+
+    box-shadow:
+        0 0 12px
+        rgba(125,211,252,0.55);
+}
+
+
+/* =====================================================
+   EXPERIENCE BOX
+===================================================== */
+
+.experience-box {
+
+    background:
+        linear-gradient(
+            145deg,
+            #173b62,
+            #102d4c
+        );
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+}
+
+
+.experience-box h3 {
+
+    color: #f2c86e;
+
+    margin-top: 0;
+
+    font-size: 22px;
+}
+
+
+.experience-box p {
+
+    color: #d8e3ef;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   COUNTRIES
+===================================================== */
+
+.countries {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+.country {
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: #ffffff;
+
+    border:
+        1px solid
+        rgba(234,182,91,0.35);
+
+    padding:
+        8px 15px;
+
+    border-radius: 25px;
+
+    font-size: 15px;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.country:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255,255,255,0.14);
+}
+
+
+/* =====================================================
+   ACCREDITATIONS
+===================================================== */
+
+.accreditation-section {
+
+    margin-top: 35px;
+
+    padding:
+        30px 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #173b62,
+            #102d4c
+        );
+
+    border-radius: 22px;
+
+    border:
+        1px solid
+        rgba(234,182,91,0.20);
+}
+
+
+.accreditation-title {
+
+    color: #f2c86e;
+
+    font-size: 28px;
+
+    margin:
+        0 0 8px;
+}
+
+
+.accreditation-description {
+
+    color: #cbd6e3;
+
+    font-size: 15px;
+
+    margin:
+        0 auto 25px;
+
+    max-width: 700px;
+}
+
+
+.accreditation-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5,1fr);
+
+    gap: 14px;
+
+    align-items: stretch;
+}
+
+
+.accreditation-card {
+
+    background: #ffffff;
+
+    border-radius: 16px;
+
+    min-height: 145px;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border:
+        2px solid
+        transparent;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.accreditation-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color: #eab65b;
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,0.30);
+}
+
+
+.accreditation-card img {
+
+    width: 115px;
+
+    height: 80px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+
+.accreditation-card span {
+
+    color: #102e50;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
+.features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    overflow: visible;
+}
+
+
+.feature {
+
+    background:
+        linear-gradient(
+            145deg,
+            #173b62,
+            #102d4c
+        );
+
+    padding: 22px;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.feature::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.08),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        left 0.7s ease;
+}
+
+
+.feature:hover::before {
+
+    left: 130%;
+}
+
+
+.feature:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(0,0,0,0.25);
+}
+
+
+.feature strong {
+
+    display: block;
+
+    color: #ffe09a;
+
+    font-size: 19px;
+
+    margin-bottom: 8px;
+}
+
+
+.feature p {
+
+    font-size: 15px;
+
+    margin: 0;
+
+    color: #d8e3ef;
+}
+
+
+/* =====================================================
+   BENEFITS
+===================================================== */
+
+.benefits-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+.benefit {
+
+    padding: 22px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.10);
+
+    text-align: center;
+}
+
+
+.benefit-icon {
+
+    font-size: 34px;
+
+    margin-bottom: 8px;
+}
+
+
+.benefit h3 {
+
+    color: #ffe09a;
+
+    font-size: 18px;
+
+    margin:
+        5px 0 8px;
+}
+
+
+.benefit p {
+
+    color: #d9e5f1;
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+
+/* =====================================================
+   CTA SALE SECTION
+===================================================== */
+
+.offer-section {
+
+    text-align: center;
+
+    margin:
+        35px 0;
+
+    padding:
+        45px 25px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20,48,83,0.98),
+            rgba(39,78,122,0.95)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,0.18);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.22);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.offer-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+
+    height: 300px;
+
+    top: -160px;
+
+    right: -100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.08);
+}
+
+
+.offer-section h2 {
+
+    color: #ffe09a;
+
+    font-size:
+        clamp(26px,5vw,38px);
+
+    margin:
+        0 0 10px;
+}
+
+
+.offer-section p {
+
+    color: #e6eef7;
+
+    font-size: 18px;
+
+    max-width: 650px;
+
+    margin:
+        0 auto 22px;
+}
+
+
+.offer-button {
+
+    display: inline-block;
+
+    padding:
+        16px 45px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7d481,
+            #eab65b
+        );
+
+    color: #17243a;
+
+    text-decoration: none;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.25);
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.offer-button:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 16px 35px
+        rgba(0,0,0,0.32);
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.faq-container {
+
+    max-width: 800px;
+
+    margin:
+        25px auto 0;
+
+    text-align: right;
+}
+
+
+.faq-item {
+
+    margin-bottom: 12px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.10);
+}
+
+
+.faq-question {
+
+    width: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    padding:
+        18px 20px;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    text-align: right;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.faq-question span:last-child {
+
+    color: #ffe09a;
+
+    font-size: 24px;
+}
+
+
+.faq-answer {
+
+    max-height: 0;
+
+    overflow: hidden;
+
+    transition:
+        max-height 0.35s ease;
+
+    padding:
+        0 20px;
+
+    color: #d9e5f1;
+
+    font-size: 15px;
+}
+
+
+.faq-item.active .faq-answer {
+
+    max-height: 200px;
+
+    padding:
+        0 20px 18px;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.button {
+
+    display: block;
+
+    width: fit-content;
+
+    margin:
+        25px auto 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f7d481,
+            #eab65b
+        );
+
+    color: #07182d;
+
+    text-decoration: none;
+
+    padding:
+        15px 35px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    font-size: 19px;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+.button:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0,0,0,0.25);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    text-align: center;
+
+    color: #f1f5f9;
+
+    font-size: 14px;
+
+    padding:
+        35px 0 45px;
+}
+
+
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+.reveal.visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .why-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .accreditation-grid {
+
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+
+
+    .benefits-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .container {
+
+        width: 94%;
+    }
+
+
+    .hero {
+
+        padding-top: 35px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 30px;
+    }
+
+
+    .hero h2 {
+
+        font-size: 23px;
+    }
+
+
+    .hero-description {
+
+        font-size: 16px;
+    }
+
+
+    .section,
+    .doctor-section {
+
+        padding:
+            28px 17px;
+    }
+
+
+    .section h2,
+    .doctor-section h2 {
+
+        font-size: 26px;
+    }
+
+
+    .why-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .audience-list {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .journey {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .features {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .benefits-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .experience-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .experience-info {
+
+        text-align: center;
+    }
+
+
+    .experience-circle {
+
+        width: 195px;
+
+        height: 195px;
+    }
+
+
+    .experience-circle::before {
+
+        width: 150px;
+
+        height: 150px;
+    }
+
+
+    .experience-number strong {
+
+        font-size: 43px;
+    }
+
+
+    .accreditation-grid {
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap: 12px;
+    }
+
+
+    .accreditation-card {
+
+        min-height: 135px;
+    }
+
+
+    .accreditation-card img {
+
+        width: 100px;
+
+        height: 70px;
+    }
+
+
+    .cta-button,
+    .offer-button {
+
+        width: 90%;
+
+        text-align: center;
+
+        font-size: 18px;
+    }
+
+
+    .button {
+
+        width: 90%;
+
+        text-align: center;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -940,706 +2015,1133 @@
 <div class="container">
 
 
-    <!-- =================================
-         HEADER
-    ================================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-    <section class="hero">
+<section class="hero reveal">
 
-        <div class="badge">
+    <div class="badge">
+        دورة تدريبية احترافية
+    </div>
 
-            دورة تدريبية احترافية
+
+    <h1>
+        هل أنت مدير... أم قائد يصنع الفرق؟
+    </h1>
+
+
+    <h2>
+        <span>
+            تحوّل من إداري تقليدي إلى قائد استراتيجي
+        </span>
+    </h2>
+
+
+    <h2>
+        <span>
+            يصنع الفارق في مؤسسته
+        </span>
+    </h2>
+
+
+    <p class="hero-description">
+
+        طوّر مهاراتك في القيادة الاستراتيجية،
+        واتخذ قرارات أكثر تأثيرًا،
+        وقُد فرقك نحو نتائج أفضل.
+
+    </p>
+
+
+    <a
+        href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
+        class="cta-button">
+
+        🚀 ابدأ رحلتك الآن
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     VIDEO
+===================================================== -->
+
+<div class="video-container reveal">
+
+    <video
+        controls
+        playsinline
+        preload="metadata">
+
+        <source
+            src="video.mp4"
+            type="video/mp4">
+
+        عذراً، متصفحك لا يدعم تشغيل الفيديو.
+
+    </video>
+
+</div>
+
+
+
+<!-- =====================================================
+     WHY COURSE
+===================================================== -->
+
+<section class="section reveal">
+
+    <h2>
+        لماذا دورة القيادة الاستراتيجية؟
+    </h2>
+
+
+    <p>
+
+        لأن القيادة الحديثة تحتاج إلى أكثر من الإدارة اليومية.
+        تحتاج إلى رؤية واضحة، تفكير استراتيجي، قرارات فعالة
+        وقدرة على قيادة التغيير وتحقيق النتائج.
+
+    </p>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <div class="icon">
+                🎯
+            </div>
+
+            <h3>
+                قيادة أكثر تأثيرًا
+            </h3>
+
+            <p>
+                طوّر قدرتك على قيادة الفرق وتحقيق النتائج.
+            </p>
 
         </div>
 
 
-        <h2>
+        <div class="why-card">
 
-            <span>
+            <div class="icon">
+                🧠
+            </div>
 
-                تحوّل من إداري تقليدي إلى قائد استراتيجي
+            <h3>
+                تفكير استراتيجي
+            </h3>
 
-            </span>
+            <p>
+                انتقل من التفكير التشغيلي إلى التفكير الاستراتيجي.
+            </p>
 
-        </h2>
-
-
-        <h2>
-
-            <span>
-
-                يصنع الفارق في مؤسسته
-
-            </span>
-
-        </h2>
+        </div>
 
 
-        <a
-            href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
-            class="cta-button">
+        <div class="why-card">
 
-            اشترك في الدورة الآن
+            <div class="icon">
+                📊
+            </div>
 
-        </a>
+            <h3>
+                قرارات أفضل
+            </h3>
 
-    </section>
+            <p>
+                استخدم مؤشرات الأداء لدعم القرارات المؤسسية.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="icon">
+                🚀
+            </div>
+
+            <h3>
+                قيادة التغيير
+            </h3>
+
+            <p>
+                اكتسب أدوات تساعدك على قيادة التغيير داخل المؤسسة.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
 
 
 
-    <!-- =================================
-         VIDEO
-    ================================= -->
+<!-- =====================================================
+     TARGET AUDIENCE
+===================================================== -->
 
-    <div class="video-container">
+<section class="section reveal">
 
-        <video
-            controls
-            playsinline
-            preload="metadata">
+    <h2>
+        هذه الدورة مناسبة لك إذا كنت...
+    </h2>
 
-            <source
-                src="video.mp4"
-                type="video/mp4">
 
-            عذراً، متصفحك لا يدعم تشغيل الفيديو.
+    <div class="audience-list">
 
-        </video>
+
+        <div class="audience-item">
+            مديرًا أو قائد فريق.
+        </div>
+
+
+        <div class="audience-item">
+            تستعد لتولي منصب قيادي.
+        </div>
+
+
+        <div class="audience-item">
+            مسؤولًا عن تطوير الأداء المؤسسي.
+        </div>
+
+
+        <div class="audience-item">
+            تعمل في التخطيط والاستراتيجية.
+        </div>
+
+
+        <div class="audience-item">
+            مسؤولًا عن تطوير الأعمال.
+        </div>
+
+
+        <div class="audience-item">
+            ترغب في تطوير مهاراتك القيادية.
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COURSE JOURNEY
+===================================================== -->
+
+<section class="section reveal">
+
+    <h2>
+        رحلتك في الدورة
+    </h2>
+
+
+    <p>
+        محتوى تدريبي منظم يساعدك على الانتقال خطوة بخطوة
+        نحو قيادة أكثر فاعلية.
+    </p>
+
+
+    <div class="journey">
+
+
+        <div class="journey-card">
+
+            <div class="journey-number">
+                01
+            </div>
+
+            <h3>
+                أساسيات القيادة
+            </h3>
+
+            <p>
+                فهم القيادة الحديثة ودور القائد داخل المؤسسة.
+            </p>
+
+        </div>
+
+
+        <div class="journey-card">
+
+            <div class="journey-number">
+                02
+            </div>
+
+            <h3>
+                التفكير الاستراتيجي
+            </h3>
+
+            <p>
+                تطوير القدرة على التحليل والتفكير بعيد المدى.
+            </p>
+
+        </div>
+
+
+        <div class="journey-card">
+
+            <div class="journey-number">
+                03
+            </div>
+
+            <h3>
+                صناعة القرار
+            </h3>
+
+            <p>
+                تطوير أدوات تساعدك على اتخاذ قرارات أكثر فاعلية.
+            </p>
+
+        </div>
+
+
+        <div class="journey-card">
+
+            <div class="journey-number">
+                04
+            </div>
+
+            <h3>
+                مؤشرات الأداء
+            </h3>
+
+            <p>
+                فهم مؤشرات الأداء وربطها بالأهداف المؤسسية.
+            </p>
+
+        </div>
+
+
+        <div class="journey-card">
+
+            <div class="journey-number">
+                05
+            </div>
+
+            <h3>
+                إدارة التغيير
+            </h3>
+
+            <p>
+                فهم كيفية التعامل مع التغيير وقيادته.
+            </p>
+
+        </div>
+
+
+        <div class="journey-card">
+
+            <div class="journey-number">
+                06
+            </div>
+
+            <h3>
+                الإبداع المؤسسي
+            </h3>
+
+            <p>
+                تطوير بيئة تساعد على الابتكار وتحسين الأداء.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DOCTOR
+===================================================== -->
+
+<section class="doctor-section reveal">
+
+    <h2>
+        نبذة عن الدكتور عمر الجبر
+    </h2>
+
+
+    <p class="doctor-intro">
+
+        الدكتور عمر الجبر مستشار وخبير متخصص في استشراف المستقبل
+        وبناء وتصميم الاستراتيجيات وتطوير ونمو العمل المؤسسي.
+        يمتلك خبرة عملية واسعة في مجال الاستشارات والتدريب
+        الاستراتيجي، ويعمل مع المؤسسات في تطوير القيادات،
+        وتحسين الأداء، وبناء الخطط الاستراتيجية والتشغيلية،
+        ودعم الابتكار والتغيير المؤسسي.
+
+    </p>
+
+
+
+    <!-- EXPERIENCE -->
+
+    <div
+        class="professional-experience"
+        id="professionalExperience">
+
+
+        <h3 class="professional-title">
+            الخبرة والتميز
+        </h3>
+
+
+        <div class="experience-layout">
+
+
+            <div class="experience-circle-wrap">
+
+                <div
+                    class="experience-circle"
+                    id="experienceCircle">
+
+
+                    <div class="experience-number">
+
+                        <strong id="experienceNumber">
+                            0
+                        </strong>
+
+                        <span>
+                            سنة خبرة
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="experience-info">
+
+                <h4>
+                    الخبرة المهنية
+                </h4>
+
+
+                <p>
+
+                    خبرة استشارية وتدريبية واسعة في
+                    تطوير القيادات، والاستراتيجيات،
+                    وتطوير الأداء المؤسسي والأعمال.
+
+                </p>
+
+
+                <div class="experience-bars">
+
+
+                    <div class="experience-bar-row">
+
+                        <div class="experience-bar-header">
+
+                            <span>
+                                الاستشارات المؤسسية
+                            </span>
+
+                            <span
+                                class="percentage"
+                                data-target="90">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="experience-bar">
+
+                            <div
+                                class="experience-fill"
+                                data-target="90">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="experience-bar-row">
+
+                        <div class="experience-bar-header">
+
+                            <span>
+                                التدريب والتطوير
+                            </span>
+
+                            <span
+                                class="percentage"
+                                data-target="85">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="experience-bar">
+
+                            <div
+                                class="experience-fill"
+                                data-target="85">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="experience-bar-row">
+
+                        <div class="experience-bar-header">
+
+                            <span>
+                                تطوير الأعمال والقيادات
+                            </span>
+
+                            <span
+                                class="percentage"
+                                data-target="80">
+                                0%
+                            </span>
+
+                        </div>
+
+
+                        <div class="experience-bar">
+
+                            <div
+                                class="experience-fill"
+                                data-target="80">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 
 
-    <!-- =================================
-         DOCTOR
-    ================================= -->
+    <!-- EXPERIENCE BOX -->
 
-    <section class="doctor-section">
+    <div class="experience-box">
 
-        <h2>
-
-            نبذة عن الدكتور عمر الجبر
-
-        </h2>
-
-
-        <p class="doctor-intro">
-
-            الدكتور عمر الجبر مستشار وخبير متخصص في استشراف المستقبل
-            وبناء وتصميم الاستراتيجيات وتطوير ونمو العمل المؤسسي.
-            يمتلك خبرة عملية واسعة في مجال الاستشارات والتدريب
-            الاستراتيجي، ويعمل مع المؤسسات في تطوير القيادات،
-            وتحسين الأداء، وبناء الخطط الاستراتيجية والتشغيلية،
-            ودعم الابتكار والتغيير المؤسسي.
-
-        </p>
-
-
-
-        <!-- =================================
-             EXPERIENCE CHART
-        ================================= -->
-
-        <div
-            class="professional-experience"
-            id="professionalExperience">
-
-            <h3 class="professional-title">
-
-                الخبرة & التميز
-
-            </h3>
-
-
-            <div class="experience-layout">
-
-
-                <div class="experience-circle-wrap">
-
-                    <div
-                        class="experience-circle"
-                        id="experienceCircle">
-
-                        <div class="experience-number">
-
-                            <strong id="experienceNumber">
-                                7
-                            </strong>
-
-                            <span>
-                                سنة خبرة
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-
-                <div class="experience-info">
-
-                    <h4>
-
-                        الخبرة المهنية
-
-                    </h4>
-
-
-                    <p>
-
-                        خبرة استشارية وتدريبية واسعة في
-                        تطوير القيادات، والاستراتيجيات،
-                        وتطوير الأداء المؤسسي والأعمال.
-
-                    </p>
-
-
-                    <div class="experience-bars">
-
-
-                        <div class="experience-bar-row">
-
-                            <div class="experience-bar-header">
-
-                                <span>
-                                    الاستشارات المؤسسية
-                                </span>
-
-                                <span
-                                    class="percentage"
-                                    data-target="90">
-
-                                    7%
-
-                                </span>
-
-                            </div>
-
-
-                            <div class="experience-bar">
-
-                                <div
-                                    class="experience-fill"
-                                    data-target="90">
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="experience-bar-row">
-
-                            <div class="experience-bar-header">
-
-                                <span>
-                                    التدريب والتطوير
-                                </span>
-
-                                <span
-                                    class="percentage"
-                                    data-target="85">
-
-                                    7%
-
-                                </span>
-
-                            </div>
-
-
-                            <div class="experience-bar">
-
-                                <div
-                                    class="experience-fill"
-                                    data-target="85">
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="experience-bar-row">
-
-                            <div class="experience-bar-header">
-
-                                <span>
-                                    تطوير الأعمال والقيادات
-                                </span>
-
-                                <span
-                                    class="percentage"
-                                    data-target="80">
-
-                                    7%
-
-                                </span>
-
-                            </div>
-
-
-                            <div class="experience-bar">
-
-                                <div
-                                    class="experience-fill"
-                                    data-target="80">
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================
-             EXPERIENCE
-        ================================= -->
-
-        <div class="experience-box">
-
-            <h3>
-                مجالات الخبرة
-            </h3>
-
-
-            <p>
-
-                تشمل خبراته استشراف المستقبل،
-                وبناء الخطط الاستراتيجية والتشغيلية،
-                والابتكار التغييري، وتصميم الخدمات الحكومية،
-                وتطوير القيادات، واستراتيجيات التدريب،
-                وتطوير الأداء المؤسسي.
-
-            </p>
-
-        </div>
-
-
-
-        <!-- =================================
-             INTERNATIONAL EXPERIENCE
-        ================================= -->
-
-        <div class="experience-box">
-
-            <h3>
-                خبرات دولية وبرامج قيادية
-            </h3>
-
-
-            <div class="countries">
-
-                <span class="country">
-                    🇦🇪 الإمارات
-                </span>
-
-                <span class="country">
-                    🇸🇦 السعودية
-                </span>
-
-                <span class="country">
-                    🇬🇧 بريطانيا
-                </span>
-
-                <span class="country">
-                    🇺🇸 أمريكا
-                </span>
-
-                <span class="country">
-                    🇴🇲 سلطنة عمان
-                </span>
-
-                <span class="country">
-                    🇯🇴 الأردن
-                </span>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- =================================
-             INTERNATIONAL ACCREDITATIONS
-        ================================= -->
-
-        <div class="accreditation-section">
-
-            <h3 class="accreditation-title">
-
-                الاعتمادات الدولية
-
-            </h3>
-
-
-            <p class="accreditation-description">
-
-                خبرات واعتمادات وشراكات مهنية دولية
-                تدعم جودة البرامج التدريبية والتطويرية.
-
-            </p>
-
-
-            <div class="accreditation-grid">
-
-
-                <div class="accreditation-card">
-
-                    <img
-                        src="iwcf.png"
-                        alt="IWCF">
-
-                    <span>
-                        IWCF
-                    </span>
-
-                </div>
-
-
-
-                <div class="accreditation-card">
-
-                    <img
-                        src="pearson.png"
-                        alt="Pearson">
-
-                    <span>
-                        Pearson
-                    </span>
-
-                </div>
-
-
-
-                <div class="accreditation-card">
-
-                    <img
-                        src="iadc.png"
-                        alt="IADC">
-
-                    <span>
-                        IADC
-                    </span>
-
-                </div>
-
-
-
-                <div class="accreditation-card">
-
-                    <img
-                        src="osha.png"
-                        alt="OSHA">
-
-                    <span>
-                        OSHA
-                    </span>
-
-                </div>
-
-
-
-                <div class="accreditation-card">
-
-                    <img
-                        src="nebosh.png"
-                        alt="NEBOSH">
-
-                    <span>
-                        NEBOSH
-                    </span>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =================================
-         ABOUT COURSE BUTTON
-    ================================= -->
-
-    <a
-        href="#about"
-        class="button">
-
-        تعرف على الدورة
-
-    </a>
-
-
-
-    <!-- =================================
-         ABOUT COURSE
-    ================================= -->
-
-    <section
-        class="section"
-        id="about">
-
-        <h2>
-
-            عن دورة القيادة الاستراتيجية
-
-        </h2>
+        <h3>
+            مجالات الخبرة
+        </h3>
 
 
         <p>
 
-            دورة متخصصة تهدف إلى تطوير مهارات القادة
-            والمديرين في التفكير والتحليل الاستراتيجي،
-            والتخطيط، واتخاذ القرارات، وقيادة فرق العمل
-            وتحقيق النتائج المؤسسية.
+            تشمل خبراته استشراف المستقبل،
+            وبناء الخطط الاستراتيجية والتشغيلية،
+            والابتكار التغييري، وتصميم الخدمات الحكومية،
+            وتطوير القيادات، واستراتيجيات التدريب،
+            وتطوير الأداء المؤسسي.
 
         </p>
 
-    </section>
+    </div>
 
 
 
-    <!-- =================================
-         WHAT YOU WILL LEARN
-    ================================= -->
+    <!-- COUNTRIES -->
 
-    <section class="section">
+    <div class="experience-box">
 
-        <h2>
-
-            ماذا ستتعلم؟
-
-        </h2>
+        <h3>
+            خبرات دولية وبرامج قيادية
+        </h3>
 
 
-        <div class="features">
+        <div class="countries">
+
+            <span class="country">
+                🇦🇪 الإمارات
+            </span>
+
+            <span class="country">
+                🇸🇦 السعودية
+            </span>
+
+            <span class="country">
+                🇬🇧 بريطانيا
+            </span>
+
+            <span class="country">
+                🇺🇸 أمريكا
+            </span>
+
+            <span class="country">
+                🇴🇲 سلطنة عمان
+            </span>
+
+            <span class="country">
+                🇯🇴 الأردن
+            </span>
+
+        </div>
+
+    </div>
 
 
-            <div class="feature">
 
-                <strong>
-                    الإبداع المؤسسي
-                </strong>
+    <!-- ACCREDITATIONS -->
+
+    <div class="accreditation-section">
+
+        <h3 class="accreditation-title">
+            الاعتمادات الدولية
+        </h3>
 
 
-                <p>
+        <p class="accreditation-description">
 
-                    الإبداع المؤسسي هو قدرة المنظمة على ابتكار
-                    أفكار وحلول جديدة تُحسّن الأداء وتمنحها
-                    ميزة تنافسية.
+            خبرات واعتمادات وشراكات مهنية دولية
+            تدعم جودة البرامج التدريبية والتطويرية.
 
-                </p>
+        </p>
+
+
+        <div class="accreditation-grid">
+
+
+            <div class="accreditation-card">
+
+                <img
+                    src="iwcf.png"
+                    alt="IWCF">
+
+                <span>
+                    IWCF
+                </span>
 
             </div>
 
 
+            <div class="accreditation-card">
 
-            <div class="feature">
+                <img
+                    src="pearson.png"
+                    alt="Pearson">
 
-                <strong>
-                    مؤشرات الأداء
-                </strong>
-
-
-                <p>
-
-                    مؤشرات الأداء (KPIs) هي أدوات قياس تُستخدم
-                    لتحديد مدى تحقيق الأهداف داخل المؤسسة
-                    بشكل دقيق وواضح.
-
-                </p>
+                <span>
+                    Pearson
+                </span>
 
             </div>
 
 
+            <div class="accreditation-card">
 
-            <div class="feature">
+                <img
+                    src="iadc.png"
+                    alt="IADC">
 
-                <strong>
-                    إدارة التغيير
-                </strong>
+                <span>
+                    IADC
+                </span>
+
+            </div>
 
 
-                <p>
+            <div class="accreditation-card">
 
-                    إدارة التغيير هي عملية منظمة تهدف إلى نقل
-                    المؤسسة من وضعها الحالي إلى وضع أفضل.
+                <img
+                    src="osha.png"
+                    alt="OSHA">
 
-                </p>
+                <span>
+                    OSHA
+                </span>
+
+            </div>
+
+
+            <div class="accreditation-card">
+
+                <img
+                    src="nebosh.png"
+                    alt="NEBOSH">
+
+                <span>
+                    NEBOSH
+                </span>
 
             </div>
 
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
 
-    <!-- =================================
-         WHAT YOU GET
-    ================================= -->
+<!-- =====================================================
+     ABOUT COURSE
+===================================================== -->
 
-    <section class="section">
+<section
+    class="section reveal"
+    id="about">
 
-        <h2>
-
-            ماذا ستحصل عليه عند الالتحاق بالدورة؟
-
-        </h2>
-
-
-        <div class="features">
+    <h2>
+        عن دورة القيادة الاستراتيجية
+    </h2>
 
 
-            <div class="feature">
+    <p>
 
-                <strong>
-                    22 فيديو تدريبي متكامل
-                </strong>
+        دورة متخصصة تهدف إلى تطوير مهارات القادة
+        والمديرين في التفكير والتحليل الاستراتيجي،
+        والتخطيط، واتخاذ القرارات، وقيادة فرق العمل
+        وتحقيق النتائج المؤسسية.
 
+    </p>
 
-                <p>
-                    محتوى تدريبي متكامل ومنظم.
-                </p>
-
-            </div>
+</section>
 
 
 
-            <div class="feature">
+<!-- =====================================================
+     WHAT YOU WILL LEARN
+===================================================== -->
 
-                <strong>
-                    محتوى تدريبي متخصص
-                </strong>
+<section class="section reveal">
 
-
-                <p>
-                    محتوى متخصص للقادة والمديرين.
-                </p>
-
-            </div>
+    <h2>
+        ماذا ستتعلم؟
+    </h2>
 
 
-
-            <div class="feature">
-
-                <strong>
-                    تطبيقات وأمثلة عملية
-                </strong>
+    <div class="features">
 
 
-                <p>
-                    أمثلة عملية قابلة للتطبيق.
-                </p>
+        <div class="feature">
 
-            </div>
+            <strong>
+                الإبداع المؤسسي
+            </strong>
 
+            <p>
 
+                القدرة على ابتكار أفكار وحلول جديدة
+                تُحسّن الأداء وتمنح المؤسسة ميزة تنافسية.
 
-            <div class="feature">
-
-                <strong>
-                    إمكانية التعلم حسب وقتك
-                </strong>
-
-
-                <p>
-                    تعلم بالوقت الذي يناسبك.
-                </p>
-
-            </div>
-
-
-
-            <div class="feature">
-
-                <strong>
-                    محتوى متاح عبر المنصة
-                </strong>
-
-
-                <p>
-                    الوصول إلى المحتوى من خلال المنصة.
-                </p>
-
-            </div>
-
-
-
-            <div class="feature">
-
-                <strong>
-                    شهادة إتمام الدورة
-                </strong>
-
-
-                <p>
-                    شهادة إتمام الدورة بعد استكمال المتطلبات.
-                </p>
-
-            </div>
-
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="feature">
+
+            <strong>
+                مؤشرات الأداء
+            </strong>
+
+            <p>
+
+                فهم أدوات القياس التي تساعد في تحديد
+                مدى تحقيق الأهداف داخل المؤسسة.
+
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <strong>
+                إدارة التغيير
+            </strong>
+
+            <p>
+
+                فهم عملية الانتقال من الوضع الحالي
+                إلى وضع أفضل داخل المؤسسة.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
 
 
 
-    <!-- =================================
-         START COURSE
-    ================================= -->
+<!-- =====================================================
+     WHAT YOU GET
+===================================================== -->
 
-    <section class="section">
+<section class="section reveal">
 
-        <h2>
-
-            <a
-                href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
-                style="color:#eab65b;"
-                onmouseover="this.style.color='#ffffff'"
-                onmouseout="this.style.color='#eab65b'"
-            >
-
-                ابدأ رحلتك في القيادة الاستراتيجية
-
-            </a>
-
-        </h2>
-
-    </section>
+    <h2>
+        ماذا ستحصل عليه عند الالتحاق بالدورة؟
+    </h2>
 
 
+    <div class="benefits-grid">
 
-    <!-- =================================
-         FOOTER
-    ================================= -->
 
-    <footer>
+        <div class="benefit">
 
-        STRATEGENCE
+            <div class="benefit-icon">
+                🎥
+            </div>
 
-        <br>
+            <h3>
+                22 فيديو تدريبي
+            </h3>
 
-        دورة القيادة الاستراتيجية © 2026
+            <p>
+                محتوى تدريبي متكامل ومنظم.
+            </p>
 
-    </footer>
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                📚
+            </div>
+
+            <h3>
+                محتوى متخصص
+            </h3>
+
+            <p>
+                محتوى مناسب للقادة والمديرين.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                💡
+            </div>
+
+            <h3>
+                تطبيقات عملية
+            </h3>
+
+            <p>
+                أمثلة وأفكار قابلة للتطبيق.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                ⏰
+            </div>
+
+            <h3>
+                تعلم بوقتك
+            </h3>
+
+            <p>
+                إمكانية التعلم حسب الوقت المناسب لك.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                🌐
+            </div>
+
+            <h3>
+                عبر المنصة
+            </h3>
+
+            <p>
+                الوصول إلى المحتوى من خلال المنصة.
+            </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <div class="benefit-icon">
+                🏆
+            </div>
+
+            <h3>
+                شهادة إتمام
+            </h3>
+
+            <p>
+                شهادة إتمام الدورة بعد استكمال المتطلبات.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN CTA
+===================================================== -->
+
+<section class="offer-section reveal">
+
+    <h2>
+        جاهز لتطوير قيادتك؟
+    </h2>
+
+
+    <p>
+
+        ابدأ الآن رحلتك في القيادة الاستراتيجية،
+        وطوّر أدواتك لتكون قائدًا أكثر تأثيرًا.
+
+    </p>
+
+
+    <a
+        href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
+        class="offer-button">
+
+        🚀 اشترك في الدورة الآن
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="section reveal">
+
+    <h2>
+        الأسئلة الشائعة
+    </h2>
+
+
+    <div class="faq-container">
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    هل الدورة مناسبة للمبتدئين؟
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                نعم، تم تصميم محتوى الدورة بشكل يساعد
+                المتدرب على فهم المفاهيم القيادية والاستراتيجية
+                بشكل تدريجي ومنظم.
+
+            </div>
+
+        </div>
+
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    كم عدد الفيديوهات التدريبية؟
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                تحتوي الدورة على 22 فيديو تدريبي متكامل.
+
+            </div>
+
+        </div>
+
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    هل يمكنني التعلم في الوقت المناسب لي؟
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                نعم، يمكنك الوصول إلى محتوى الدورة
+                والتعلم حسب الوقت المناسب لك عبر المنصة.
+
+            </div>
+
+        </div>
+
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    هل توجد شهادة إتمام؟
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                نعم، توجد شهادة إتمام الدورة بعد استكمال
+                المتطلبات المحددة للدورة.
+
+            </div>
+
+        </div>
+
+
+
+        <div class="faq-item">
+
+            <button class="faq-question">
+
+                <span>
+                    كيف يمكنني التسجيل؟
+                </span>
+
+                <span>
+                    +
+                </span>
+
+            </button>
+
+
+            <div class="faq-answer">
+
+                اضغط على زر "اشترك في الدورة الآن"
+                للانتقال إلى صفحة التسجيل.
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
+
+<section class="offer-section reveal">
+
+    <h2>
+        ابدأ رحلتك في القيادة الاستراتيجية
+    </h2>
+
+
+    <p>
+        الاستثمار في تطوير مهاراتك القيادية
+        هو استثمار في مستقبلك ومستقبل مؤسستك.
+    </p>
+
+
+    <a
+        href="https://elearning.omaraljaber.com/OneCourseAr.aspx?Course=14"
+        class="offer-button">
+
+        ابدأ الآن ←
+
+    </a>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    STRATEGENCE
+
+    <br>
+
+    دورة القيادة الاستراتيجية © 2026
+
+</footer>
+
 
 </div>
 
@@ -1650,6 +3152,13 @@
 ===================================================== -->
 
 <script>
+
+
+/* =====================================================
+   EXPERIENCE ANIMATION
+   يبدأ من 0 عند ظهور القسم
+   ويعود إلى 0 عند مغادرة القسم
+===================================================== */
 
 const professionalExperience =
     document.getElementById(
@@ -1686,9 +3195,6 @@ let experienceAnimationFrame = null;
 let experienceIsAnimating = false;
 
 
-/* =====================================================
-   RESET
-===================================================== */
 
 function resetExperience() {
 
@@ -1699,26 +3205,20 @@ function resetExperience() {
         );
 
         experienceAnimationFrame = null;
-
     }
 
 
     experienceIsAnimating = false;
 
 
-    experienceNumber.textContent = "7";
-
-
-    const startDegrees =
-        (7 / 20) * 360;
+    experienceNumber.textContent = "0";
 
 
     experienceCircle.style.background =
         `
         conic-gradient(
             #7dd3fc 0deg,
-            #7dd3fc ${startDegrees}deg,
-            #234667 ${startDegrees}deg,
+            #234667 0deg,
             #234667 360deg
         )
         `;
@@ -1727,7 +3227,7 @@ function resetExperience() {
     experienceFills.forEach(
         function(fill) {
 
-            fill.style.width = "7%";
+            fill.style.width = "0%";
 
         }
     );
@@ -1736,17 +3236,13 @@ function resetExperience() {
     percentages.forEach(
         function(percentage) {
 
-            percentage.textContent = "7%";
+            percentage.textContent = "0%";
 
         }
     );
-
 }
 
 
-/* =====================================================
-   START EXPERIENCE ANIMATION
-===================================================== */
 
 function startExperienceAnimation() {
 
@@ -1755,9 +3251,6 @@ function startExperienceAnimation() {
         return;
 
     }
-
-
-    experienceIsAnimating = true;
 
 
     resetExperience();
@@ -1804,13 +3297,13 @@ function startExperienceAnimation() {
             );
 
 
-        /* CIRCLE */
+        /* =========================
+           CIRCLE
+        ========================= */
 
         const experienceValue =
             Math.floor(
-                7 +
-                smoothProgress *
-                (20 - 7)
+                smoothProgress * 20
             );
 
 
@@ -1818,60 +3311,27 @@ function startExperienceAnimation() {
             experienceValue;
 
 
-        const startDegrees =
-            (7 / 20) * 360;
-
-
         const degrees =
-            startDegrees +
-            smoothProgress *
-            (360 - startDegrees);
-
-
-        const color1 = "#7dd3fc";
-
-        const color2 = "#38bdf8";
-
-        const color3 = "#0ea5e9";
-
-        const color4 = "#0369a1";
-
-        const color5 = "#075985";
-
-
-        const point1 =
-            startDegrees +
-            (degrees - startDegrees) *
-            0.25;
-
-
-        const point2 =
-            startDegrees +
-            (degrees - startDegrees) *
-            0.50;
-
-
-        const point3 =
-            startDegrees +
-            (degrees - startDegrees) *
-            0.75;
+            smoothProgress * 360;
 
 
         experienceCircle.style.background =
             `
             conic-gradient(
-                ${color1} 0deg,
-                ${color2} ${point1}deg,
-                ${color3} ${point2}deg,
-                ${color4} ${point3}deg,
-                ${color5} ${degrees}deg,
+                #b9f0ff 0deg,
+                #7dd3fc ${degrees * 0.30}deg,
+                #38bdf8 ${degrees * 0.60}deg,
+                #0ea5e9 ${degrees * 0.80}deg,
+                #075985 ${degrees}deg,
                 #234667 ${degrees}deg,
                 #234667 360deg
             )
             `;
 
 
-        /* BARS */
+        /* =========================
+           BARS
+        ========================= */
 
         experienceFills.forEach(
             function(fill) {
@@ -1883,9 +3343,8 @@ function startExperienceAnimation() {
 
 
                 const currentValue =
-                    7 +
                     smoothProgress *
-                    (target - 7);
+                    target;
 
 
                 fill.style.width =
@@ -1895,7 +3354,9 @@ function startExperienceAnimation() {
         );
 
 
-        /* PERCENTAGES */
+        /* =========================
+           PERCENTAGES
+        ========================= */
 
         percentages.forEach(
             function(percentage) {
@@ -1908,9 +3369,8 @@ function startExperienceAnimation() {
 
                 const currentValue =
                     Math.floor(
-                        7 +
                         smoothProgress *
-                        (target - 7)
+                        target
                     );
 
 
@@ -1956,25 +3416,12 @@ function startExperienceAnimation() {
             );
 
 
-            experienceCircle.style.background =
-                `
-                conic-gradient(
-                    #7dd3fc 0deg,
-                    #38bdf8 90deg,
-                    #0ea5e9 180deg,
-                    #0369a1 270deg,
-                    #075985 360deg
-                )
-                `;
-
-
             experienceIsAnimating =
                 false;
 
 
             experienceAnimationFrame =
                 null;
-
         }
 
     }
@@ -1988,9 +3435,6 @@ function startExperienceAnimation() {
 }
 
 
-/* =====================================================
-   INTERSECTION OBSERVER
-===================================================== */
 
 const experienceObserver =
     new IntersectionObserver(
@@ -2029,6 +3473,154 @@ const experienceObserver =
 experienceObserver.observe(
     professionalExperience
 );
+
+
+
+/* =====================================================
+   SCROLL REVEAL
+   يرجع يبدأ من جديد عند مغادرة القسم
+===================================================== */
+
+const revealElements =
+    document.querySelectorAll(
+        ".reveal"
+    );
+
+
+const revealObserver =
+    new IntersectionObserver(
+
+        function(entries) {
+
+            entries.forEach(
+                function(entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                    }
+
+                    else {
+
+                        entry.target.classList.remove(
+                            "visible"
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+revealElements.forEach(
+    function(element) {
+
+        revealObserver.observe(
+            element
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+const faqQuestions =
+    document.querySelectorAll(
+        ".faq-question"
+    );
+
+
+faqQuestions.forEach(
+    function(question) {
+
+        question.addEventListener(
+            "click",
+            function() {
+
+                const item =
+                    this.parentElement;
+
+
+                const isActive =
+                    item.classList.contains(
+                        "active"
+                    );
+
+
+                document
+                    .querySelectorAll(
+                        ".faq-item"
+                    )
+                    .forEach(
+                        function(otherItem) {
+
+                            otherItem.classList.remove(
+                                "active"
+                            );
+
+
+                            const icon =
+                                otherItem.querySelector(
+                                    ".faq-question span:last-child"
+                                );
+
+
+                            if (icon) {
+
+                                icon.textContent =
+                                    "+";
+
+                            }
+
+                        }
+                    );
+
+
+                if (!isActive) {
+
+                    item.classList.add(
+                        "active"
+                    );
+
+
+                    const icon =
+                        this.querySelector(
+                            "span:last-child"
+                        );
+
+
+                    if (icon) {
+
+                        icon.textContent =
+                            "−";
+
+                    }
+
+                }
+
+            }
+        );
+
+    }
+);
+
 
 </script>
 
