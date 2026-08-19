@@ -277,6 +277,47 @@ body::after {
 
 
 /* =====================================================
+   COURSE ADVERTISEMENT IMAGE
+===================================================== */
+
+.course-ad {
+    width: 100%;
+    max-width: 1000px;
+    margin: 10px auto 35px;
+    padding: 8px;
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.65),
+            rgba(255,255,255,0.12)
+        );
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.25);
+
+    overflow: hidden;
+}
+
+.course-ad img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    object-fit: cover;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.course-ad:hover img {
+    transform: scale(1.02);
+}
+
+
+/* =====================================================
    VIDEO
 ===================================================== */
 
@@ -405,33 +446,6 @@ body::after {
     color: #e7eef7;
     font-size: 18px;
     line-height: 2;
-}
-
-
-/* =====================================================
-   MARKETING INTRO
-===================================================== */
-
-.marketing-intro {
-    text-align: center;
-    padding: 20px 10px 10px;
-}
-
-.marketing-intro h2 {
-    font-size: clamp(28px,5vw,42px);
-    margin-bottom: 12px;
-    color: #ffffff;
-}
-
-.marketing-intro h2 span {
-    color: #ffe09a;
-}
-
-.marketing-intro p {
-    max-width: 760px;
-    margin: auto;
-    color: #f4f8fc;
-    font-size: 18px;
 }
 
 
@@ -1369,47 +1383,6 @@ footer {
 
 
 /* =====================================================
-   COURSE ADVERTISEMENT IMAGE
-===================================================== */
-
-.course-ad {
-    width: 100%;
-    max-width: 1000px;
-    margin: 10px auto 35px;
-    padding: 8px;
-    border-radius: 24px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,0.65),
-            rgba(255,255,255,0.12)
-        );
-
-    box-shadow:
-        0 20px 50px
-        rgba(0,0,0,0.25);
-
-    overflow: hidden;
-}
-
-.course-ad img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 18px;
-    object-fit: cover;
-
-    transition:
-        transform 0.4s ease;
-}
-
-.course-ad:hover img {
-    transform: scale(1.02);
-}
-
-
-/* =====================================================
    TABLET
 ===================================================== */
 
@@ -1548,6 +1521,7 @@ footer {
         width: 100%;
         margin-top: 20px;
     }
+
 }
 
 </style>
@@ -1607,14 +1581,14 @@ footer {
 
 
 <!-- =====================================================
-     COURSE ADVERTISEMENT
+     NEW IMAGE
 ===================================================== -->
 
 <div class="course-ad reveal">
 
     <img
-        src="strategic-leadership.jfif"
-        alt="إعلان دورة القيادة الاستراتيجية">
+        src="دكتور عمر 11.png"
+        alt="دورة القيادة الاستراتيجية">
 
 </div>
 
@@ -1895,6 +1869,19 @@ footer {
     </div>
 
 </section>
+
+
+<!-- =====================================================
+     OLD IMAGE
+===================================================== -->
+
+<div class="course-ad reveal">
+
+    <img
+        src="strategic-leadership.jfif"
+        alt="إعلان دورة القيادة الاستراتيجية">
+
+</div>
 
 
 <!-- =====================================================
